@@ -1,0 +1,8 @@
+@mixin hook-dotnav-item(){
+    transition: transform linear 200ms;
+}
+@mixin hook-dotnav-item-active(){
+    transform: scale(1.2);
+    background-color: transparent !important;
+    box-shadow: 0px 0px 0px 2px $global-inverse-color;
+}

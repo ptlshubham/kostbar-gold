@@ -1,0 +1,68 @@
+// app button
+.in-button-app {
+    display: flex;
+    align-items: center;
+    background-color: #1a1a1a;
+    font-size: 13px;
+    font-weight: 300;
+    text-align: left;
+    line-height: 17px;
+    padding: 12px 23px 13px 23px;
+    color: $global-inverse-color;
+    i {
+        font-size: 26px;
+        margin-right: 14px;
+        &.fa-apple {
+            font-size: 30px;
+            top: 3px;
+        }
+    }
+    .wrapper span {
+        font-weight: 500;
+    } 
+    &:hover {
+        transition: all ease 200ms;
+        background-color: $global-primary-background;
+        color: $global-inverse-color;
+    }
+}
+
+// highlight
+.in-highlight {
+    position: relative;
+    background: 0 0;
+    z-index: 0;
+    display: inline-block;
+    &::before {
+        content: '';
+        background: lighten($global-primary-background, 30%);
+        position: absolute;
+        left: 0;
+        right: -2px;
+        bottom: 2px;
+        height: 16px;
+        z-index: -1;
+    }
+}
+
+// list
+.in-list-check > li {
+    position: relative;
+    padding-left: 30px;
+}
+
+.in-list-check > li::before {
+    font-family: 'Font Awesome 6 Free'; 
+    color: $global-primary-background;
+    content: "\f058";
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+// label small
+.in-label-small {
+    font-size: 13px;
+    line-height: 1.4;
+    padding: 2px 11px;
+}

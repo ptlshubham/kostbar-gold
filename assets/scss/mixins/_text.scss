@@ -1,0 +1,8 @@
+@mixin hook-text-lead(){
+    font-weight: 300;
+}
+@mixin hook-text-misc(){
+    .uk-text-bold {
+        font-weight: 500;
+    }
+}

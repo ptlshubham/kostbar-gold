@@ -1,0 +1,45 @@
+@mixin hook-sticky-misc(){
+    .uk-sticky {    
+        &.uk-active {
+            background: $global-secondary-background;
+            box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.13);
+            &.uk-navbar-container,
+            .uk-navbar-nav {
+                height: 75px;
+            }
+            .uk-navbar-nav > li > a,
+            .uk-navbar-item {
+                min-height: 75px;
+            }
+            .uk-navbar-nav > li {
+                a {
+                    color: rgba(255,255,255,.75);
+                }
+                a:hover {
+                    color: rgba(255,255,255,1);
+                }
+                &.uk-active > a {
+                    color: rgba(255,255,255,1);
+                }
+            }
+            .uk-navbar-dropdown-nav > li {
+                a {
+                    color: $navbar-nav-item-color;
+                }
+                a:hover {
+                    color: $navbar-nav-item-hover-color;
+                }
+                &.uk-active > a {
+                    color: $primary;
+                }
+            }
+            .in-optional-nav {
+                border-left: 1px solid rgba(255,255,255,0.15);
+                .uk-button-primary {
+                    background-color: rgba(255,255,255,0.2);
+                    box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.3);
+                }
+            } 
+        }
+    }
+}
