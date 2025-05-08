@@ -23647,7 +23647,7 @@ header .uk-card-secondary a:hover {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(242, 231, 182, 0.35);
+  /* background: rgba(242, 231, 182, 0.35); */
 }
 .in-slideshow .uk-container {
   position: relative;
