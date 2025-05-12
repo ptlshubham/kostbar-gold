@@ -37,8 +37,8 @@ html {
   /* 2 */
   -webkit-text-size-adjust: 100%;
   /* 3 */
-  background: #FFFFFF;
-  color: #666666;
+  background: #000;
+  color: #fff;
   overflow-x: hidden;
 }
 
@@ -345,7 +345,13 @@ dt {
 dd {
   margin-left: 0;
 }
+.uk-text-color-lighter {
+  color: #fff;
+}
+.dark-background-color{
+  background-color: #000;
 
+}
 /* Horizontal rules
  ========================================================================== */
 /*
@@ -7915,7 +7921,7 @@ ul.uk-nav-sub {
 .uk-text-lead {
   font-size: 1.5rem;
   line-height: 1.5;
-  color: #727272;
+  color: #fff;
   font-weight: 300;
 }
 
@@ -23166,12 +23172,12 @@ readers do not read off random characters that represent icons */
 }
 .in-highlight::before {
   content: "";
-  background: #eadab9;
+  background: #e9bd64;
   position: absolute;
   left: 0;
   right: -2px;
   bottom: 2px;
-  height: 16px;
+  height: 12px;
   z-index: -1;
 }
 
@@ -24369,3 +24375,4 @@ footer .social-media-list div a .fab {
   background-color: #C89B42;
   margin-top: -18px;
 }
+

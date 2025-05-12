@@ -38,7 +38,7 @@
    </div>
    <!-- header begin -->
    <header>
-      <div class="uk-section uk-padding-remove-vertical in-header-inverse ">
+      <div class="uk-section uk-padding-remove-vertical in-header-inverse " style="height: 160px">
          <nav class="uk-navbar-container uk-navbar-transparent"
             data-uk-sticky="show-on-up: true; top: 80; animation: uk-animation-fade">
             <div class="uk-container" data-uk-navbar>
@@ -173,22 +173,28 @@
       </div>
       <!-- slideshow content end -->
       <!-- section content begin -->
-      <div class="uk-section in-wave-16">
-         <div class="uk-container">
+      <div class="uk-section in-wave-16 ">
+         <div class="uk-container" style="background-color: black;">
             <div class="uk-grid">
                <div class="uk-width-1-1">
                   <div class="uk-card uk-card-default uk-box-shadow-small uk-border-rounded in-margin-medium-top@s">
                      <div class="uk-grid" data-uk-grid>
-                        <div class="uk-width-expand@s uk-width-2-5@m uk-card-media-right uk-cover-container">
-                           <img class="uk-width-1-1 uk-margin-remove-bottom" src="assets/img/home/1.jpg"
+                        <div class="uk-width-expand@s uk-width-2-5@m uk-card-media-right uk-cover-container"
+                           uk-scrollspy="cls: uk-animation-fade; delay: 400; repeat: true">
+                           <img class=" uk-width-1-1 uk-margin-remove-bottom" src="assets/img/home/1.jpg"
                               alt="sample-image" width="564" height="625">
                         </div>
-                        <div class="uk-width-1-2@s uk-width-expand@m uk-flex uk-flex-middle">
+                        <div class="uk-width-1-2@s uk-width-expand@m uk-flex uk-flex-middle"
+                           uk-scrollspy="cls: uk-animation-fade; delay: 600 repeat: true"
+                           style="background-color: black;">
                            <div class="uk-card-body">
-                              <h1>Welcome to <br><span class="in-highlight">Kostbar Trading</span></h1>
-                              <h4 class="uk-margin-remove-bottom uk-visible@m">Your Trusted Partner in Precious Metals
+                              <h1 class="uk-text-color-lighter">Welcome to <br><span class="in-highlight">Kostbar
+                                    Trading</span></h1>
+                              <h4 class="uk-text-color-lighter">Your Trusted
+                                 Partner in Precious Metals
                                  and Bullion Trading</h4>
-                              <p>Experience ethical, transparent, and secure investment opportunities with a legacy of
+                              <p class="uk-text-color-lighter">Experience ethical, transparent, and secure investment
+                                 opportunities with a legacy of
                                  trust and excellence. At Kostbar, we invite you to join us in exploring the rewarding
                                  world of gold, silver, and jewellery trading, backed by our commitment to quality and
                                  integrity.</p>
@@ -196,21 +202,27 @@
                               <div class="uk-child-width-1-3@m uk-text-center uk-visible@m" data-uk-grid>
                                  <div>
                                     <img src="assets/img/in-wave-award.svg" alt="wave-award" width="71" height="58">
-                                    <h6 class="uk-margin-small-top uk-margin-remove-bottom">Best Gold Trading Platform
+                                    <h6 class="uk-margin-small-top uk-margin-remove-bottom uk-text-color-lighter">Best
+                                       Gold Trading Platform
                                     </h6>
-                                    <p class="uk-text-small uk-margin-remove-top">TradeON Summit 2020</p>
+                                    <p class="uk-text-small uk-margin-remove-top uk-text-color-lighter">TradeON Summit
+                                       2020</p>
                                  </div>
                                  <div>
                                     <img src="assets/img/in-wave-award.svg" alt="wave-award" width="71" height="58">
-                                    <h6 class="uk-margin-small-top uk-margin-remove-bottom">Excellence in Bullion
+                                    <h6 class="uk-margin-small-top uk-margin-remove-bottom uk-text-color-lighter">
+                                       Excellence in Bullion
                                        Trading</h6>
-                                    <p class="uk-text-small uk-margin-remove-top">Jordan Gold EXPO 2020</p>
+                                    <p class="uk-text-small uk-margin-remove-top uk-text-color-lighter">Jordan Gold EXPO
+                                       2020</p>
                                  </div>
                                  <div>
                                     <img src="assets/img/in-wave-award.svg" alt="wave-award" width="71" height="58">
-                                    <h6 class="uk-margin-small-top uk-margin-remove-bottom">Best Precious Metals
+                                    <h6 class="uk-margin-small-top uk-margin-remove-bottom uk-text-color-lighter">Best
+                                       Precious Metals
                                        Investment Firm</h6>
-                                    <p class="uk-text-small uk-margin-remove-top">Dubai Precious Metals EXPO 2020</p>
+                                    <p class="uk-text-small uk-margin-remove-top uk-text-color-lighter">Dubai Precious
+                                       Metals EXPO 2020</p>
                                  </div>
                               </div>
                            </div>
@@ -223,34 +235,26 @@
       </div>
       <!-- section content end -->
 
-      <!-- section content begin -->
-      <div class="uk-section in-wave-9 ">
-         <div class="uk-container ">
+
+      <!-- Section with Fade-In Animation -->
+      <div class="uk-section in-wave-9">
+         <div class="uk-container">
             <div class="uk-grid uk-flex uk-flex-center">
                <div class="uk-width-3-4@m">
                   <div class="uk-grid-large uk-child-width-1-2@s uk-child-width-1-2@m uk-flex uk-flex-middle"
                      data-uk-grid>
-                     <div>
-                        <h1 class="uk-margin-remove">Gold Price <span class="in-highlight"> Live Quote</span></h1>
-
+                     <div uk-scrollspy="cls: uk-animation-fade; delay: 400 repeat: true">
+                        <h1 class="uk-margin-remove uk-text-color-lighter">Gold Price <span class="in-highlight"> Live
+                              Quote</span></h1>
                         <p class="uk-margin-medium-bottom">
-                           Stay updated with the latest live
-                           gold
-                           prices to make informed decisions for investment or purchase. Our real-time gold price
-                           tracker
-                           provides current rates for 24K, 22K, 18K, and 14K gold, helping you monitor market movements
-                           instantly. Prices are updated every few seconds and reflect international spot prices and
-                           local
-                           market trends. Gold rates are influenced by factors like inflation, global demand, and
-                           currency
-                           exchange rates. Whether you're a jeweler, investor, or buyer, live gold quotes enable smarter
-                           planning. Track trends, view daily charts, and subscribe for alerts to stay ahead in the
-                           dynamic
-                           gold market.
+                           Stay updated with the latest live gold prices to make informed decisions for investment or
+                           purchase.
+                           Our real-time gold price tracker provides current rates for 24K, 22K, 18K, and 14K gold,
+                           helping you
+                           monitor market movements instantly.
                         </p>
-
                      </div>
-                     <div>
+                     <div uk-scrollspy="cls: uk-animation-fade; delay: 600 repeat: true">
                         <img src="assets/img/home/Gold-Price.jpg" alt="wave-mockup" width="395" height="509">
                      </div>
                   </div>
@@ -258,29 +262,26 @@
             </div>
          </div>
       </div>
-      <!-- section content end -->
-      <!-- section content begin -->
+
+      <!-- Another Section with Slide-Left Animation -->
       <div class="uk-section in-wave-9">
          <div class="uk-container">
             <div class="uk-grid uk-flex uk-flex-center">
                <div class="uk-width-3-4@m">
                   <div class="uk-grid-large uk-child-width-1-2@s uk-child-width-1-2@m uk-flex uk-flex-middle"
                      data-uk-grid>
-                     <div>
+                     <div uk-scrollspy="cls: uk-animation-fade; delay: 400 repeat: true">
                         <img src="assets/img/home/395x509.jpg" alt="wave-mockup" width="395" height="509">
                      </div>
-                     <div>
-                        <h1>About <span class="in-highlight "> Kostbar</span></h1>
+                     <div uk-scrollspy="cls: uk-animation-fade; delay: 600 repeat: true">
+                        <h1 class="uk-text-color-lighter">About <span class="in-highlight"> Kostbar</span></h1>
                         <p class="uk-margin-medium-bottom">
                            At Kostbar, credibility, integrity, and trust are the pillars of our business. Established
-                           under Commercial License No. 5021690 by the Department of Ajman Free Zone, UAE, we are a
-                           leading name in the gold and precious metals trading industry. With decades of expertise, we
-                           serve elite investors, bullion traders, jewellery retailers, and gold refineries, delivering
-                           unmatched quality and compliance with Dubai and London Good Delivery standards.
+                           under
+                           Commercial License No. 5021690 by the Department of Ajman Free Zone, UAE, we are a leading
+                           name in
+                           the gold and precious metals trading industry.
                         </p>
-                        <p>Our mission is to empower individuals and institutions to invest in precious metals through
-                           secure and profitable opportunities, underpinned by cutting-edge technology and ethical
-                           practices.</p>
                      </div>
                   </div>
                </div>
@@ -288,6 +289,7 @@
          </div>
       </div>
       <!-- section content end -->
+
       <!-- section content begin -->
       <div class="uk-section in-wave-9 ">
          <div class="uk-container ">
@@ -295,9 +297,11 @@
                <div class="uk-width-3-4@m">
                   <div class="uk-grid-large uk-child-width-1-2@s uk-child-width-1-2@m uk-flex uk-flex-middle"
                      data-uk-grid>
-                     <div>
+                     <div uk-scrollspy="cls: uk-animation-fade; delay: 400 repeat: true">
                         </h1>
-                        <h1>What is <span class="in-highlight">Bullion?</span></h1>
+                        <h1 class="uk-text-color-lighter ">What is
+                           <span class="in-highlight">Bullion?</span>
+                        </h1>
                         <p class="uk-margin-medium-bottom">
                            Bullion refers to gold, silver, or other precious metals in the form of bars, ingots, or
                            coins, valued by their weight and purity. At Kostbar, our bullion products meet the highest
@@ -309,7 +313,7 @@
                            providing our clients with confidence in every transaction.
                         </p>
                      </div>
-                     <div>
+                     <div uk-scrollspy="cls: uk-animation-fade; delay: 600 repeat: true">
                         <img src="assets/img/home/395x509-copy.png" alt="wave-mockup" width="395" height="509">
                      </div>
                   </div>
@@ -319,79 +323,78 @@
       </div>
       <!-- section content end -->
 
-      <!-- section content begin -->
-      <div class="uk-section in-wave-9 ">
-         <div class="uk-container ">
-            <div
-               class="uk-section uk-section-default uk-background-contain uk-background-center-right  in-offset-bottom-30"
-               style="background-image: url(assets/img/in-wave-background-3.png);">
-               <div class="uk-container">
-                  <div class="uk-grid uk-flex uk-flex-middle">
-                     <div class="">
-                        <h2>Why Choose <span class="uk-text-primary uk-button-text">Kostbar?</span></h2>
-                        <h6>With a decade of experience in the Middle East and India, Kostbar stands out for its:</h6>
-                        <p><b>Ethical Conduct: Upholding honesty and transparency in every transaction.
-                              Global Reach: Serving clients across the Middle East, South Asia, and Southeast Asia.
-                              Innovation: Leveraging cutting-edge technology to enhance trading efficiency.
-                              Diverse Portfolio: Expanding into commodities, wealth management, and mining
-                              investments.</b>
-                        </p>
-                     </div>
-                  </div>
+      <div class="uk-section uk-section-primary in-wave-10 in-offset-bottom-30"
+         uk-scrollspy="cls: uk-animation-fade; delay: 400 repeat: true">
+         <div class="uk-container">
+            <div class="uk-grid uk-position-relative uk-flex uk-flex-middle">
+               <div class="uk-position-bottom-right">
+                  <img src="assets/img/in-wave-background-4.svg" alt="wave-hq" width="500" height="189">
+               </div>
+               <div class="uk-width-auto@m uk-text-center">
+                  <img src="assets/img/in-wave-icon-10.svg" alt="wave-icon" width="96" height="96">
+               </div>
+               <div class="uk-width-3-5@m">
+                  <h2 class="uk-margin-remove-bottom">Why Choose Kostbar</h2>
+                  <h6>With a decade of experience in the Middle East and India, Kostbar stands out for its:</h6>
+                  <p>Ethical Conduct: Upholding honesty and transparency in every transaction.
+                     Global Reach: Serving clients across the Middle East, South Asia, and Southeast Asia.
+                     Innovation: Leveraging cutting-edge technology to enhance trading efficiency.
+                     Diverse Portfolio: Expanding into commodities, wealth management, and mining
+                     investments. </p>
                </div>
             </div>
          </div>
       </div>
-
       <!-- section content end -->
 
       <!-- section content begin -->
       <div class="uk-section in-wave-12 in-offset-bottom-60 ">
          <div class="uk-container uk-margin-small-bottom">
             <div class="uk-grid">
-               <div class="uk-width-3-4@m">
-                  <h1 class="uk-margin-remove-bottom">Why Customers <span class="in-highlight">Choose </span> Kostbar
+               <div class="uk-width-3-4@m" uk-scrollspy="cls: uk-animation-fade; delay: 400 repeat: true">
+                  <h1 class="uk-margin-remove-bottom uk-text-color-lighter">Why Customers <span
+                        class="in-highlight">Choose </span> Kostbar
                   </h1>
                </div>
             </div>
             <div class="uk-grid-large uk-child-width-1-2@s uk-child-width-1-4@m uk-margin-large-top" data-uk-grid>
-               <div>
+               <div uk-scrollspy="cls: uk-animation-fade; delay: 400 repeat: true">
                   <div class="in-wave-12-counter">
                      <h1 class="uk-heading-medium uk-margin-remove">
-                        <span class="count" data-counter-end="20">0</span>
+                        <span class="count uk-text-color-lighter" data-counter-end="20">0</span>
                         <span class="in-wave-12-small">years</span>
                      </h1>
-                     <h4 class="uk-margin-top uk-margin-remove-bottom">Trusted Expertise</h4>
+                     <h4 class="uk-margin-top uk-margin-remove-bottom  uk-text-color-lighter">Trusted Expertise</h4>
                      <p class="uk-text-muted uk-margin-remove-top">Serving Since 2004</p>
                   </div>
                </div>
-               <div>
+               <div uk-scrollspy="cls: uk-animation-fade; delay: 500 repeat: true">
                   <div class="in-wave-12-counter">
                      <h1 class="uk-heading-medium uk-margin-remove">
-                        <span class="count" data-counter-end="100">0</span>
+                        <span class="count uk-text-color-lighter" data-counter-end="100">0</span>
                         <span class="in-wave-12-small">%</span>
                      </h1>
-                     <h4 class="uk-margin-top uk-margin-remove-bottom">Quality Assurance</h4>
+                     <h4 class="uk-margin-top uk-margin-remove-bottom  uk-text-color-lighter">Quality Assurance</h4>
                      <p class="uk-text-muted uk-margin-remove-top">Dubai & London Standards</p>
                   </div>
                </div>
-               <div>
+               <div uk-scrollspy="cls: uk-animation-fade; delay: 600 repeat: true">
                   <div class="in-wave-12-counter">
                      <h1 class="uk-heading-medium uk-margin-remove">
-                        <span class="count" data-counter-end="500">0</span>
+                        <span class="count uk-text-color-lighter" data-counter-end="500">0</span>
                         <span class="in-wave-12-small">+</span>
                      </h1>
-                     <h4 class="uk-margin-top uk-margin-remove-bottom">Satisfied Clients</h4>
+                     <h4 class="uk-margin-top uk-margin-remove-bottom  uk-text-color-lighter">Satisfied Clients</h4>
                      <p class="uk-text-muted uk-margin-remove-top">Elite Investors & Retailers</p>
                   </div>
                </div>
-               <div>
+               <div uk-scrollspy="cls: uk-animation-fade; delay: 700 repeat: true">
                   <div class="in-wave-12-counter">
                      <h1 class="uk-heading-medium uk-margin-remove">
-                        <span class="count" data-counter-end="24">0</span>
+                        <span class="count uk-text-color-lighter" data-counter-end="24">0</span>
                         <span class="in-wave-12-small">/7</span>
                      </h1>
-                     <h4 class="uk-margin-top uk-margin-remove-bottom">Customer Support</h4>
+                     <h4 class="uk-margin-top uk-margin-remove-bottom  uk-text-color-lighter">Customer Support</h4>
                      <p class="uk-text-muted uk-margin-remove-top">Personalized Assistance</p>
                   </div>
                </div>
@@ -402,16 +405,11 @@
          </div>
       </div>
       <!-- section content end -->
-      <!-- section content end -->
-      <!-- section content begin -->
 
-      <!-- section content end -->
-      <!-- section content begin -->
       <div class="uk-section">
          <div class="uk-container">
-
-            <div class="uk-grid">
-               <div class="uk-width-1-1 in-card-16">
+            <div class="uk-grid" data-uk-grid>
+               <div class="uk-width-1-1 in-card-16" uk-scrollspy="cls: uk-animation-fade; delay: 300 repeat: true">
                   <div class="uk-card uk-card-default uk-card-body uk-box-shadow-small uk-border-rounded">
                      <div class="uk-grid uk-flex-middle" data-uk-grid>
                         <div class="uk-width-1-1 uk-width-expand@m">
@@ -421,13 +419,20 @@
                         </div>
                         <div class="uk-width-auto">
                            <a class="uk-button uk-button-primary uk-border-rounded" href="contact-us.html">Contact Our
-                              Gold Experts
-                              Now</a>
+                              Gold Experts Now</a>
                         </div>
                      </div>
                   </div>
                </div>
             </div>
+         </div>
+      </div>
+
+      <!-- section content begin -->
+      <div class="uk-section" uk-scrollspy="cls: uk-animation-fade; delay: 600 repeat: true">
+         <div class="uk-container">
+
+
             <div class="in-wave-7">
                <div class="uk-container  uk-margin-medium-left">
                   <div class="uk-grid uk-flex uk-flex-center">
@@ -439,11 +444,13 @@
                            <div class="uk-width-1-1@m uk-margin-medium-top u">
                               <div class="uk-grid uk-grid-large" data-uk-grid>
                                  <div class="uk-width-1-3@m">
-                                    <h4 class="uk-margin-remove-bottom">Visit our office</h4>
+                                    <h4 class="uk-margin-remove-bottom uk-text-color-lighter">Visit our office</h4>
                                     <p class="uk-margin-small-top">C1- 601, Executive Office, Ajman Free Zone, Ajman –
                                        PO Box
                                        No - 241677</p>
-                                    <h4 class="uk-margin-medium-top uk-margin-remove-bottom">Message us</h4>
+                                    <h4 class="uk-margin-medium-top uk-margin-remove-bottom uk-text-color-lighter">
+                                       Message us
+                                    </h4>
                                     <p class="uk-margin-small-top">
                                        <span class="uk-margin-small-right uk-icon" uk-icon="mail">
                                           <svg width="20" height="20" viewBox="0 0 20 20">
@@ -553,7 +560,8 @@
    </main>
    <!-- footer begin -->
    <footer>
-      <div class="uk-section uk-section-muted uk-padding-large uk-padding-remove-horizontal ">
+      <div class="uk-section uk-section-muted uk-padding-large uk-padding-remove-horizontal "
+         style="background-color: black;">
          <div class="uk-container">
             <div class="uk-grid-medium" data-uk-grid="">
                <div class="uk-width-expand@m">
@@ -569,7 +577,7 @@
                <div class="uk-width-3-5@m">
                   <div class="uk-child-width-1-3@s uk-child-width-1-3@m" data-uk-grid="">
                      <div>
-                        <h4><span>Useful Links</span></h4>
+                        <h4 class="uk-text-color-lighter ">Useful Links</h4>
                         <ul class="uk-list uk-link-text">
                            <li><a href="index.html" class="uk-text-small uk-button uk-button-text">Home</a></li>
                            <li><a href="about-us.html" class="uk-text-small uk-button uk-button-text">About US</a></li>
@@ -581,7 +589,7 @@
                      </div>
 
                      <div>
-                        <h4><span>Our Products</span></h4>
+                        <h4 class="uk-text-color-lighter">Our Products</h4>
                         <ul class="uk-list uk-link-text">
                            <li><a href="corporate-responsibilities.html"
                                  class=" uk-text-small uk-button uk-button-text">Corporate Responsibilities</a></li>
@@ -590,7 +598,7 @@
                         </ul>
                      </div>
                      <div>
-                        <h4><span>Contact</span></h4>
+                        <h4 class="uk-text-color-lighter">Contact</h4>
                         <ul class="uk-list uk-link-text">
                            <li>
                               <span class="uk-margin-small-right uk-icon" uk-icon="receiver">
@@ -641,11 +649,11 @@
             </div>
          </div>
       </div>
-      <div class="uk-section-secondary uk-padding-remove-vertical">
+      <div class=" uk-padding-remove-vertical">
          <div class="uk-grid uk-flex uk-flex-center uk-padding-small">
             <div class="uk-width-auto uk-text-center">
-               <span class="uk-text-small uk-button uk-button-text">© 2025 <a href="https://keryar.com/"
-                     target="_blank">KERYAR.</a> All rights reserved.</span>
+               <span class="uk-text-small uk-button">© 2025 <a href="https://keryar.com/" target="_blank">KERYAR.</a>
+                  All rights reserved.</span>
             </div>
          </div>
       </div>
