@@ -26,10 +26,24 @@
    <link rel="shortcut icon" href="assets/img/logo/favicon.ico" type="image/x-icon">
    <!-- touch icon -->
    <link rel="apple-touch-icon-precomposed" href="assets/img/logo/apple-touch-icon.png">
+   <style>
+      /* Canvas background */
+      #line-network-background {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         z-index: -1;
+         background-color: #070a12;
+      }
+   </style>
    <title>Our-Services</title>
 </head>
 
 <body>
+   <canvas id="line-network-background"></canvas>
+
    <!-- page loader begin -->
    <div class="page-loader">
       <div></div>
@@ -37,9 +51,8 @@
       <div></div>
    </div>
    <!-- page loader end -->
-   <header>
-      <div class="uk-section uk-padding-remove-vertical  uk-background-cover uk-background-top-center"
-         style="background-image: url(assets/img/in-wave-background-1.png);">
+   <header uk-scrollspy="cls: uk-animation-fade; delay: 300">
+      <div class="uk-section uk-padding-remove-vertical  uk-background-cover uk-background-top-center">
          <nav class="uk-navbar-container uk-navbar-transparent "
             data-uk-sticky="show-on-up: true; top: 80; animation: uk-animation-fade">
             <div class="uk-container " data-uk-navbar>
@@ -54,14 +67,9 @@
                      </li>
                      <li><a href="our-services.html">Our Services</a></li>
                      <li>
-                        <a href="#">Product<span data-uk-navbar-parent-icon></span></a>
-                        <div class="uk-navbar-dropdown uk-width-auto">
-                           <ul class="uk-nav uk-navbar-dropdown-nav">
-                              <li><a href="corporate-responsibilities.html">Corporate Responsibilities</a></li>
-                              <li><a href="precious-metals-lnsight.html">Precious Metals Insight</a></li>
-                           </ul>
-                        </div>
+                        <a href="products.html">Product</a>
                      </li>
+                     <li><a href="faqs.html">FAQs</a></li>
                      <li><a href="contact-us.html">Contact Us</a></li>
                   </ul>
                </div>
@@ -90,28 +98,45 @@
                </div>
             </div>
          </nav>
+         <div class="uk-container">
+            <div class="uk-grid">
+               <div class="uk-width-1-1">
+                  <div class="uk-card uk-card-secondary uk-card-small uk-card-body uk-border-rounded ">
+                     <div class="uk-grid uk-text-small" data-uk-grid>
+                        <div class="uk-width-3-4@m uk-visible@m">
+                           <p><b>Invest in Gold & Bullion with Kostbar Trading – Protect Your Wealth Now!</b>
+                           </p>
+                        </div>
+                        <div class="uk-width-expand@m uk-text-center uk-text-right@m">
+
+                           <a href="tel:+971588159515"><i
+                                 class="fas fa-phone uk-margin-small-right uk-margin-small-left"></i>+971 58
+                              815 9515</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- breadcrumb content begin -->
+               <div class="uk-section uk-padding-remove-vertical in-wave-breadcrumb">
+                  <div class="uk-container">
+                     <div class="uk-grid">
+                        <div class="uk-width-1-1">
+                           <ul class="uk-breadcrumb">
+                              <li><a href="#">Home</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- breadcrumb content end -->
+            </div>
+         </div>
       </div>
    </header>
    <!-- header end -->
    <main>
       <!-- blog content begin -->
-      <div class="uk-section " style="padding: 0%;" uk-scrollspy="cls: uk-animation-fade; delay: 500">
-         <div class="uk-container">
-            <div class="uk-grid uk-flex uk-flex-center in-blog-1 in-article">
-               <div class="uk-width-1-1 in-figure-available">
-                  <img class="uk-width-1-1 uk-border-rounded" src="assets/img/Services/Services.jpg"
-                     alt="The typical U.S. household is spending $445 more a month due to inflation">
-               </div>
-               <div class="uk-width-3-4@m">
-                  <article class="uk-card uk-card-default uk-border-rounded in-flat-rounded-top">
-                     <div class="uk-card-body">
-                        <h1 class="uk-margin-top uk-margin-medium-bottom uk-text-center">Our Services</h1>
-                        <!-- section content begin -->
-                     </div>
-               </div>
-            </div>
-         </div>
-      </div>
+
       <!-- blog content end -->
       <!-- section content begin -->
       <div class="uk-section in-wave-16">
@@ -124,12 +149,12 @@
                   <div class="uk-flex uk-flex-middle" data-uk-grid>
                      <!-- Image on the left -->
                      <div class="uk-width-1-1 uk-width-auto@m uk-flex-first@m"
-                        uk-scrollspy="cls: uk-animation-fade; delay: 500">
+                        uk-scrollspy="cls: uk-animation-fade; delay: 300">
                         <img class="uk-align-center uk-margin-remove-bottom"
                            src="assets/img/Precious-metals-Insight/001.jpg" alt="client-testimoni" width="300"
                            height="317">
                      </div>
-                     <div class="uk-width-1-1 uk-width-expand@m" uk-scrollspy="cls: uk-animation-fade; delay: 700">
+                     <div class="uk-width-1-1 uk-width-expand@m" uk-scrollspy="cls: uk-animation-fade; delay: 400">
                         <h1 class="uk-margin-remove uk-text-color-lighter"><span class="in-highlight">Kostbar
                               Trading</span></h1>
                         <p class="uk-margin-bottom ">
@@ -152,20 +177,20 @@
 
       <div class="uk-container">
          <div class="uk-grid uk-flex uk-flex-center uk-margin-large-top   uk-margin-medium-bottom">
-            <h1 class="uk-margin-remove uk-text-color-lighter" uk-scrollspy="cls: uk-animation-fade; delay: 500"><span
+            <h1 class="uk-margin-remove uk-text-color-lighter" uk-scrollspy="cls: uk-animation-fade; delay: 300"><span
                   class="in-highlight">What We Offer </span></h1>
             <div class="uk-width-3-4@m">
                <div class="in-create-account uk-margin-medium-top">
                   <div
                      class="uk-grid-divider uk-child-width-1-3@s uk-child-width-1-3@m uk-margin-medium-top uk-margin-bottom"
                      data-uk-grid>
-                     <div uk-scrollspy="cls: uk-animation-fade; delay: 600">
+                     <div uk-scrollspy="cls: uk-animation-fade; delay: 400">
                         <p>👉 End-to-end support for physical bullion trading</p>
                      </div>
-                     <div uk-scrollspy="cls: uk-animation-fade; delay: 700">
+                     <div uk-scrollspy="cls: uk-animation-fade; delay: 500">
                         <p>👉 Assistance with investment in precious metals</p>
                      </div>
-                     <div uk-scrollspy="cls: uk-animation-fade; delay: 800">
+                     <div uk-scrollspy="cls: uk-animation-fade; delay: 600">
                         <p>👉 Wholesale supply for jewellery businesses</p>
                      </div>
                   </div>
@@ -174,13 +199,13 @@
                   <div
                      class="uk-grid-divider uk-child-width-1-3@s uk-child-width-1-3@m uk-margin-medium-top uk-margin-bottom"
                      data-uk-grid>
-                     <div uk-scrollspy="cls: uk-animation-fade; delay: 900">
+                     <div uk-scrollspy="cls: uk-animation-fade; delay: 700">
                         <p>👉 Secure storage and logistics coordination</p>
                      </div>
-                     <div uk-scrollspy="cls: uk-animation-fade; delay: 1000">
+                     <div uk-scrollspy="cls: uk-animation-fade; delay: 800">
                         <p>👉 Advisory services for investors and institutions</p>
                      </div>
-                     <div uk-scrollspy="cls: uk-animation-fade; delay: 1100">
+                     <div uk-scrollspy="cls: uk-animation-fade; delay: 900">
                         <p>👉 Customized product solutions on request</p>
                      </div>
                   </div>
@@ -190,7 +215,7 @@
          </div>
       </div>
       <!-- section content end -->
-      <div class="uk-section " uk-scrollspy="cls: uk-animation-fade; delay: 500">
+      <div class="uk-section " uk-scrollspy="cls: uk-animation-fade; delay: 300">
          <div class="uk-container">
             <div class="uk-grid">
                <div class="uk-width-1-1">
@@ -209,143 +234,14 @@
       </div>
       <!-- section content end -->
       <!-- section content begin -->
-      <div class="uk-section in-wave-9">
-         <div class="uk-container">
-            <div class="uk-width-1-1 uk-width-expand@m">
 
-               <!-- section content begin -->
-               <div
-                  class="uk-grid uk-flex uk-flex-center uk-background-contain uk-background-top-center in-testimoni-wrap">
-
-                  <div class="uk-width-3-4@m">
-                     <h5 class="uk-heading-small uk-text-color-lighter"
-                        uk-scrollspy="cls: uk-animation-fade; delay: 500"><span class="in-highlight">Our Products</span>
-                     </h5>
-                     <p uk-scrollspy="cls: uk-animation-fade; delay: 700">We deliver only the highest quality products,
-                        sourced with strict due diligence and offered in
-                        compliance with Dubai Gold Delivery and London Bullion Market Association (LBMA) standards.</p>
-                     <div class="uk-flex uk-flex-middle" data-uk-grid>
-                        <!-- Image on the right -->
-                        <div class="uk-width-1-1 uk-width-auto@m uk-flex-last@m"
-                           uk-scrollspy="cls: uk-animation-fade; delay: 900">
-                           <img class="uk-align-center uk-margin-remove-bottom" src="assets/img/Services/Gold-Coins.png"
-                              alt="client-testimoni" width="300" height="317">
-                        </div>
-                        <div class="uk-width-1-1 uk-width-expand@m" uk-scrollspy="cls: uk-animation-fade; delay: 800">
-                           <h3 class="uk-text-color-lighter ">Bullion
-                              Bars</h3>
-                           <p class="uk-margin-bottom ">Refined gold
-                              and silver bars available in a variety of weights,
-                              purity
-                              levels, and packaging formats—certified and sealed for guaranteed authenticity.</p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <!-- section content end -->
-               <!-- section content begin -->
-               <div
-                  class="uk-grid uk-flex uk-flex-center uk-background-contain uk-background-top-center in-testimoni-wrap">
-                  <div class="uk-width-3-4@m">
-                     <div class="uk-flex uk-flex-middle" data-uk-grid>
-                        <!-- Image on the left -->
-                        <div class="uk-width-1-1 uk-width-auto@m uk-flex-first@m"
-                           uk-scrollspy="cls: uk-animation-fade; delay: 800">
-                           <img class="uk-align-center uk-margin-remove-bottom"
-                              src="assets/img/Services/Value-Added.png" alt="client-testimoni" width="300" height="317">
-                        </div>
-                        <div class="uk-width-1-1 uk-width-expand@m" uk-scrollspy="cls: uk-animation-fade; delay: 900">
-                           <h3 class="uk-text-color-lighter">Value-Added Investment Bars</h3>
-                           <p class="uk-margin-bottom ">
-                              Designer-styled, gift-ready bars suitable for investment and corporate gifting. Available
-                              in
-                              elegant packaging with authenticity certification.
-                           </p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <!-- section content end -->
-               <!-- section content begin -->
-               <div
-                  class="uk-grid uk-flex uk-flex-center uk-background-contain uk-background-top-center in-testimoni-wrap">
-                  <div class="uk-width-3-4@m">
-                     <div class="uk-flex uk-flex-middle" data-uk-grid>
-                        <!-- Image on the right -->
-                        <div class="uk-width-1-1 uk-width-auto@m uk-flex-last@m"
-                           uk-scrollspy="cls: uk-animation-fade; delay: 900">
-                           <img class="uk-align-center uk-margin-remove-bottom"
-                              src="assets/img/Services/Bullion-Bars.png" alt="client-testimoni" width="300"
-                              height="317">
-                        </div>
-                        <div class="uk-width-1-1 uk-width-expand@m" uk-scrollspy="cls: uk-animation-fade; delay: 800">
-                           <h3 class="uk-text-color-lighter">Gold Coins</h3>
-                           <p class="uk-margin-bottom ">
-                              Beautifully minted gold coins in various denominations and designs—ideal for gifting,
-                              religious
-                              purposes, or portfolio diversification.
-                           </p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <!-- section content end -->
-               <!-- section content begin -->
-               <div
-                  class="uk-grid uk-flex uk-flex-center uk-background-contain uk-background-top-center in-testimoni-wrap">
-                  <div class="uk-width-3-4@m">
-                     <div class="uk-flex uk-flex-middle" data-uk-grid>
-                        <!-- Image on the left -->
-                        <div class="uk-width-1-1 uk-width-auto@m uk-flex-first@m"
-                           uk-scrollspy="cls: uk-animation-fade; delay: 800">
-                           <img class="uk-align-center uk-margin-remove-bottom" src="assets/img/Services/Dore-Bars.png"
-                              alt="client-testimoni" width="300" height="317">
-                        </div>
-                        <div class="uk-width-1-1 uk-width-expand@m" uk-scrollspy="cls: uk-animation-fade; delay: 900">
-                           <h3 class="uk-text-color-lighter">Dore Bars</h3>
-                           <p class="uk-margin-bottom ">
-                              Sourced ethically from reputed mining partners, our dore bars are available for refinery
-                              processing and institutional purchases.
-                           </p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <!-- section content end -->
-               <!-- section content begin -->
-               <div
-                  class="uk-grid uk-flex uk-flex-center uk-background-contain uk-background-top-center in-testimoni-wrap">
-                  <div class="uk-width-3-4@m">
-                     <div class="uk-flex uk-flex-middle" data-uk-grid>
-                        <!-- Image on the right -->
-                        <div class="uk-width-1-1 uk-width-auto@m uk-flex-last@m"
-                           uk-scrollspy="cls: uk-animation-fade; delay: 900">
-                           <img class="uk-align-center uk-margin-remove-bottom"
-                              src="assets/img/Services/Investment-Bars.png" alt="client-testimoni" width="300"
-                              height="317">
-                        </div>
-                        <div class="uk-width-1-1 uk-width-expand@m" uk-scrollspy="cls: uk-animation-fade; delay: 800">
-                           <h3 class="uk-text-color-lighter">Gold & Silver Jewellery</h3>
-                           <p class="uk-margin-bottom ">
-                              Plain and custom-designed ornaments crafted with precision. Wholesale supply for jewellers
-                              and
-                              retailers across the UAE, India, and the Middle East.
-                           </p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <!-- section content end -->
-            </div>
-         </div>
-      </div>
 
       <!-- section content end -->
    </main>
    <!-- footer begin -->
    <footer>
       <div class="uk-section uk-section-muted uk-padding-large uk-padding-remove-horizontal "
-         style="background-color: black;">
+         style="background-color: #070a12;">
          <div class="uk-container">
             <div class="uk-grid-medium" data-uk-grid="">
                <div class="uk-width-expand@m">
@@ -359,28 +255,29 @@
                   </p>
                </div>
                <div class="uk-width-3-5@m">
-                  <div class="uk-child-width-1-3@s uk-child-width-1-3@m" data-uk-grid="">
+                  <div class="uk-child-width-1-2@s uk-child-width-1-2@m" data-uk-grid="">
                      <div>
                         <h4 class="uk-text-color-lighter ">Useful Links</h4>
                         <ul class="uk-list uk-link-text">
-                           <li><a href="index.html" class="uk-text-small uk-button uk-button-text">Home</a></li>
-                           <li><a href="about-us.html" class="uk-text-small uk-button uk-button-text">About US</a></li>
+                           <li><a href="index.html" class="uk-text-small uk-button uk-button-text">Home</a>
+                           </li>
+                           <li><a href="about-us.html" class="uk-text-small uk-button uk-button-text">About
+                                 US</a></li>
                            <li><a href="our-services.html" class="uk-text-small uk-button uk-button-text">Our
                                  Services</a></li>
-                           <li><a href="contact-us.html" class="uk-text-small uk-button uk-button-text">Contact Us</a>
+                           <li><a href="products.html" class="uk-text-small uk-button uk-button-text">Products
+                              </a>
+                           </li>
+                           <li><a href="faqs.html" class="uk-text-small uk-button uk-button-text">FAQs
+                              </a>
+                           </li>
+                           <li><a href="contact-us.html" class="uk-text-small uk-button uk-button-text">Contact
+                                 Us</a>
                            </li>
                         </ul>
                      </div>
 
-                     <div>
-                        <h4 class="uk-text-color-lighter">Our Products</h4>
-                        <ul class="uk-list uk-link-text">
-                           <li><a href="corporate-responsibilities.html"
-                                 class=" uk-text-small uk-button uk-button-text">Corporate Responsibilities</a></li>
-                           <li><a href="precious-metals-lnsight.html"
-                                 class="uk-text-small uk-button uk-button-text">Precious metals lnsight</a></li>
-                        </ul>
-                     </div>
+
                      <div>
                         <h4 class="uk-text-color-lighter">Contact</h4>
                         <ul class="uk-list uk-link-text">
@@ -392,14 +289,17 @@
                                     </path>
                                  </svg>
                               </span>
-                              <a href="tel:+971588159515" class="uk-text-small uk-button uk-button-text">+971 58 815
+                              <a href="tel:+971588159515" class="uk-text-small uk-button uk-button-text">+971
+                                 58 815
                                  9515</a>
                            </li>
                            <li>
                               <span class="uk-margin-small-right uk-icon" uk-icon="mail">
                                  <svg width="20" height="20" viewBox="0 0 20 20">
-                                    <polyline fill="none" stroke="#000" points="1.4,6.5 10,11 18.6,6.5"></polyline>
-                                    <path d="M 1,4 1,16 19,16 19,4 1,4 Z M 18,15 2,15 2,5 18,5 18,15 Z"></path>
+                                    <polyline fill="none" stroke="#000" points="1.4,6.5 10,11 18.6,6.5">
+                                    </polyline>
+                                    <path d="M 1,4 1,16 19,16 19,4 1,4 Z M 18,15 2,15 2,5 18,5 18,15 Z">
+                                    </path>
                                  </svg>
                               </span>
                               <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=kostbartrading@gmail.com"
@@ -451,6 +351,92 @@
    <!-- javascript -->
    <script src="assets/js/utilities.min.js"></script>
    <script src="assets/js/config-theme.js"></script>
+   <script>
+      const canvas = document.getElementById('line-network-background');
+      const ctx = canvas.getContext('2d');
+
+      // Set canvas size
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      // Resize canvas on window resize
+      window.addEventListener('resize', () => {
+         canvas.width = window.innerWidth;
+         canvas.height = window.innerHeight;
+      });
+
+      // Node class for line network
+      class Node {
+         constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.vx = (Math.random() - 0.5) * 0.5;
+            this.vy = (Math.random() - 0.5) * 0.5;
+            this.glow = Math.random() * 0.5 + 0.5;
+         }
+
+         update() {
+            this.x += this.vx;
+            this.y += this.vy;
+
+            // Bounce off edges
+            if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+            if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+
+            // Pulse glow effect
+            this.glow += (Math.random() - 0.5) * 0.05;
+            if (this.glow < 0.5) this.glow = 0.5;
+            if (this.glow > 1) this.glow = 1;
+         }
+      }
+
+      // Create nodes
+      const nodes = [];
+      for (let i = 0; i < 30; i++) {
+         nodes.push(new Node());
+      }
+
+      function animate() {
+         ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+         // Draw lines between nodes
+         for (let i = 0; i < nodes.length; i++) {
+            for (let j = i + 1; j < nodes.length; j++) {
+               const dx = nodes[i].x - nodes[j].x;
+               const dy = nodes[i].y - nodes[j].y;
+               const distance = Math.sqrt(dx * dx + dy * dy);
+
+               if (distance < 150) {
+                  ctx.beginPath();
+                  ctx.strokeStyle = `rgba(252, 180, 45, ${1 - distance / 150})`;
+                  ctx.lineWidth = 1;
+                  ctx.moveTo(nodes[i].x, nodes[i].y);
+                  ctx.lineTo(nodes[j].x, nodes[j].y);
+                  ctx.stroke();
+               }
+            }
+         }
+
+         // Draw nodes
+         nodes.forEach(node => {
+            node.update();
+            ctx.beginPath();
+            ctx.arc(node.x, node.y, 2, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(252, 180, 45, ${node.glow})`;
+            ctx.fill();
+
+            // Add glow effect
+            ctx.beginPath();
+            ctx.arc(node.x, node.y, 5, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(252, 180, 45, ${node.glow * 0.3})`;
+            ctx.fill();
+         });
+
+         requestAnimationFrame(animate);
+      }
+
+      animate();
+   </script>
 </body>
 
 </html>

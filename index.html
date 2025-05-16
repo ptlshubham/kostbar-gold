@@ -26,10 +26,26 @@
    <link rel="shortcut icon" href="assets/img/logo/favicon.ico" type="image/x-icon">
    <!-- touch icon -->
    <link rel="apple-touch-icon-precomposed" href="assets/img/logo/apple-touch-icon.png">
+   <!-- CSS for canvas background -->
+   <style>
+      /* Canvas background */
+      #line-network-background {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         z-index: -1;
+         background-color: #070a12;
+      }
+   </style>
    <title>Homepage</title>
 </head>
 
 <body>
+   <!-- Dynamic Canvas Background -->
+   <canvas id="line-network-background"></canvas>
+
    <!-- page loader begin -->
    <div class="page-loader">
       <div></div>
@@ -47,24 +63,14 @@
                      <img src="assets/img/logo/heaer-logo.png" alt="logo" width="230" height="100">
                   </a>
                   <ul class="uk-navbar-nav uk-visible@m">
-                     <li><a href="index.html">Home</a>
-                     </li>
-                     <li><a href="about-us.html">About Us</a>
-                     </li>
+                     <li><a href="index.html">Home</a></li>
+                     <li><a href="about-us.html">About Us</a></li>
                      <li><a href="our-services.html">Our Services</a></li>
-
                      <li>
-                        <a href="#">Product<span data-uk-navbar-parent-icon></span></a>
-                        <div class="uk-navbar-dropdown uk-width-auto">
-                           <ul class="uk-nav uk-navbar-dropdown-nav">
-                              <li><a href="corporate-responsibilities.html">Corporate Responsibilities</a></li>
-                              <li><a href="precious-metals-lnsight.html">Precious Metals Insight</a></li>
-                           </ul>
-                        </div>
+                        <a href="products.html">Product</a>
                      </li>
+                     <li><a href="faqs.html">FAQs</a></li>
                      <li><a href="contact-us.html">Contact Us</a></li>
-                     </li>
-
                   </ul>
                </div>
                <div class="uk-navbar-right uk-width-auto">
@@ -78,7 +84,6 @@
                                  <i class="fab fa-facebook-square"></i>
                               </a>
                            </div>
-
                            <div style="padding: 5px;">
                               <a href="https://www.instagram.com/indonez_ig"
                                  style="color: #e4405f; text-decoration: none; font-size: 20px;">
@@ -92,14 +97,12 @@
                </div>
             </div>
          </nav>
-
       </div>
    </header>
    <!-- header end -->
    <main>
       <!-- slideshow content begin -->
       <div class="uk-section uk-padding-remove-vertical in-slideshow-gradient ">
-
          <div class="in-slideshow" data-uk-slideshow>
             <ul class="uk-slideshow-items uk-light">
                <li>
@@ -174,19 +177,18 @@
       <!-- slideshow content end -->
       <!-- section content begin -->
       <div class="uk-section in-wave-16 ">
-         <div class="uk-container" style="background-color: black;">
+         <div class="uk-container">
             <div class="uk-grid">
                <div class="uk-width-1-1">
                   <div class="uk-card uk-card-default uk-box-shadow-small uk-border-rounded in-margin-medium-top@s">
                      <div class="uk-grid" data-uk-grid>
                         <div class="uk-width-expand@s uk-width-2-5@m uk-card-media-right uk-cover-container"
-                           uk-scrollspy="cls: uk-animation-fade; delay: 400; repeat: true">
+                           uk-scrollspy="cls: uk-animation-fade; delay: 200; ">
                            <img class=" uk-width-1-1 uk-margin-remove-bottom" src="assets/img/home/1.jpg"
                               alt="sample-image" width="564" height="625">
                         </div>
                         <div class="uk-width-1-2@s uk-width-expand@m uk-flex uk-flex-middle"
-                           uk-scrollspy="cls: uk-animation-fade; delay: 600 repeat: true"
-                           style="background-color: black;">
+                           uk-scrollspy="cls: uk-animation-fade; delay: 600 " style="background-color: #070a12;">
                            <div class="uk-card-body">
                               <h1 class="uk-text-color-lighter">Welcome to <br><span class="in-highlight">Kostbar
                                     Trading</span></h1>
@@ -235,7 +237,6 @@
       </div>
       <!-- section content end -->
 
-
       <!-- Section with Fade-In Animation -->
       <div class="uk-section in-wave-9">
          <div class="uk-container">
@@ -243,7 +244,7 @@
                <div class="uk-width-3-4@m">
                   <div class="uk-grid-large uk-child-width-1-2@s uk-child-width-1-2@m uk-flex uk-flex-middle"
                      data-uk-grid>
-                     <div uk-scrollspy="cls: uk-animation-fade; delay: 400 repeat: true">
+                     <div uk-scrollspy="cls: uk-animation-fade; delay: 300 ">
                         <h1 class="uk-margin-remove uk-text-color-lighter">Gold Price <span class="in-highlight"> Live
                               Quote</span></h1>
                         <p class="uk-margin-medium-bottom">
@@ -254,7 +255,7 @@
                            monitor market movements instantly.
                         </p>
                      </div>
-                     <div uk-scrollspy="cls: uk-animation-fade; delay: 600 repeat: true">
+                     <div uk-scrollspy="cls: uk-animation-fade; delay: 400 ">
                         <img src="assets/img/home/Gold-Price.jpg" alt="wave-mockup" width="395" height="509">
                      </div>
                   </div>
@@ -270,10 +271,10 @@
                <div class="uk-width-3-4@m">
                   <div class="uk-grid-large uk-child-width-1-2@s uk-child-width-1-2@m uk-flex uk-flex-middle"
                      data-uk-grid>
-                     <div uk-scrollspy="cls: uk-animation-fade; delay: 400 repeat: true">
+                     <div uk-scrollspy="cls: uk-animation-fade; delay: 300">
                         <img src="assets/img/home/395x509.jpg" alt="wave-mockup" width="395" height="509">
                      </div>
-                     <div uk-scrollspy="cls: uk-animation-fade; delay: 600 repeat: true">
+                     <div uk-scrollspy="cls: uk-animation-fade; delay: 400">
                         <h1 class="uk-text-color-lighter">About <span class="in-highlight"> Kostbar</span></h1>
                         <p class="uk-margin-medium-bottom">
                            At Kostbar, credibility, integrity, and trust are the pillars of our business. Established
@@ -297,8 +298,7 @@
                <div class="uk-width-3-4@m">
                   <div class="uk-grid-large uk-child-width-1-2@s uk-child-width-1-2@m uk-flex uk-flex-middle"
                      data-uk-grid>
-                     <div uk-scrollspy="cls: uk-animation-fade; delay: 400 repeat: true">
-                        </h1>
+                     <div uk-scrollspy="cls: uk-animation-fade; delay: 300">
                         <h1 class="uk-text-color-lighter ">What is
                            <span class="in-highlight">Bullion?</span>
                         </h1>
@@ -313,7 +313,7 @@
                            providing our clients with confidence in every transaction.
                         </p>
                      </div>
-                     <div uk-scrollspy="cls: uk-animation-fade; delay: 600 repeat: true">
+                     <div uk-scrollspy="cls: uk-animation-fade; delay: 400">
                         <img src="assets/img/home/395x509-copy.png" alt="wave-mockup" width="395" height="509">
                      </div>
                   </div>
@@ -324,7 +324,7 @@
       <!-- section content end -->
 
       <div class="uk-section uk-section-primary in-wave-10 in-offset-bottom-30"
-         uk-scrollspy="cls: uk-animation-fade; delay: 400 repeat: true">
+         uk-scrollspy="cls: uk-animation-fade; delay: 400 ">
          <div class="uk-container">
             <div class="uk-grid uk-position-relative uk-flex uk-flex-middle">
                <div class="uk-position-bottom-right">
@@ -351,14 +351,14 @@
       <div class="uk-section in-wave-12 in-offset-bottom-60 ">
          <div class="uk-container uk-margin-small-bottom">
             <div class="uk-grid">
-               <div class="uk-width-3-4@m" uk-scrollspy="cls: uk-animation-fade; delay: 400 repeat: true">
+               <div class="uk-width-3-4@m" uk-scrollspy="cls: uk-animation-fade; delay: 400 ">
                   <h1 class="uk-margin-remove-bottom uk-text-color-lighter">Why Customers <span
                         class="in-highlight">Choose </span> Kostbar
                   </h1>
                </div>
             </div>
             <div class="uk-grid-large uk-child-width-1-2@s uk-child-width-1-4@m uk-margin-large-top" data-uk-grid>
-               <div uk-scrollspy="cls: uk-animation-fade; delay: 400 repeat: true">
+               <div uk-scrollspy="cls: uk-animation-fade; delay: 400 ">
                   <div class="in-wave-12-counter">
                      <h1 class="uk-heading-medium uk-margin-remove">
                         <span class="count uk-text-color-lighter" data-counter-end="20">0</span>
@@ -368,7 +368,7 @@
                      <p class="uk-text-muted uk-margin-remove-top">Serving Since 2004</p>
                   </div>
                </div>
-               <div uk-scrollspy="cls: uk-animation-fade; delay: 500 repeat: true">
+               <div uk-scrollspy="cls: uk-animation-fade; delay: 500 ">
                   <div class="in-wave-12-counter">
                      <h1 class="uk-heading-medium uk-margin-remove">
                         <span class="count uk-text-color-lighter" data-counter-end="100">0</span>
@@ -378,7 +378,7 @@
                      <p class="uk-text-muted uk-margin-remove-top">Dubai & London Standards</p>
                   </div>
                </div>
-               <div uk-scrollspy="cls: uk-animation-fade; delay: 600 repeat: true">
+               <div uk-scrollspy="cls: uk-animation-fade; delay: 600 ">
                   <div class="in-wave-12-counter">
                      <h1 class="uk-heading-medium uk-margin-remove">
                         <span class="count uk-text-color-lighter" data-counter-end="500">0</span>
@@ -388,7 +388,7 @@
                      <p class="uk-text-muted uk-margin-remove-top">Elite Investors & Retailers</p>
                   </div>
                </div>
-               <div uk-scrollspy="cls: uk-animation-fade; delay: 700 repeat: true">
+               <div uk-scrollspy="cls: uk-animation-fade; delay: 700 ">
                   <div class="in-wave-12-counter">
                      <h1 class="uk-heading-medium uk-margin-remove">
                         <span class="count uk-text-color-lighter" data-counter-end="24">0</span>
@@ -409,7 +409,7 @@
       <div class="uk-section">
          <div class="uk-container">
             <div class="uk-grid" data-uk-grid>
-               <div class="uk-width-1-1 in-card-16" uk-scrollspy="cls: uk-animation-fade; delay: 300 repeat: true">
+               <div class="uk-width-1-1 in-card-16" uk-scrollspy="cls: uk-animation-fade; delay: 300 ">
                   <div class="uk-card uk-card-default uk-card-body uk-box-shadow-small uk-border-rounded">
                      <div class="uk-grid uk-flex-middle" data-uk-grid>
                         <div class="uk-width-1-1 uk-width-expand@m">
@@ -429,10 +429,8 @@
       </div>
 
       <!-- section content begin -->
-      <div class="uk-section" uk-scrollspy="cls: uk-animation-fade; delay: 600 repeat: true">
+      <div class="uk-section" uk-scrollspy="cls: uk-animation-fade; delay: 600 ">
          <div class="uk-container">
-
-
             <div class="in-wave-7">
                <div class="uk-container  uk-margin-medium-left">
                   <div class="uk-grid uk-flex uk-flex-center">
@@ -490,7 +488,6 @@
                                           class="fab fa-facebook-square fa-lg uk-text-decoration-none uk-margin-right"></a>
                                        <a href="#"
                                           class="fab fa-instagram fa-lg uk-text-decoration-none uk-margin-right"></a>
-
                                     </div>
                                  </div>
                                  <div class="uk-width-2-3@m">
@@ -519,7 +516,6 @@
                                           <div class="uk-width-1-1">
                                              <input type="submit" value="Send Message"
                                                 class="uk-button uk-button-primary uk-border-rounded uk-align-right">
-
                                           </div>
                                        </form>
                                     </div>
@@ -535,23 +531,6 @@
       </div>
       <!-- section content end -->
       <!-- map -->
-      <!-- <div class="uk-padding-remove-vertical uk-padding-remove-horizontal in-wave-7" >
-            <div class="uk-container">
-               <div class="uk-grid uk-flex uk-flex-center">
-                  <div class="uk-width-1-1">
-                     <div class="in-create-account uk-margin-medium-top">
-                        <span class="uk-label in-label-small uk-text-uppercase uk-margin-small-bottom">Map</span>
-                        <iframe 
-                           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d903.4177855200795!2d55.148442472213745!3d25.079133000000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6d9c0ba2b39b%3A0xa5672a0762681447!2s1%20lake%20towers%20Jumeirah%20Lakes%20towers!5e0!3m2!1sen!2sin!4v1746092778789!5m2!1sen!2sin" style="border:1px; width: 100%; height: 450px;" 
-                           style="border:1px; width: 100%; height: 450px;" 
-                           allowfullscreen="" 
-                           loading="lazy">
-                        </iframe>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            </div> -->
       <iframe
          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d903.4177855200795!2d55.148442472213745!3d25.079133000000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6d9c0ba2b39b%3A0xa5672a0762681447!2s1%20lake%20towers%20Jumeirah%20Lakes%20towers!5e0!3m2!1sen!2sin!4v1746092778789!5m2!1sen!2sin"
          style="border:1px; width: 100%; height: 450px;" allowfullscreen="" loading="lazy">
@@ -561,7 +540,7 @@
    <!-- footer begin -->
    <footer>
       <div class="uk-section uk-section-muted uk-padding-large uk-padding-remove-horizontal "
-         style="background-color: black;">
+         style="background-color: #070a12;">
          <div class="uk-container">
             <div class="uk-grid-medium" data-uk-grid="">
                <div class="uk-width-expand@m">
@@ -575,28 +554,29 @@
                   </p>
                </div>
                <div class="uk-width-3-5@m">
-                  <div class="uk-child-width-1-3@s uk-child-width-1-3@m" data-uk-grid="">
+                  <div class="uk-child-width-1-2@s uk-child-width-1-2@m" data-uk-grid="">
                      <div>
                         <h4 class="uk-text-color-lighter ">Useful Links</h4>
                         <ul class="uk-list uk-link-text">
-                           <li><a href="index.html" class="uk-text-small uk-button uk-button-text">Home</a></li>
-                           <li><a href="about-us.html" class="uk-text-small uk-button uk-button-text">About US</a></li>
+                           <li><a href="index.html" class="uk-text-small uk-button uk-button-text">Home</a>
+                           </li>
+                           <li><a href="about-us.html" class="uk-text-small uk-button uk-button-text">About
+                                 US</a></li>
                            <li><a href="our-services.html" class="uk-text-small uk-button uk-button-text">Our
                                  Services</a></li>
-                           <li><a href="contact-us.html" class="uk-text-small uk-button uk-button-text">Contact Us</a>
+                           <li><a href="products.html" class="uk-text-small uk-button uk-button-text">Products
+                              </a>
+                           </li>
+                           <li><a href="faqs.html" class="uk-text-small uk-button uk-button-text">FAQs
+                              </a>
+                           </li>
+                           <li><a href="contact-us.html" class="uk-text-small uk-button uk-button-text">Contact
+                                 Us</a>
                            </li>
                         </ul>
                      </div>
 
-                     <div>
-                        <h4 class="uk-text-color-lighter">Our Products</h4>
-                        <ul class="uk-list uk-link-text">
-                           <li><a href="corporate-responsibilities.html"
-                                 class=" uk-text-small uk-button uk-button-text">Corporate Responsibilities</a></li>
-                           <li><a href="precious-metals-lnsight.html"
-                                 class="uk-text-small uk-button uk-button-text">Precious metals lnsight</a></li>
-                        </ul>
-                     </div>
+
                      <div>
                         <h4 class="uk-text-color-lighter">Contact</h4>
                         <ul class="uk-list uk-link-text">
@@ -608,14 +588,17 @@
                                     </path>
                                  </svg>
                               </span>
-                              <a href="tel:+971588159515" class="uk-text-small uk-button uk-button-text">+971 58 815
+                              <a href="tel:+971588159515" class="uk-text-small uk-button uk-button-text">+971
+                                 58 815
                                  9515</a>
                            </li>
                            <li>
                               <span class="uk-margin-small-right uk-icon" uk-icon="mail">
                                  <svg width="20" height="20" viewBox="0 0 20 20">
-                                    <polyline fill="none" stroke="#000" points="1.4,6.5 10,11 18.6,6.5"></polyline>
-                                    <path d="M 1,4 1,16 19,16 19,4 1,4 Z M 18,15 2,15 2,5 18,5 18,15 Z"></path>
+                                    <polyline fill="none" stroke="#000" points="1.4,6.5 10,11 18.6,6.5">
+                                    </polyline>
+                                    <path d="M 1,4 1,16 19,16 19,4 1,4 Z M 18,15 2,15 2,5 18,5 18,15 Z">
+                                    </path>
                                  </svg>
                               </span>
                               <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=kostbartrading@gmail.com"
@@ -640,7 +623,6 @@
                            <div><a href="https://www.instagram.com/indonez_ig"
                                  class="color-instagram text-decoration-none"><i class="fab fa-instagram"></i>
                                  Instagram</a></div>
-
                         </div>
                         <!-- social media end -->
                      </div>
@@ -667,6 +649,93 @@
    <!-- javascript -->
    <script src="assets/js/utilities.min.js"></script>
    <script src="assets/js/config-theme.js"></script>
+   <!-- Dynamic line network background script -->
+   <script>
+      const canvas = document.getElementById('line-network-background');
+      const ctx = canvas.getContext('2d');
+
+      // Set canvas size
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      // Resize canvas on window resize
+      window.addEventListener('resize', () => {
+         canvas.width = window.innerWidth;
+         canvas.height = window.innerHeight;
+      });
+
+      // Node class for line network
+      class Node {
+         constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.vx = (Math.random() - 0.5) * 0.5;
+            this.vy = (Math.random() - 0.5) * 0.5;
+            this.glow = Math.random() * 0.5 + 0.5;
+         }
+
+         update() {
+            this.x += this.vx;
+            this.y += this.vy;
+
+            // Bounce off edges
+            if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+            if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+
+            // Pulse glow effect
+            this.glow += (Math.random() - 0.5) * 0.05;
+            if (this.glow < 0.5) this.glow = 0.5;
+            if (this.glow > 1) this.glow = 1;
+         }
+      }
+
+      // Create nodes
+      const nodes = [];
+      for (let i = 0; i < 30; i++) {
+         nodes.push(new Node());
+      }
+
+      function animate() {
+         ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+         // Draw lines between nodes
+         for (let i = 0; i < nodes.length; i++) {
+            for (let j = i + 1; j < nodes.length; j++) {
+               const dx = nodes[i].x - nodes[j].x;
+               const dy = nodes[i].y - nodes[j].y;
+               const distance = Math.sqrt(dx * dx + dy * dy);
+
+               if (distance < 150) {
+                  ctx.beginPath();
+                  ctx.strokeStyle = `rgba(252, 180, 45, ${1 - distance / 150})`;
+                  ctx.lineWidth = 1;
+                  ctx.moveTo(nodes[i].x, nodes[i].y);
+                  ctx.lineTo(nodes[j].x, nodes[j].y);
+                  ctx.stroke();
+               }
+            }
+         }
+
+         // Draw nodes
+         nodes.forEach(node => {
+            node.update();
+            ctx.beginPath();
+            ctx.arc(node.x, node.y, 2, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(252, 180, 45, ${node.glow})`;
+            ctx.fill();
+
+            // Add glow effect
+            ctx.beginPath();
+            ctx.arc(node.x, node.y, 5, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(252, 180, 45, ${node.glow * 0.3})`;
+            ctx.fill();
+         });
+
+         requestAnimationFrame(animate);
+      }
+
+      animate();
+   </script>
 </body>
 
 </html>

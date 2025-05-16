@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Premium HTML5 Template by Indonez">
+    <meta name="keywords" content="blockit, uikit3, indonez, handlebars, scss, javascript">
+    <meta name="author" content="Indonez">
+    <meta name="theme-color" content="#FCB42D">
+    <link rel="preload" href="assets/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/rubik-v9-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/rubik-v9-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/rubik-v9-latin-300.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/css/style.css" as="style">
+    <link rel="preload" href="assets/js/vendors/uikit.min.js" as="script">
+    <link rel="preload" href="assets/js/utilities.min.js" as="script">
+    <link rel="preload" href="assets/js/config-theme.js" as="script">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- uikit -->
+    <script src="assets/js/vendors/uikit.min.js"></script>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/img/logo/favicon.ico" type="image/x-icon">
+    <!-- touch icon -->
+    <link rel="apple-touch-icon-precomposed" href="assets/img/logo/apple-touch-icon.png">
+    <style>
+        /* Canvas background */
+        #line-network-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: #070a12;
+        }
+    </style>
+    <title>Products</title>
+</head>
+
+<body>
+    <canvas id="line-network-background"></canvas>
+
+    <!-- page loader begin -->
+    <div class="page-loader">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <!-- page loader end -->
+    <header uk-scrollspy="cls: uk-animation-fade; delay: 300">
+        <div class="uk-section uk-padding-remove-vertical  uk-background-cover uk-background-top-center">
+            <nav class="uk-navbar-container uk-navbar-transparent "
+                data-uk-sticky="show-on-up: true; top: 80; animation: uk-animation-fade">
+                <div class="uk-container " data-uk-navbar>
+                    <div class="uk-navbar-left uk-width-expand uk-flex uk-flex-between ">
+                        <a class="uk-navbar-item uk-logo" href="index.html">
+                            <img src="assets/img/logo/heaer-logo.png" alt="logo" width="230" height="23">
+                        </a>
+                        <ul class="uk-navbar-nav uk-visible@m">
+                            <li><a href="index.html">Home</a>
+                            </li>
+                            <li><a href="about-us.html">About Us</a>
+                            </li>
+                            <li><a href="our-services.html">Our Services</a></li>
+                            <li>
+                                <a href="products.html">Product</a>
+                            </li>
+                            <li><a href="faqs.html">FAQs</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="uk-navbar-right uk-width-auto">
+                        <div class="uk-navbar-item uk-visible@m">
+                            <div class="uk-width-1-2@m uk-flex uk-flex-right@m uk-background-cover">
+                                <!-- social media begin -->
+                                <div class="uk-flex social-media-list uk-flex-right@m uk-flex-middle@m">
+                                    <div style="padding: 5px;">
+                                        <a href="https://www.facebook.com/indonez"
+                                            style="color: #3b5998; text-decoration: none; font-size: 20px;">
+                                            <i class="fab fa-facebook-square"></i>
+                                        </a>
+                                    </div>
+
+                                    <div style="padding: 5px;">
+                                        <a href="https://www.instagram.com/indonez_ig"
+                                            style="color: #e4405f; text-decoration: none; font-size: 20px;">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- social media end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="uk-container">
+                <div class="uk-grid">
+                    <div class="uk-width-1-1">
+                        <div class="uk-card uk-card-secondary uk-card-small uk-card-body uk-border-rounded ">
+                            <div class="uk-grid uk-text-small" data-uk-grid>
+                                <div class="uk-width-3-4@m uk-visible@m">
+                                    <p><b>Invest in Gold & Bullion with Kostbar Trading – Protect Your Wealth Now!</b>
+                                    </p>
+                                </div>
+                                <div class="uk-width-expand@m uk-text-center uk-text-right@m">
+
+                                    <a href="tel:+971588159515"><i
+                                            class="fas fa-phone uk-margin-small-right uk-margin-small-left"></i>+971 58
+                                        815 9515</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- breadcrumb content begin -->
+                    <div class="uk-section uk-padding-remove-vertical in-wave-breadcrumb">
+                        <div class="uk-container">
+                            <div class="uk-grid">
+                                <div class="uk-width-1-1">
+                                    <ul class="uk-breadcrumb">
+                                        <li><a href="#">Home</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- breadcrumb content end -->
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+    <main>
+
+        <!-- section content begin -->
+        <div class="uk-section">
+            <div class="uk-container">
+                <div class="uk-grid uk-flex uk-flex-center">
+                    <div class="uk-width-1-1 uk-text-center uk-margin-medium-bottom uk-text-color-lighter">
+                        <h1 class="uk-text-color-lighter" uk-scrollspy="cls: uk-animation-fade; delay: 300">Frequently
+                            Asked Questions (FAQs)</h1>
+                    </div>
+                    <div class="uk-width-3-5@m">
+                        <div class="uk-card uk-card-large uk-card-default in-card-paper">
+                            <div class="uk-card-body">
+                                <h2 uk-scrollspy="cls: uk-animation-fade; delay: 400">FAQs on trading with Kostbar
+                                    Trading</h2>
+
+                                <hr class="uk-margin-medium-top uk-margin-small-bottom">
+                                <ul class="in-faq-5" data-uk-accordion="collapsible: false">
+                                    <li class="uk-open" uk-scrollspy="cls: uk-animation-fade; delay: 500">
+                                        <a class="uk-accordion-title" href="#">Why Gold?</a>
+                                        <div class="uk-accordion-content">
+                                            <ul class="uk-list uk-list-bullet">
+                                                <li>Gold has maintained its worth over centuries, standing as a reliable
+                                                    store of value while fiat currencies have eroded in purchasing
+                                                    power. Despite short-term fluctuations, gold’s long-term performance
+                                                    proves its resilience. It holds a negative correlation with the US
+                                                    Dollar, often acting as a leading indicator for currency trends.
+                                                    When the value of paper currencies diminishes, gold typically holds
+                                                    or increases its value.
+
+                                                </li>
+                                                <li><b> Independent of Political Control:</b>
+                                                    <p>Gold can’t be easily
+                                                        controlled or overproduced by governments, unlike paper
+                                                        money.</p>
+                                                </li>
+                                                <li><b>Long-Term Value:</b>
+                                                    <p>Gold’s price may dip, but it grows
+                                                        steadily, making it a safe choice in tough times.</p>
+                                                </li>
+                                                <li><b>Supply & Demand:</b>
+                                                    <p>Gold is scarce and hard to produce,
+                                                        while more people and banks want it.</p>
+                                                </li>
+                                                <li><b>Institutional Interest:</b>
+                                                    <p>Large funds are starting to
+                                                        invest in gold, which could push its price higher.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="uk-accordion-title" href="#">Why Physical Bullion?</a>
+                                        <div class="uk-accordion-content">
+                                            <ul class="uk-list uk-list-bullet">
+                                                <li><b>Gold Accountability: </b>
+                                                    <p>Physical bullion ensures true ownership, unlike paper ETFs that
+                                                        may not guarantee delivery or actual gold backing.
+                                                    </p>
+                                                </li>
+                                                <li><b>Minimized Risk:</b>
+                                                    <p>Holding physical bullion eliminates counterparty risk tied to
+                                                        paper substitutes, securing your investment.
+                                                    </p>
+                                                </li>
+                                                <li><b>Professional Asset Management:</b>
+                                                    <p> Physical bullion’s value is inherent, relying on the asset
+                                                        itself, not complex market strategies.</p>
+                                                </li>
+                                                <li><b>Liquidity and Tradeability: </b>
+                                                    <p> Physical bullion is highly liquid, easily traded worldwide,
+                                                        making it a flexible investment.</p>
+                                                </li>
+                                                <li><b>True Ownership:</b>
+                                                    <p>Every transaction includes title transfer and secure, allocated
+                                                        storage, ensuring your bullion is yours and unleveraged.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="uk-accordion-title" href="#">Why Silver?</a>
+                                        <div class="uk-accordion-content">
+                                            <ul class="uk-list uk-list-bullet">
+                                                <li><b> Historic Monetary Metal: </b>
+                                                    <p> Silver has been a trusted form of money for centuries, proving
+                                                        its worth as a reliable store of wealth.</p>
+                                                </li>
+                                                <li><b>Undervalued Potential:</b>
+                                                    <p>Silver is currently much cheaper than gold compared to historical
+                                                        ratios, offering great growth potential for investors.
+                                                    </p>
+                                                </li>
+                                                <li><b>Industrial Demand:</b>
+                                                    <p> Silver’s essential role in electronics, solar
+                                                        panels, and medical devices boosts its value due to increasing
+                                                        industrial needs.</p>
+                                                </li>
+                                                <li><b>COMEX Short Positions: </b>
+                                                    <p>Big banks’ large bets against silver prices may lead to a price
+                                                        surge when they need to buy back.</p>
+                                                </li>
+                                                <li><b>Supply Constraints: </b>
+                                                    <p>Supply Constraints: Silver’s limited and unpredictable supply,
+                                                        paired with rising global demand, could push prices higher.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="uk-accordion-title" href="#">Why Platinum?</a>
+                                        <div class="uk-accordion-content">
+                                            <ul class="uk-list uk-list-bullet">
+                                                <li><b>Store of Value During Economic Uncertainty: </b>
+                                                    <p>Platinum serves as a reliable hedge like gold, gaining value
+                                                        during economic instability due to its scarce supply.</p>
+                                                </li>
+                                                <li><b>Rarity & Source Dependency:</b>
+                                                    <p>Platinum’s limited supply, mainly from Russia and South Africa,
+                                                        makes it rarer and often pricier than gold.
+                                                    </p>
+                                                </li>
+                                                <li><b>Industrial Utility:</b>
+                                                    <p> Its durability and resistance make platinum
+                                                        essential in cars, jewelry, oil refining, and medical tech,
+                                                        driving demand.</p>
+                                                </li>
+                                                <li><b>COMEX Short Positions: </b>
+                                                    <p>Big banks’ large bets against silver prices may lead to a price
+                                                        surge when they need to buy back.</p>
+                                                </li>
+                                                <li><b>Inflation Indicator: </b>
+                                                    <p>Platinum tracks inflation with minimal government control, making
+                                                        it a strong shield against currency devaluation.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                                <div
+                                    class="uk-card uk-card-small uk-card-body uk-background-muted uk-border-rounded uk-margin-medium-top">
+                                    <p class="uk-text-small">For general inquiries please contact <a
+                                            class="uk-text-lowercase uk-link" href="mailto:">legal@wave-capital.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- footer begin -->
+    <footer>
+        <div class="uk-section uk-section-muted uk-padding-large uk-padding-remove-horizontal "
+            style=" background-color: #070a12;">
+            <div class="uk-container">
+                <div class="uk-grid-medium" data-uk-grid="">
+                    <div class="uk-width-expand@m">
+                        <div class="footer-logo">
+                            <img class="uk-display-block" src="assets/img/logo/heaer-logo.png" alt="footer-logo"
+                                width="230" height="23" data-uk-img="">
+                        </div>
+                        <p class="uk-text-small uk-margin-small-top">Your Trusted Source for Gold & Jewelry</p>
+                        <p class="uk-margin-small-top">C1- 601, Executive Office,<br> Ajman Free Zone, <br>
+                            Ajman – PO Box No - 241677
+                        </p>
+                    </div>
+                    <div class="uk-width-3-5@m">
+                        <div class="uk-child-width-1-3@s uk-child-width-1-3@m" data-uk-grid="">
+                            <div>
+                                <h4 class="uk-text-color-lighter ">Useful Links</h4>
+                                <ul class="uk-list uk-link-text">
+                                    <li><a href="index.html" class="uk-text-small uk-button uk-button-text">Home</a>
+                                    </li>
+                                    <li><a href="about-us.html" class="uk-text-small uk-button uk-button-text">About
+                                            US</a></li>
+                                    <li><a href="our-services.html" class="uk-text-small uk-button uk-button-text">Our
+                                            Services</a></li>
+                                    <li><a href="products.html" class="uk-text-small uk-button uk-button-text">Products
+                                        </a>
+                                    </li>
+                                    <li><a href="faqs.html" class="uk-text-small uk-button uk-button-text">FAQs
+                                        </a>
+                                    </li>
+                                    <li><a href="contact-us.html" class="uk-text-small uk-button uk-button-text">Contact
+                                            Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- <div>
+                                <h4 class="uk-text-color-lighter">Our Products</h4>
+                                <ul class="uk-list uk-link-text">
+                                    <li><a href="corporate-responsibilities.html"
+                                            class=" uk-text-small uk-button uk-button-text">Corporate
+                                            Responsibilities</a></li>
+                                    <li><a href="precious-metals-lnsight.html"
+                                            class="uk-text-small uk-button uk-button-text">Precious metals lnsight</a>
+                                    </li>
+                                </ul>
+                            </div> -->
+                            <div>
+                                <h4 class="uk-text-color-lighter">Contact</h4>
+                                <ul class="uk-list uk-link-text">
+                                    <li>
+                                        <span class="uk-margin-small-right uk-icon" uk-icon="receiver">
+                                            <svg width="20" height="20" viewBox="0 0 20 20">
+                                                <path fill="none" stroke="#000" stroke-width="1.01"
+                                                    d="M6.189,13.611C8.134,15.525 11.097,18.239 13.867,18.257C16.47,18.275 18.2,16.241 18.2,16.241L14.509,12.551L11.539,13.639L6.189,8.29L7.313,5.355L3.76,1.8C3.76,1.8 1.732,3.537 1.7,6.092C1.667,8.809 4.347,11.738 6.189,13.611">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <a href="tel:+971588159515" class="uk-text-small uk-button uk-button-text">+971
+                                            58 815
+                                            9515</a>
+                                    </li>
+                                    <li>
+                                        <span class="uk-margin-small-right uk-icon" uk-icon="mail">
+                                            <svg width="20" height="20" viewBox="0 0 20 20">
+                                                <polyline fill="none" stroke="#000" points="1.4,6.5 10,11 18.6,6.5">
+                                                </polyline>
+                                                <path d="M 1,4 1,16 19,16 19,4 1,4 Z M 18,15 2,15 2,5 18,5 18,15 Z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=kostbartrading@gmail.com"
+                                            target="_blank" class="uk-text-small  uk-button
+                                    uk-button-text" target="_blank">kostbartrading@gmail.com</a>
+                                                   
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-width-1-1 uk-margin-large-top in-offset-bottom-10">
+                        <div class="uk-grid uk-flex uk-flex-middle" data-uk-grid="">
+                            <div class="uk-width-1-2@m">
+                            </div>
+                            <div class="uk-width-1-2@m uk-flex uk-flex-right@m">
+                                <!-- social media begin -->
+                                <div class="uk-flex social-media-list">
+                                    <div><a href="https://www.facebook.com/indonez"
+                                            class="color-facebook text-decoration-none"><i
+                                                class="fab fa-facebook-square"></i>
+                                            Facebook</a></div>
+                                    <div><a href="https://www.instagram.com/indonez_ig"
+                                            class="color-instagram text-decoration-none"><i
+                                                class="fab fa-instagram"></i>
+                                            Instagram</a></div>
+
+                                </div>
+                                <!-- social media end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" uk-padding-remove-vertical">
+            <div class="uk-grid uk-flex uk-flex-center uk-padding-small">
+                <div class="uk-width-auto uk-text-center">
+                    <span class="uk-text-small uk-button">© 2025 <a href="https://keryar.com/"
+                            target="_blank">KERYAR.</a>
+                        All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+    <!-- to top begin -->
+    <a href="#" class="to-top uk-visible@m" data-uk-scroll>
+        Top<i class="fas fa-chevron-up"></i>
+    </a>
+    <!-- to top end -->
+    <!-- javascript -->
+    <script src="assets/js/utilities.min.js"></script>
+    <script src="assets/js/config-theme.js"></script>
+    <script>
+        const canvas = document.getElementById('line-network-background');
+        const ctx = canvas.getContext('2d');
+
+        // Set canvas size
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // Resize canvas on window resize
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        // Node class for line network
+        class Node {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.glow = Math.random() * 0.5 + 0.5;
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                // Bounce off edges
+                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+
+                // Pulse glow effect
+                this.glow += (Math.random() - 0.5) * 0.05;
+                if (this.glow < 0.5) this.glow = 0.5;
+                if (this.glow > 1) this.glow = 1;
+            }
+        }
+
+        // Create nodes
+        const nodes = [];
+        for (let i = 0; i < 30; i++) {
+            nodes.push(new Node());
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw lines between nodes
+            for (let i = 0; i < nodes.length; i++) {
+                for (let j = i + 1; j < nodes.length; j++) {
+                    const dx = nodes[i].x - nodes[j].x;
+                    const dy = nodes[i].y - nodes[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < 150) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = `rgba(252, 180, 45, ${1 - distance / 150})`;
+                        ctx.lineWidth = 1;
+                        ctx.moveTo(nodes[i].x, nodes[i].y);
+                        ctx.lineTo(nodes[j].x, nodes[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            // Draw nodes
+            nodes.forEach(node => {
+                node.update();
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, 2, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(252, 180, 45, ${node.glow})`;
+                ctx.fill();
+
+                // Add glow effect
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, 5, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(252, 180, 45, ${node.glow * 0.3})`;
+                ctx.fill();
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
+</body>
+
+</html>

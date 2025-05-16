@@ -37,7 +37,7 @@ html {
   /* 2 */
   -webkit-text-size-adjust: 100%;
   /* 3 */
-  background: #000;
+  background: #070a12;
   color: #fff;
   overflow-x: hidden;
 }
@@ -349,7 +349,7 @@ dd {
   color: #fff;
 }
 .dark-background-color{
-  background-color: #000;
+  background-color: #0c1429;
 
 }
 /* Horizontal rules

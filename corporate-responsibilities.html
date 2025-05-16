@@ -26,10 +26,24 @@
    <link rel="shortcut icon" href="assets/img/logo/favicon.ico" type="image/x-icon">
    <!-- touch icon -->
    <link rel="apple-touch-icon-precomposed" href="assets/img/logo/apple-touch-icon.png">
+   <style>
+      /* Canvas background */
+      #line-network-background {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         z-index: -1;
+         background: linear-gradient(135deg, #070a12 0%, #1a2a44 50%);
+      }
+   </style>
    <title>Product-corporate Responsibilities</title>
 </head>
 
 <body>
+   <canvas id="line-network-background"></canvas>
+
    <!-- page loader begin -->
    <div class="page-loader">
       <div></div>
@@ -38,8 +52,7 @@
    </div>
    <!-- page loader end -->
    <header uk-scrollspy="cls: uk-animation-fade; delay: 500">
-      <div class="uk-section uk-padding-remove-vertical   uk-background-cover uk-background-top-center"
-         style="background-image: url(assets/img/in-wave-background-1.png);">
+      <div class="uk-section uk-padding-remove-vertical   uk-background-cover uk-background-top-center">
          <nav class="uk-navbar-container uk-navbar-transparent "
             data-uk-sticky="show-on-up: true; top: 80; animation: uk-animation-fade">
             <div class="uk-container " data-uk-navbar>
@@ -355,7 +368,7 @@
    <!-- footer begin -->
    <footer>
       <div class="uk-section uk-section-muted uk-padding-large uk-padding-remove-horizontal "
-         style="background-color: black;">
+         style=" background: linear-gradient(135deg, #070a12 0%, #1a2a44 50%);">
          <div class="uk-container">
             <div class="uk-grid-medium" data-uk-grid="">
                <div class="uk-width-expand@m">
@@ -377,20 +390,15 @@
                            <li><a href="about-us.html" class="uk-text-small uk-button uk-button-text">About US</a></li>
                            <li><a href="our-services.html" class="uk-text-small uk-button uk-button-text">Our
                                  Services</a></li>
+                           <li><a href="products.html" class="uk-text-small uk-button uk-button-text">Products
+                              </a>
+                           </li>
                            <li><a href="contact-us.html" class="uk-text-small uk-button uk-button-text">Contact Us</a>
                            </li>
                         </ul>
                      </div>
 
-                     <div>
-                        <h4 class="uk-text-color-lighter">Our Products</h4>
-                        <ul class="uk-list uk-link-text">
-                           <li><a href="corporate-responsibilities.html"
-                                 class=" uk-text-small uk-button uk-button-text">Corporate Responsibilities</a></li>
-                           <li><a href="precious-metals-lnsight.html"
-                                 class="uk-text-small uk-button uk-button-text">Precious metals lnsight</a></li>
-                        </ul>
-                     </div>
+
                      <div>
                         <h4 class="uk-text-color-lighter">Contact</h4>
                         <ul class="uk-list uk-link-text">
@@ -461,6 +469,92 @@
    <!-- javascript -->
    <script src="assets/js/utilities.min.js"></script>
    <script src="assets/js/config-theme.js"></script>
+   <script>
+      const canvas = document.getElementById('line-network-background');
+      const ctx = canvas.getContext('2d');
+
+      // Set canvas size
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      // Resize canvas on window resize
+      window.addEventListener('resize', () => {
+         canvas.width = window.innerWidth;
+         canvas.height = window.innerHeight;
+      });
+
+      // Node class for line network
+      class Node {
+         constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.vx = (Math.random() - 0.5) * 0.5;
+            this.vy = (Math.random() - 0.5) * 0.5;
+            this.glow = Math.random() * 0.5 + 0.5;
+         }
+
+         update() {
+            this.x += this.vx;
+            this.y += this.vy;
+
+            // Bounce off edges
+            if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+            if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+
+            // Pulse glow effect
+            this.glow += (Math.random() - 0.5) * 0.05;
+            if (this.glow < 0.5) this.glow = 0.5;
+            if (this.glow > 1) this.glow = 1;
+         }
+      }
+
+      // Create nodes
+      const nodes = [];
+      for (let i = 0; i < 30; i++) {
+         nodes.push(new Node());
+      }
+
+      function animate() {
+         ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+         // Draw lines between nodes
+         for (let i = 0; i < nodes.length; i++) {
+            for (let j = i + 1; j < nodes.length; j++) {
+               const dx = nodes[i].x - nodes[j].x;
+               const dy = nodes[i].y - nodes[j].y;
+               const distance = Math.sqrt(dx * dx + dy * dy);
+
+               if (distance < 150) {
+                  ctx.beginPath();
+                  ctx.strokeStyle = `rgba(252, 180, 45, ${1 - distance / 150})`;
+                  ctx.lineWidth = 1;
+                  ctx.moveTo(nodes[i].x, nodes[i].y);
+                  ctx.lineTo(nodes[j].x, nodes[j].y);
+                  ctx.stroke();
+               }
+            }
+         }
+
+         // Draw nodes
+         nodes.forEach(node => {
+            node.update();
+            ctx.beginPath();
+            ctx.arc(node.x, node.y, 2, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(252, 180, 45, ${node.glow})`;
+            ctx.fill();
+
+            // Add glow effect
+            ctx.beginPath();
+            ctx.arc(node.x, node.y, 5, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(252, 180, 45, ${node.glow * 0.3})`;
+            ctx.fill();
+         });
+
+         requestAnimationFrame(animate);
+      }
+
+      animate();
+   </script>
 </body>
 
 </html>
