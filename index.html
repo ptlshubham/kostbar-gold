@@ -20,32 +20,80 @@
    <link rel="preload" href="assets/js/config-theme.js" as="script">
    <!-- stylesheet -->
    <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="assets/css/custom.css">
    <!-- uikit -->
    <script src="assets/js/vendors/uikit.min.js"></script>
    <!-- favicon -->
    <link rel="shortcut icon" href="assets/img/logo/favicon.ico" type="image/x-icon">
    <!-- touch icon -->
    <link rel="apple-touch-icon-precomposed" href="assets/img/logo/apple-touch-icon.png">
-   <!-- CSS for canvas background -->
-   <style>
-      /* Canvas background */
-      #line-network-background {
-         position: fixed;
-         top: 0;
-         left: 0;
-         width: 100%;
-         height: 100%;
-         z-index: -1;
-         background-color: #070a12;
+   <!-- CSS for canvas background and scrolling effects -->
+      <style>
+   
+
+    .about-us {
+      margin-top: 0%;
+      margin-bottom: 10px;
+    }
+
+    .center-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      margin-top: -90px;
+ 
+    }
+
+    .circle {
+      width: 200px;
+      height: 200px;
+      background-color: rgb(7 10 18);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .circle:hover {
+      transform: scale(1.05);
+    }
+
+    .circle span {
+      display: block;
+      word-wrap: break-word;
+      max-width: 90%;
+    }
+
+    .circle .number {
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #f5c518;
+    }
+
+    .circle .text {
+      font-size: 1em;
+      color: #ffffff;
+    }
+
+    @media (max-width: 768px) {
+      .center-section {
+        margin: 20px 0;
       }
-   </style>
+    }
+  </style>
    <title>Homepage</title>
+
 </head>
 
 <body>
    <!-- Dynamic Canvas Background -->
    <canvas id="line-network-background"></canvas>
-
    <!-- page loader begin -->
    <div class="page-loader">
       <div></div>
@@ -54,7 +102,7 @@
    </div>
    <!-- header begin -->
    <header>
-      <div class="uk-section uk-padding-remove-vertical in-header-inverse " style="height: 160px">
+      <div class="uk-section uk-padding-remove-vertical in-header-inverse" style="height: 160px">
          <nav class="uk-navbar-container uk-navbar-transparent"
             data-uk-sticky="show-on-up: true; top: 80; animation: uk-animation-fade">
             <div class="uk-container" data-uk-navbar>
@@ -62,16 +110,14 @@
                   <a class="uk-navbar-item uk-logo" href="index.html">
                      <img src="assets/img/logo/heaer-logo.png" alt="logo" width="230" height="100">
                   </a>
-                  <ul class="uk-navbar-nav uk-visible@m">
+                  <ulексу class="uk-navbar-nav uk-visible@m">
                      <li><a href="index.html">Home</a></li>
                      <li><a href="about-us.html">About Us</a></li>
                      <li><a href="our-services.html">Our Services</a></li>
-                     <li>
-                        <a href="products.html">Product</a>
-                     </li>
+                     <li><a href="products.html">Product</a></li>
                      <li><a href="faqs.html">FAQs</a></li>
                      <li><a href="contact-us.html">Contact Us</a></li>
-                  </ul>
+                     </ul>
                </div>
                <div class="uk-navbar-right uk-width-auto">
                   <div class="uk-navbar-item uk-visible@m">
@@ -80,13 +126,13 @@
                         <div class="uk-flex social-media-list uk-flex-right@m uk-flex-middle@m">
                            <div style="padding: 5px;">
                               <a href="https://www.facebook.com/indonez"
-                                 style="color: #3b5998; text-decoration: none; font-size: 20px;">
-                                 <i class="fab fa-facebook-square"></i>
+                                 style="color: #ffffff; text-decoration: none; font-size: 20px;">
+                                 <i class="fab fa-facebook"></i>
                               </a>
                            </div>
                            <div style="padding: 5px;">
                               <a href="https://www.instagram.com/indonez_ig"
-                                 style="color: #e4405f; text-decoration: none; font-size: 20px;">
+                                 style="color: #ffffff; text-decoration: none; font-size: 20px;">
                                  <i class="fab fa-instagram"></i>
                               </a>
                            </div>
@@ -101,9 +147,10 @@
    </header>
    <!-- header end -->
    <main>
-      <!-- slideshow content begin -->
-      <div class="uk-section uk-padding-remove-vertical in-slideshow-gradient ">
-         <div class="in-slideshow" data-uk-slideshow>
+      <!-- Slideshow content begin -->
+      <!-- <div class="uk-section uk-padding-remove-vertical in-slideshow-gradient">
+         <div class="in-slideshow"
+            data-uk-slideshow="animation: fade; autoplay: true; autoplay-interval: 5000; pause-on-hover: true">
             <ul class="uk-slideshow-items uk-light">
                <li>
                   <div class="uk-position-cover">
@@ -113,14 +160,15 @@
                   <span></span>
                   <div class="uk-container">
                      <div class="uk-grid" data-uk-grid>
-                        <div class="uk-width-3-5@m">
+                        <div class="uk-width-3-5@m" uk-scrollspy="cls: fade-in; delay: 200">
                            <div class="uk-overlay">
-                              <h1> Invest in Premium Gold Bullion</h1>
+                              <h1>Invest in Premium Gold Bullion</h1>
                               <p class="uk-text-lead uk-visible@m">Highlights your core business of physical bullion
                                  trading, appealing to investors and refineries.</p>
                               <a href="contact-us.html"
-                                 class="uk-button uk-button-primary uk-border-rounded uk-visible@m"><i
-                                    class="fas fa-scroll uk-margin-small-right"></i>Contact now</a>
+                                 class="uk-button uk-button-primary uk-border-rounded uk-visible@m">
+                                 <i class="fas fa-scroll uk-margin-small-right"></i>Contact now
+                              </a>
                            </div>
                         </div>
                      </div>
@@ -134,14 +182,15 @@
                   <span></span>
                   <div class="uk-container">
                      <div class="uk-grid" data-uk-grid>
-                        <div class="uk-width-3-5@m">
+                        <div class="uk-width-3-5@m" uk-scrollspy="cls: fade-in; delay: 200">
                            <div class="uk-overlay">
                               <h1>Wear Gold. Live Elegant. Choose DORE.</h1>
                               <p class="uk-text-lead uk-visible@m">Showcases your jewelry offerings, appealing to retail
                                  customers and those seeking luxury pieces.</p>
                               <a href="contact-us.html"
-                                 class="uk-button uk-button-primary uk-border-rounded uk-visible@m"><i
-                                    class="fas fa-scroll uk-margin-small-right"></i>Contact now</a>
+                                 class="uk-button uk-button-primary uk-border-rounded uk-visible@m">
+                                 <i class="fas fa-scroll uk-margin-small-right"></i>Contact now
+                              </a>
                            </div>
                         </div>
                      </div>
@@ -155,14 +204,15 @@
                   <span></span>
                   <div class="uk-container">
                      <div class="uk-grid" data-uk-grid>
-                        <div class="uk-width-3-5@m">
+                        <div class="uk-width-3-5@m" uk-scrollspy="cls: fade-in; delay: 200">
                            <div class="uk-overlay">
                               <h1>Secure Your Future with Gold Investment</h1>
                               <p class="uk-text-lead uk-visible@m">Appeals to investors interested in gold as a
                                  long-term asset, aligning with your encouragement of bullion trading.</p>
                               <a href="contact-us.html"
-                                 class="uk-button uk-button-primary uk-border-rounded uk-visible@m"><i
-                                    class="fas fa-scroll uk-margin-small-right"></i>Contact now</a>
+                                 class="uk-button uk-button-primary uk-border-rounded uk-visible@m">
+                                 <i class="fas fa-scroll uk-margin-small-right"></i>Contact now
+                              </a>
                            </div>
                         </div>
                      </div>
@@ -173,22 +223,105 @@
                <ul class="uk-slideshow-nav uk-dotnav uk-position-bottom-center"></ul>
             </div>
          </div>
+      </div> -->
+      <!-- Slideshow content end -->
+      <div class="uk-section uk-padding-remove-vertical in-slideshow-gradient">
+         <div class="in-slideshow"
+            data-uk-slideshow="animation: fade; autoplay: true; autoplay-interval: 3000; pause-on-hover: true">
+            <ul class="uk-slideshow-items uk-light">
+               <li>
+                  <div class="uk-position-cover" uk-scrollspy="cls: uk-animation-scale-up; delay: 100">
+                     <img src="assets/img/slider/04.jpg" data-src="assets/img/slider/04.jpg" alt="slideshow-image"
+                        data-uk-cover width="1920" height="700">
+                  </div>
+                  <span></span>
+                  <div class="uk-container">
+                     <div class="uk-grid" data-uk-grid>
+                        <div class="uk-width-3-5@m" uk-scrollspy="cls: uk-animation-fade; delay: 200">
+                           <div class="uk-overlay">
+                              <h1 uk-scrollspy="cls: uk-animation-slide-left; delay: 300">Invest in Premium Gold Bullion
+                              </h1>
+                              <p class="uk-text-lead uk-visible@m"
+                                 uk-scrollspy="cls: uk-animation-slide-left; delay: 400">Highlights your core business
+                                 of physical bullion trading, appealing to investors and refineries.</p>
+                              <a href="contact-us.html"
+                                 class="uk-button uk-button-primary uk-border-rounded uk-visible@m"
+                                 uk-scrollspy="cls: uk-animation-scale-up; delay: 500">
+                                 <i class="fas fa-scroll uk-margin-small-right"></i>Contact now
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <div class="uk-position-cover" uk-scrollspy="cls: uk-animation-scale-up; delay: 100">
+                     <img src="assets/img/slider/4.jpg" data-src="assets/img/slider/4.jpg" alt="slideshow-image"
+                        data-uk-cover width="1920" height="700" data-uk-img>
+                  </div>
+                  <span></span>
+                  <div class="uk-container">
+                     <div class="uk-grid" data-uk-grid>
+                        <div class="uk-width-3-5@m" uk-scrollspy="cls: uk-animation-fade; delay: 200">
+                           <div class="uk-overlay">
+                              <h1 uk-scrollspy="cls: uk-animation-slide-right; delay: 300">Wear Gold. Live Elegant.
+                                 Choose DORE.</h1>
+                              <p class="uk-text-lead uk-visible@m"
+                                 uk-scrollspy="cls: uk-animation-slide-right; delay: 400">Showcases your jewelry
+                                 offerings, appealing to retail customers and those seeking luxury pieces.</p>
+                              <a href="contact-us.html"
+                                 class="uk-button uk-button-primary uk-border-rounded uk-visible@m"
+                                 uk-scrollspy="cls: uk-animation-scale-up; delay: 500">
+                                 <i class="fas fa-scroll uk-margin-small-right"></i>Contact now
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <div class="uk-position-cover" uk-scrollspy="cls: uk-animation-scale-up; delay: 100">
+                     <img src="assets/img/slider/3.jpg" data-src="assets/img/slider/3.jpg" alt="slideshow-image"
+                        data-uk-cover width="1920" height="700" data-uk-img>
+                  </div>
+                  <span></span>
+                  <div class="uk-container">
+                     <div class="uk-grid" data-uk-grid>
+                        <div class="uk-width-3-5@m" uk-scrollspy="cls: uk-animation-fade; delay: 200">
+                           <div class="uk-overlay">
+                              <h1 uk-scrollspy="cls: uk-animation-slide-top; delay: 300">Secure Your Future with Gold
+                                 Investment</h1>
+                              <p class="uk-text-lead uk-visible@m"
+                                 uk-scrollspy="cls: uk-animation-slide-top; delay: 400">Appeals to investors interested
+                                 in gold as a long-term asset, aligning with your encouragement of bullion trading.</p>
+                              <a href="contact-us.html"
+                                 class="uk-button uk-button-primary uk-border-rounded uk-visible@m"
+                                 uk-scrollspy="cls: uk-animation-scale-up; delay: 500">
+                                 <i class="fas fa-scroll uk-margin-small-right"></i>Contact now
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+            </ul>
+
+         </div>
       </div>
-      <!-- slideshow content end -->
       <!-- section content begin -->
-      <div class="uk-section in-wave-16 ">
+      <div class="uk-section in-wave-16 uk-padding-remove-vertical uk-padding-remove-horizontal">
          <div class="uk-container">
             <div class="uk-grid">
                <div class="uk-width-1-1">
                   <div class="uk-card uk-card-default uk-box-shadow-small uk-border-rounded in-margin-medium-top@s">
                      <div class="uk-grid" data-uk-grid>
                         <div class="uk-width-expand@s uk-width-2-5@m uk-card-media-right uk-cover-container"
-                           uk-scrollspy="cls: uk-animation-fade; delay: 200; ">
-                           <img class=" uk-width-1-1 uk-margin-remove-bottom" src="assets/img/home/1.jpg"
+                           uk-scrollspy="cls: slide-in-right; delay: 200">
+                           <img class="uk-width-1-1 uk-margin-remove-bottom" src="assets/img/home/1.jpg"
                               alt="sample-image" width="564" height="625">
                         </div>
                         <div class="uk-width-1-2@s uk-width-expand@m uk-flex uk-flex-middle"
-                           uk-scrollspy="cls: uk-animation-fade; delay: 600 " style="background-color: #070a12;">
+                           uk-scrollspy="cls: slide-in-left; delay: 600" style="background-color: #070a12;">
                            <div class="uk-card-body">
                               <h1 class="uk-text-color-lighter">Welcome to <br><span class="in-highlight">Kostbar
                                     Trading</span></h1>
@@ -235,71 +368,38 @@
             </div>
          </div>
       </div>
-      <!-- section content end -->
-
-      <!-- Section with Fade-In Animation -->
-      <div class="uk-section in-wave-9">
-         <div class="uk-container">
-            <div class="uk-grid uk-flex uk-flex-center">
-               <div class="uk-width-3-4@m">
-                  <div class="uk-grid-large uk-child-width-1-2@s uk-child-width-1-2@m uk-flex uk-flex-middle"
-                     data-uk-grid>
-                     <div uk-scrollspy="cls: uk-animation-fade; delay: 300 ">
-                        <h1 class="uk-margin-remove uk-text-color-lighter">Gold Price <span class="in-highlight"> Live
-                              Quote</span></h1>
-                        <p class="uk-margin-medium-bottom">
-                           Stay updated with the latest live gold prices to make informed decisions for investment or
-                           purchase.
-                           Our real-time gold price tracker provides current rates for 24K, 22K, 18K, and 14K gold,
-                           helping you
-                           monitor market movements instantly.
-                        </p>
-                     </div>
-                     <div uk-scrollspy="cls: uk-animation-fade; delay: 400 ">
-                        <img src="assets/img/home/Gold-Price.jpg" alt="wave-mockup" width="395" height="509">
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-
-      <!-- Another Section with Slide-Left Animation -->
-      <div class="uk-section in-wave-9">
-         <div class="uk-container">
-            <div class="uk-grid uk-flex uk-flex-center">
-               <div class="uk-width-3-4@m">
-                  <div class="uk-grid-large uk-child-width-1-2@s uk-child-width-1-2@m uk-flex uk-flex-middle"
-                     data-uk-grid>
-                     <div uk-scrollspy="cls: uk-animation-fade; delay: 300">
-                        <img src="assets/img/home/395x509.jpg" alt="wave-mockup" width="395" height="509">
-                     </div>
-                     <div uk-scrollspy="cls: uk-animation-fade; delay: 400">
-                        <h1 class="uk-text-color-lighter">About <span class="in-highlight"> Kostbar</span></h1>
-                        <p class="uk-margin-medium-bottom">
-                           At Kostbar, credibility, integrity, and trust are the pillars of our business. Established
-                           under
-                           Commercial License No. 5021690 by the Department of Ajman Free Zone, UAE, we are a leading
-                           name in
-                           the gold and precious metals trading industry.
-                        </p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- section content end -->
-
+      <!-- Section with Parallax and Fade-In Animation -->
       <!-- section content begin -->
-      <div class="uk-section in-wave-9 ">
-         <div class="uk-container ">
+      <div class="uk-section bg uk-padding-large" id="gold-price">
+         <div class="uk-container uk-padding-large">
+            <div class="uk-grid">
+               <div class="uk-width-2-2@m" uk-scrollspy="cls: fade-in; delay: 300">
+                  <div class="uk-grid uk-grid-small" data-uk-grid>
+                     <div class="uk-width-expand">
+                        <h1 class="uk-margin-remove uk-text-color-lighter uk-text-center" style="color: #ffffff;">
+                           Gold Price <span class="in-highlight"> Live Quote</span>
+                        </h1>
+                        <p class="uk-margin-medium-bottom uk-text-center" style="color: #ffffff;"><b>
+                              Stay updated with the latest live gold prices to make informed decisions for investment or
+                              purchase.
+                              Our real-time gold price tracker provides current rates for 24K, 22K, 18K, and 14K gold,
+                              helping you monitor market movements instantly.
+                           </b></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="uk-section  in-wave-16 uk-padding-remove-vertical uk-padding-remove-horizontal" id="about-us">
+         <div class="uk-container">
+            <!-- section content begin -->
             <div class="uk-grid uk-flex uk-flex-center">
                <div class="uk-width-3-4@m">
                   <div class="uk-grid-large uk-child-width-1-2@s uk-child-width-1-2@m uk-flex uk-flex-middle"
                      data-uk-grid>
-                     <div uk-scrollspy="cls: uk-animation-fade; delay: 300">
-                        <h1 class="uk-text-color-lighter ">What is
+                     <div uk-scrollspy="cls: slide-in-left; delay: 300">
+                        <h1 class="uk-text-color-lighter">What is
                            <span class="in-highlight">Bullion?</span>
                         </h1>
                         <p class="uk-margin-medium-bottom">
@@ -313,7 +413,7 @@
                            providing our clients with confidence in every transaction.
                         </p>
                      </div>
-                     <div uk-scrollspy="cls: uk-animation-fade; delay: 400">
+                     <div uk-scrollspy="cls: slide-in-right; delay: 400">
                         <img src="assets/img/home/395x509-copy.png" alt="wave-mockup" width="395" height="509">
                      </div>
                   </div>
@@ -322,104 +422,62 @@
          </div>
       </div>
       <!-- section content end -->
-
-      <div class="uk-section uk-section-primary in-wave-10 in-offset-bottom-30"
-         uk-scrollspy="cls: uk-animation-fade; delay: 400 ">
-         <div class="uk-container">
-            <div class="uk-grid uk-position-relative uk-flex uk-flex-middle">
-               <div class="uk-position-bottom-right">
-                  <img src="assets/img/in-wave-background-4.svg" alt="wave-hq" width="500" height="189">
-               </div>
-               <div class="uk-width-auto@m uk-text-center">
-                  <img src="assets/img/in-wave-icon-10.svg" alt="wave-icon" width="96" height="96">
-               </div>
-               <div class="uk-width-3-5@m">
-                  <h2 class="uk-margin-remove-bottom">Why Choose Kostbar</h2>
-                  <h6>With a decade of experience in the Middle East and India, Kostbar stands out for its:</h6>
-                  <p>Ethical Conduct: Upholding honesty and transparency in every transaction.
-                     Global Reach: Serving clients across the Middle East, South Asia, and Southeast Asia.
-                     Innovation: Leveraging cutting-edge technology to enhance trading efficiency.
-                     Diverse Portfolio: Expanding into commodities, wealth management, and mining
-                     investments. </p>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- section content end -->
-
-      <!-- section content begin -->
-      <div class="uk-section in-wave-12 in-offset-bottom-60 ">
-         <div class="uk-container uk-margin-small-bottom">
+      <div class="uk-section  About uk-padding-large">
+         <div class="uk-container uk-padding-large">
             <div class="uk-grid">
-               <div class="uk-width-3-4@m" uk-scrollspy="cls: uk-animation-fade; delay: 400 ">
-                  <h1 class="uk-margin-remove-bottom uk-text-color-lighter">Why Customers <span
-                        class="in-highlight">Choose </span> Kostbar
-                  </h1>
-               </div>
-            </div>
-            <div class="uk-grid-large uk-child-width-1-2@s uk-child-width-1-4@m uk-margin-large-top" data-uk-grid>
-               <div uk-scrollspy="cls: uk-animation-fade; delay: 400 ">
-                  <div class="in-wave-12-counter">
-                     <h1 class="uk-heading-medium uk-margin-remove">
-                        <span class="count uk-text-color-lighter" data-counter-end="20">0</span>
-                        <span class="in-wave-12-small">years</span>
-                     </h1>
-                     <h4 class="uk-margin-top uk-margin-remove-bottom  uk-text-color-lighter">Trusted Expertise</h4>
-                     <p class="uk-text-muted uk-margin-remove-top">Serving Since 2004</p>
+               <div class="uk-width-2-2@m" uk-scrollspy="cls: fade-in; delay: 300">
+                  <div class="uk-grid uk-grid-small" data-uk-grid>
+                     <div class="uk-width-expand">
+                        <h1 class="uk-text-color-lighter uk-text-center">About <span class="in-highlight">
+                              Kostbar</span></h1>
+                        <p class="uk-margin-medium-bottom uk-text-center"><b> At Kostbar, credibility, integrity, and
+                              trust are the pillars of our
+                              business. Established
+                              under
+                              Commercial License No. 5021690 by the Department of Ajman Free Zone, UAE,
+                              we are a leading
+                              name in
+                              the gold and precious metals trading industry.</b>
+
+                        </p>
+                     </div>
                   </div>
                </div>
-               <div uk-scrollspy="cls: uk-animation-fade; delay: 500 ">
-                  <div class="in-wave-12-counter">
-                     <h1 class="uk-heading-medium uk-margin-remove">
-                        <span class="count uk-text-color-lighter" data-counter-end="100">0</span>
-                        <span class="in-wave-12-small">%</span>
-                     </h1>
-                     <h4 class="uk-margin-top uk-margin-remove-bottom  uk-text-color-lighter">Quality Assurance</h4>
-                     <p class="uk-text-muted uk-margin-remove-top">Dubai & London Standards</p>
-                  </div>
-               </div>
-               <div uk-scrollspy="cls: uk-animation-fade; delay: 600 ">
-                  <div class="in-wave-12-counter">
-                     <h1 class="uk-heading-medium uk-margin-remove">
-                        <span class="count uk-text-color-lighter" data-counter-end="500">0</span>
-                        <span class="in-wave-12-small">+</span>
-                     </h1>
-                     <h4 class="uk-margin-top uk-margin-remove-bottom  uk-text-color-lighter">Satisfied Clients</h4>
-                     <p class="uk-text-muted uk-margin-remove-top">Elite Investors & Retailers</p>
-                  </div>
-               </div>
-               <div uk-scrollspy="cls: uk-animation-fade; delay: 700 ">
-                  <div class="in-wave-12-counter">
-                     <h1 class="uk-heading-medium uk-margin-remove">
-                        <span class="count uk-text-color-lighter" data-counter-end="24">0</span>
-                        <span class="in-wave-12-small">/7</span>
-                     </h1>
-                     <h4 class="uk-margin-top uk-margin-remove-bottom  uk-text-color-lighter">Customer Support</h4>
-                     <p class="uk-text-muted uk-margin-remove-top">Personalized Assistance</p>
-                  </div>
-               </div>
-            </div>
-            <div class="uk-text-center uk-margin-top">
-               <p class="uk-text-muted">Licensed by Ajman Free Zone, UAE – Commercial License No. 5021690</p>
             </div>
          </div>
       </div>
+        <!-- Expertise Circle Section -->
+  <div class="center-section">
+    <div class="circle">
+      <span class="text">EXPERTISE OF</span>
+      <span class="number">05</span>
+      <span class="text">YEARS</span>
+    </div>
+  </div>
+      <!-- section content begin -->
       <!-- section content end -->
-
-      <div class="uk-section">
+      <div class="uk-section uk-padding-remove-vertical  uk-margin-large-bottom ">
          <div class="uk-container">
             <div class="uk-grid" data-uk-grid>
-               <div class="uk-width-1-1 in-card-16" uk-scrollspy="cls: uk-animation-fade; delay: 300 ">
-                  <div class="uk-card uk-card-default uk-card-body uk-box-shadow-small uk-border-rounded">
+               <div class="uk-width-1-1 in-card-16" uk-scrollspy="cls: fade-in; delay: 300">
+                  <div class="uk-card  uk-padding-large uk-box-shadow-small uk-border-rounded ">
                      <div class="uk-grid uk-flex-middle" data-uk-grid>
                         <div class="uk-width-1-1 uk-width-expand@m">
-                           <h3>Discover Gold Investment – Contact Us Today!</h3>
-                           <p class="uk-text-small uk-margin-small-top">Connect with Our Trusted Gold Experts to Start
-                              Your Journey!</p>
+                           <h3 class="uk-text-center" style="color: #ffffff;">Our Mission</h3>
+                           <p> At Kostbar, our mission is to provide unparalleled access to premium gold bullion, doré
+                              metals, and bullion trading services, delivering exceptional value and trust to our
+                              clients. We are dedicated to empowering investors and collectors with high-quality,
+                              responsibly sourced precious metals, ensuring transparency, security, and excellence in
+                              every transaction.</p>
+
                         </div>
-                        <div class="uk-width-auto">
-                           <a class="uk-button uk-button-primary uk-border-rounded" href="contact-us.html">Contact Our
-                              Gold Experts Now</a>
+                        <div class="uk-width-1-1 uk-width-expand@m">
+                           <h3 class="uk-text-center" style="color: #ffffff;" >Our Vision</h3>
+                           <p>Our vision is to be the global benchmark in premium gold bullion and doré metals trading,
+                              recognized for integrity, innovation, and sustainability. We aim to shape a future where
+                              precious metals are a cornerstone of wealth preservation and growth, fostering confidence
+                              and prosperity through ethical sourcing, cutting-edge trading solutions, and a commitment
+                              to client success.</p>
                         </div>
                      </div>
                   </div>
@@ -427,97 +485,227 @@
             </div>
          </div>
       </div>
-
       <!-- section content begin -->
-      <div class="uk-section" uk-scrollspy="cls: uk-animation-fade; delay: 600 ">
+      <!-- section content end -->
+      <div class="uk-section uk-section-primary in-wave-10 in-offset-bottom-30" uk-scrollspy="cls: fade-in; delay: 400">
          <div class="uk-container">
-            <div class="in-wave-7">
-               <div class="uk-container  uk-margin-medium-left">
-                  <div class="uk-grid uk-flex uk-flex-center">
-                     <div class="in-create-account uk-margin-medium-top">
-                        <span class="uk-label in-label-small uk-text-uppercase uk-margin-small-bottom">Contact Us</span>
-                        <p class="uk-margin-remove-top uk-visible@m">Let’s build a long-term, trustworthy partnership.
-                        </p>
-                        <div class="uk-grid-small" data-uk-grid>
-                           <div class="uk-width-1-1@m uk-margin-medium-top u">
-                              <div class="uk-grid uk-grid-large" data-uk-grid>
-                                 <div class="uk-width-1-3@m">
-                                    <h4 class="uk-margin-remove-bottom uk-text-color-lighter">Visit our office</h4>
-                                    <p class="uk-margin-small-top">C1- 601, Executive Office, Ajman Free Zone, Ajman –
-                                       PO Box
-                                       No - 241677</p>
-                                    <h4 class="uk-margin-medium-top uk-margin-remove-bottom uk-text-color-lighter">
-                                       Message us
-                                    </h4>
-                                    <p class="uk-margin-small-top">
-                                       <span class="uk-margin-small-right uk-icon" uk-icon="mail">
-                                          <svg width="20" height="20" viewBox="0 0 20 20">
-                                             <polyline fill="none" stroke="#000" points="1.4,6.5 10,11 18.6,6.5">
-                                             </polyline>
-                                             <path d="M 1,4 1,16 19,16 19,4 1,4 Z M 18,15 2,15 2,5 18,5 18,15 Z"></path>
-                                          </svg>
-                                       </span>
-                                       <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=kostbartrading@gmail.com"
-                                          target="_blank"
-                                          class="uk-link-text uk-button uk-button-text">kostbartrading@gmail.com</a>
-                                    </p>
-                                    <p>
-                                       <span class="uk-margin-small-right uk-icon" uk-icon="receiver">
-                                          <svg width="20" height="20" viewBox="0 0 20 20">
-                                             <path fill="none" stroke="#000" stroke-width="1.01"
-                                                d="M6.189,13.611C8.134,15.525 11.097,18.239 13.867,18.257C16.47,18.275 18.2,16.241 18.2,16.241L14.509,12.551L11.539,13.639L6.189,8.29L7.313,5.355L3.76,1.8C3.76,1.8 1.732,3.537 1.7,6.092C1.667,8.809 4.347,11.738 6.189,13.611">
-                                             </path>
-                                          </svg>
-                                       </span>
-                                       <a href="tel:+971588159515" class="uk-link-text uk-button uk-button-text">+971 58
-                                          815 9515</a>
-                                    </p>
-                                    <label for=""><span class="uk-margin-small-right uk-icon" uk-icon="world"><svg
-                                             width="20" height="20" viewBox="0 0 20 20">
-                                             <path fill="none" stroke="#000" d="M1,10.5 L19,10.5"></path>
-                                             <path fill="none" stroke="#000" d="M2.35,15.5 L17.65,15.5"></path>
-                                             <path fill="none" stroke="#000" d="M2.35,5.5 L17.523,5.5"></path>
-                                             <path fill="none" stroke="#000"
-                                                d="M10,19.46 L9.98,19.46 C7.31,17.33 5.61,14.141 5.61,10.58 C5.61,7.02 7.33,3.83 10,1.7 C10.01,1.7 9.99,1.7 10,1.7 L10,1.7 C12.67,3.83 14.4,7.02 14.4,10.58 C14.4,14.141 12.67,17.33 10,19.46 L10,19.46 L10,19.46 L10,19.46 Z">
-                                             </path>
-                                             <circle fill="none" stroke="#000" cx="10" cy="10.5" r="9"></circle>
-                                          </svg></span><a href="www.kostbartrading.com"
-                                          class="uk-link-text uk-button uk-button-text">www.kostbartrading.com</a></label>
-                                    <div class="uk-margin-medium-top in-wave-socials-contact">
-                                       <a href="#"
-                                          class="fab fa-facebook-square fa-lg uk-text-decoration-none uk-margin-right"></a>
-                                       <a href="#"
-                                          class="fab fa-instagram fa-lg uk-text-decoration-none uk-margin-right"></a>
-                                    </div>
-                                 </div>
-                                 <div class="uk-width-2-3@m">
-                                    <div class="uk-margin-medium-left in-margin-remove-left@s">
-                                       <form id="contact-form" class="uk-form uk-grid-small" data-uk-grid
-                                          action="php/php/contact-form.php" method="POST">
-                                          <div class="uk-width-1-2@s uk-inline">
-                                             <span class="uk-form-icon fas fa-user fa-sm"></span>
-                                             <input class="uk-input uk-border-rounded" id="name" name="name" type="text"
-                                                placeholder="Full name" required>
+            <div class="uk-grid uk-position-relative uk-flex uk-flex-middle">
+               <!-- <div class="uk-position-bottom-right">
+                   <img src="assets/img/in-wave-background-4.svg" alt="wave-hq" width="500" height="189"> 
+               </div> -->
+               <div class="uk-width-auto@m uk-text-center" uk-scrollspy="cls: scale-up; delay: 300">
+                  <img src="assets/img/in-wave-icon-10.svg" alt="wave-icon" width="96" height="96">
+               </div>
+               <div class="uk-width-3-5@m" uk-scrollspy="cls: slide-in-left; delay: 400">
+                  <h2 class="uk-margin-remove-bottom">Why Choose Kostbar</h2>
+                  <h6>With a decade of experience in the Middle East and India, Kostbar stands out for its:</h6>
+                  <p>Ethical Conduct: Upholding honesty and transparency in every transaction.
+                     Global Reach: Serving clients across the Middle East, South Asia, and Southeast Asia.
+                     Innovation: Leveraging cutting-edge technology to enhance trading efficiency.
+                     Diverse Portfolio: Expanding into commodities, wealth management, and mining
+                     investments.</p Enthält nicht übersetzte Inhalte>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- section content end -->
+      <div class="uk-section in-wave-16">
+         <div class="uk-container">
+            <!-- section content begin -->
+            <div class="uk-section in-wave-12 in-offset-bottom-60">
+               <div class="uk-container uk-margin-small-bottom">
+                  <div class="uk-grid">
+                     <div class="uk-width-3-4@m" uk-scrollspy="cls: fade-in; delay: 400">
+                        <h1 class="uk-margin-remove-bottom uk-text-color-lighter">Why Customer <span
+                              class="in-highlight">Choose </span> Kostbar
+                        </h1>
+                     </div>
+                  </div>
+                  <div class="uk-grid-large uk-child-width-1-2@s uk-child-width-1-4@m uk-margin-large-top" data-uk-grid>
+                     <div uk-scrollspy="cls: scale-up; delay: 400">
+                        <div class="in-wave-12-counter">
+                           <h1 class="uk-heading-medium uk-margin-remove">
+                              <span class="count uk-text-color-lighter" data-counter-end="20">0</span>
+                              <span class="in-wave-12-small">years</span>
+                           </h1>
+                           <h4 class="uk-margin-top uk-margin-remove-bottom uk-text-color-lighter">Trusted Expertise
+                           </h4>
+                           <p class="uk-text-muted uk-margin-remove-top">Serving Since 2004</p>
+                        </div>
+                     </div>
+                     <div uk-scrollspy="cls: scale-up; delay: 500">
+                        <div class="in-wave-12-counter">
+                           <h1 class="uk-heading-medium uk-margin-remove">
+                              <span class="count uk-text-color-lighter" data-counter-end="100">0</span>
+                              <span class="in-wave-12-small">%</span>
+                           </h1>
+                           <h4 class="uk-margin-top uk-margin-remove-bottom uk-text-color-lighter">Quality Assurance
+                           </h4>
+                           <p class="uk-text-muted uk-margin-remove-top">Dubai & London Standards</p>
+                        </div>
+                     </div>
+                     <div uk-scrollspy="cls: scale-up; delay: 600">
+                        <div class="in-wave-12-counter">
+                           <h1 class="uk-heading-medium uk-margin-remove">
+                              <span class="count uk-text-color-lighter" data-counter-end="500">0</span>
+                              <span class="in-wave-12-small">+</span>
+                           </h1>
+                           <h4 class="uk-margin-top uk-margin-remove-bottom uk-text-color-lighter">Satisfied Clients
+                           </h4>
+                           <p class="uk-text-muted uk-margin-remove-top">Elite Investors & Retailers</p>
+                        </div>
+                     </div>
+                     <div uk-scrollspy="cls: scale-up; delay: 700">
+                        <div class="in-wave-12-counter">
+                           <h1 class="uk-heading-medium uk-margin-remove">
+                              <span class="count uk-text-color-lighter" data-counter-end="24">0</span>
+                              <span class="in-wave-12-small">/7</span>
+                           </h1>
+                           <h4 class="uk-margin-top uk-margin-remove-bottom uk-text-color-lighter">Customer Support</h4>
+                           <p class="uk-text-muted uk-margin-remove-top">Personalized Assistance</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="uk-text-center uk-margin-top">
+                     <p class="uk-text-muted">Licensed by Ajman Free Zone, UAE – Commercial License No. 5021690</p>
+                  </div>
+               </div>
+            </div>
+            <!-- section content end -->
+            <div class="uk-section uk-padding-remove-vertical">
+               <div class="uk-container">
+                  <div class="uk-grid" data-uk-grid>
+                     <div class="uk-width-1-1 in-card-16" uk-scrollspy="cls: fade-in; delay: 300">
+                        <div class="uk-card uk-card-default uk-card-body uk-box-shadow-small uk-border-rounded">
+                           <div class="uk-grid uk-flex-middle" data-uk-grid>
+                              <div class="uk-width-1-1 uk-width-expand@m">
+                                 <h3>Discover Gold Investment – Contact Us Today!</h3>
+                                 <p class="uk-text-small uk-margin-small-top">Connect with Our Trusted Gold Experts to
+                                    Start
+                                    Your Journey!</p>
+                              </div>
+                              <div class="uk-width-auto">
+                                 <a class="uk-button uk-button-primary uk-border-rounded" href="contact-us.html">Contact
+                                    Our
+                                    Gold Experts Now</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- section content begin -->
+            <div class="uk-section uk-padding-remove-horizontal uk-padding-remove-vertical"
+               uk-scrollspy="cls: fade-in; delay: 600">
+               <div class="uk-container">
+                  <div class="in-wave-7">
+                     <div class="uk-container uk-margin-medium-left">
+                        <div class="uk-grid uk-flex uk-flex-center">
+                           <div class="in-create-account uk-margin-medium-top">
+                              <span class="uk-label in-label-small uk-text-uppercase uk-margin-small-bottom">Contact
+                                 Us</span>
+                              <p class="uk-margin-remove-top uk-visible@m">Let’s build a long-term, trustworthy
+                                 partnership.
+                              </p>
+                              <div class="uk-grid-small" data-uk-grid>
+                                 <div class="uk-width-1-1@m uk-margin-medium-top u">
+                                    <div class="uk-grid uk-grid-large" data-uk-grid>
+                                       <div class="uk-width-1-3@m" uk-scrollspy="cls: slide-in-left; delay: 300">
+                                          <h4 class="uk-margin-remove-bottom uk-text-color-lighter">Visit our office
+                                          </h4>
+                                          <p class="uk-margin-small-top">C1- 601, Executive Office, Ajman Free Zone,
+                                             Ajman –
+                                             PO Box
+                                             No - 241677</p>
+                                          <h4
+                                             class="uk-margin-medium-top uk-margin-remove-bottom uk-text-color-lighter">
+                                             Message us
+                                          </h4>
+                                          <p class="uk-margin-small-top">
+                                             <span class="uk-margin-small-right uk-icon" uk-icon="mail">
+                                                <svg width="20" height="20" viewBox="0 0 20 20">
+                                                   <polyline fill="none" stroke="#000" points="1.4,6.5 10,11 18.6,6.5">
+                                                   </polyline>
+                                                   <path d="M 1,4 1,16 19,16 19,4 1,4 Z M 18,15 2,15 2,5 18,5 18,15 Z">
+                                                   </path>
+                                                </svg>
+                                             </span>
+                                             <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=kostbartrading@gmail.com"
+                                                target="_blank"
+                                                class="uk-link-text uk-button uk-button-text">kostbartrading@gmail.com</a>
+                                          </p>
+                                          <p>
+                                             <span class="uk-margin-small-right uk-icon" uk-icon="receiver">
+                                                <svg width="20" height="20" viewBox="0 0 20 20">
+                                                   <path fill="none" stroke="#000" stroke-width="1.01"
+                                                      d="M6.189,13.611C8.134,15.525 11.097,18.239 13.867,18.257C16.47,18.275 18.2,16.241 18.2,16.241L14.509,12.551L11.539,13.639L6.189,8.29L7.313,5.355L3.76,1.8C3.76,1.8 1.732,3.537 1.7,6.092C1.667,8.809 4.347,11.738 6.189,13.611">
+                                                   </path>
+                                                </svg>
+                                             </span>
+                                             <a href="tel:+971588159515"
+                                                class="uk-link-text uk-button uk-button-text">+971 58
+                                                815 9515</a>
+                                          </p>
+                                          <label for=""><span class="uk-margin-small-right uk-icon" uk-icon="world"><svg
+                                                   width="20" height="20" viewBox="0 0 20 20">
+                                                   <path fill="none" stroke="#000" d="M1,10.5 L19,10.5"></path>
+                                                   <path fill="none" stroke="#000" d="M2.35,15.5 L17.65,15.5"></path>
+                                                   <path fill="none" stroke="#000" d="M2.35,5.5 L17.523,5.5"></path>
+                                                   <path fill="none" stroke="#000"
+                                                      d="M10,19.46 L9.98,19.46 C7.31,17.33 5.61,14.141 5.61,10.58 C5.61,7.02 7.33,3.83 10,1.7 C10.01,1.7 9.99,1.7 10,1.7 L10,1.7 C12.67,3.83 14.4,7.02 14.4,10.58 C14.4,14.141 12.67,17.33 10,19.46 L10,19.46 L10,19.46 L10,19.46 Z">
+                                                   </path>
+                                                   <circle fill="none" stroke="#000" cx="10" cy="10.5" r="9"></circle>
+                                                </svg></span><a href="www.kostbartrading.com"
+                                                class="uk-link-text uk-button uk-button-text">www.kostbartrading.com</a></label>
+                                          <!-- social media begin -->
+                                          <div class="uk-flex">
+                                             <div style="margin-top: 3px;">
+                                                <a href="https://www.facebook.com/indonez"
+                                                   style="color: #ffffff; text-decoration: none; font-size: 20px;">
+                                                   <i class="fab fa-facebook"></i>
+                                                </a>
+                                             </div>
+
+                                             <div style="margin-top: 3px; padding-left: 10px;">
+                                                <a href="https://www.instagram.com/indonez_ig"
+                                                   style="color: #ffffff; text-decoration: none; font-size: 20px;">
+                                                   <i class="fab fa-instagram"></i>
+                                                </a>
+                                             </div>
                                           </div>
-                                          <div class="uk-width-1-2@s uk-inline">
-                                             <span class="uk-form-icon fas fa-envelope fa-sm"></span>
-                                             <input class="uk-input uk-border-rounded" id="email" name="email"
-                                                type="email" placeholder="Email address" required>
+                                          <!-- social media end -->
+                                       </div>
+                                       <div class="uk-width-2-3@m" uk-scrollspy="cls: slide-in-right; delay: 400">
+                                          <div class="uk-margin-medium-left in-margin-remove-left@s">
+                                             <form id="contact-form" class="uk-form uk-grid-small" data-uk-grid
+                                                action="php/php/contact-form.php" method="POST">
+                                                <div class="uk-width-1-2@s uk-inline">
+                                                   <span class="uk-form-icon fas fa-user fa-sm"></span>
+                                                   <input class="uk-input uk-border-rounded" id="name" name="name"
+                                                      type="text" placeholder="Full name" required>
+                                                </div>
+                                                <div class="uk-width-1-2@s uk-inline">
+                                                   <span class="uk-form-icon fas fa-envelope fa-sm"></span>
+                                                   <input class="uk-input uk-border-rounded" id="email" name="email"
+                                                      type="email" placeholder="Email address" required>
+                                                </div>
+                                                <div class="uk-width-1-1 uk-inline">
+                                                   <span class="uk-form-icon fas fa-pen fa-sm"></span>
+                                                   <input class="uk-input uk-border-rounded" id="subject" name="subject"
+                                                      type="text" placeholder="Subject" required>
+                                                </div>
+                                                <div class="uk-width-1-1">
+                                                   <textarea class="uk-textarea uk-border-rounded" id="message"
+                                                      name="message" rows="6" placeholder="Message" required></textarea>
+                                                </div>
+                                                <div class="uk-width-1-1">
+                                                   <input type="submit" value="Send Message"
+                                                      class="uk-button uk-button-primary uk-border-rounded uk-align-right">
+                                                </div>
+                                             </form>
                                           </div>
-                                          <div class="uk-width-1-1 uk-inline">
-                                             <span class="uk-form-icon fas fa-pen fa-sm"></span>
-                                             <input class="uk-input uk-border-rounded" id="subject" name="subject"
-                                                type="text" placeholder="Subject" required>
-                                          </div>
-                                          <div class="uk-width-1-1">
-                                             <textarea class="uk-textarea uk-border-rounded" id="message" name="message"
-                                                rows="6" placeholder="Message" required></textarea>
-                                          </div>
-                                          <div class="uk-width-1-1">
-                                             <input type="submit" value="Send Message"
-                                                class="uk-button uk-button-primary uk-border-rounded uk-align-right">
-                                          </div>
-                                       </form>
+                                       </div>
                                     </div>
                                  </div>
                               </div>
@@ -527,9 +715,9 @@
                   </div>
                </div>
             </div>
+            <!-- section content end -->
          </div>
       </div>
-      <!-- section content end -->
       <!-- map -->
       <iframe
          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d903.4177855200795!2d55.148442472213745!3d25.079133000000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6d9c0ba2b39b%3A0xa5672a0762681447!2s1%20lake%20towers%20Jumeirah%20Lakes%20towers!5e0!3m2!1sen!2sin!4v1746092778789!5m2!1sen!2sin"
@@ -538,7 +726,7 @@
       <!-- map end -->
    </main>
    <!-- footer begin -->
-   <footer>
+      <footer>
       <div class="uk-section uk-section-muted uk-padding-large uk-padding-remove-horizontal "
          style="background-color: #070a12;">
          <div class="uk-container">
@@ -606,28 +794,24 @@
                                     uk-button-text" target="_blank">kostbartrading@gmail.com</a>
                                          
                            </li>
+                           <li class="uk-margin-top">
+                              <!-- social media begin -->
+                              <div class="uk-flex social-media-list uk-margin-large-bottom">
+                                 <div><a href="https://www.facebook.com/indonez"
+                                       class="color-facebook text-decoration-none"><i class="fab fa-facebook" style="color: #d6c5c5; text-decoration: none;"></i>
+                                       Facebook</a></div>
+                                 <div><a href="https://www.instagram.com/indonez_ig"
+                                       class="color-instagram text-decoration-none"><i class="fab fa-instagram" style="color: #d6c5c5; text-decoration: none;"></i>
+                                       Instagram</a></div>
+
+                              </div>
+                              <!-- social media end -->
+                           </li>
                         </ul>
                      </div>
                   </div>
                </div>
-               <div class="uk-width-1-1 uk-margin-large-top in-offset-bottom-10">
-                  <div class="uk-grid uk-flex uk-flex-middle" data-uk-grid="">
-                     <div class="uk-width-1-2@m">
-                     </div>
-                     <div class="uk-width-1-2@m uk-flex uk-flex-right@m">
-                        <!-- social media begin -->
-                        <div class="uk-flex social-media-list">
-                           <div><a href="https://www.facebook.com/indonez"
-                                 class="color-facebook text-decoration-none"><i class="fab fa-facebook-square"></i>
-                                 Facebook</a></div>
-                           <div><a href="https://www.instagram.com/indonez_ig"
-                                 class="color-instagram text-decoration-none"><i class="fab fa-instagram"></i>
-                                 Instagram</a></div>
-                        </div>
-                        <!-- social media end -->
-                     </div>
-                  </div>
-               </div>
+               
             </div>
          </div>
       </div>
