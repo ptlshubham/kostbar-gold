@@ -7919,12 +7919,15 @@ ul.uk-nav-sub {
 /* Style modifiers
  ========================================================================== */
 .uk-text-lead {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   color: #fff;
   font-weight: 300;
 }
+.text-lead{
+  font-weight: 300;
 
+}
 .uk-text-meta {
   font-size: 0.824rem;
   line-height: 1.4;

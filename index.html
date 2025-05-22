@@ -28,65 +28,63 @@
    <!-- touch icon -->
    <link rel="apple-touch-icon-precomposed" href="assets/img/logo/apple-touch-icon.png">
    <!-- CSS for canvas background and scrolling effects -->
-      <style>
-   
-
-    .about-us {
-      margin-top: 0%;
-      margin-bottom: 10px;
-    }
-
-    .center-section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      position: relative;
-      margin-top: -90px;
- 
-    }
-
-    .circle {
-      width: 200px;
-      height: 200px;
-      background-color: rgb(7 10 18);
-      border-radius: 50%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease;
-    }
-
-    .circle:hover {
-      transform: scale(1.05);
-    }
-
-    .circle span {
-      display: block;
-      word-wrap: break-word;
-      max-width: 90%;
-    }
-
-    .circle .number {
-      font-size: 2.5em;
-      font-weight: bold;
-      color: #f5c518;
-    }
-
-    .circle .text {
-      font-size: 1em;
-      color: #ffffff;
-    }
-
-    @media (max-width: 768px) {
-      .center-section {
-        margin: 20px 0;
+   <style>
+      .about-us {
+         margin-top: 0%;
+         margin-bottom: 10px;
       }
-    }
-  </style>
+
+      .center-section {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 100%;
+         position: relative;
+         margin-top: -90px;
+
+      }
+
+      .circle {
+         width: 200px;
+         height: 200px;
+         background-color: rgb(7 10 18);
+         border-radius: 50%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+         transition: transform 0.3s ease;
+      }
+
+      .circle:hover {
+         transform: scale(1.05);
+      }
+
+      .circle span {
+         display: block;
+         word-wrap: break-word;
+         max-width: 90%;
+      }
+
+      .circle .number {
+         font-size: 2.5em;
+         font-weight: bold;
+         color: #f5c518;
+      }
+
+      .circle .text {
+         font-size: 1em;
+         color: #ffffff;
+      }
+
+      @media (max-width: 768px) {
+         .center-section {
+            margin: 20px 0;
+         }
+      }
+   </style>
    <title>Homepage</title>
 
 </head>
@@ -289,7 +287,7 @@
                      <div class="uk-grid" data-uk-grid>
                         <div class="uk-width-3-5@m" uk-scrollspy="cls: uk-animation-fade; delay: 200">
                            <div class="uk-overlay">
-                              <h1 uk-scrollspy="cls: uk-animation-slide-top; delay: 300">Secure Your Future with Gold
+                              <h1 uk-scrollspy=" cls: uk-animation-slide-top; delay: 300">Secure Your Future with Gold
                                  Investment</h1>
                               <p class="uk-text-lead uk-visible@m"
                                  uk-scrollspy="cls: uk-animation-slide-top; delay: 400">Appeals to investors interested
@@ -323,12 +321,14 @@
                         <div class="uk-width-1-2@s uk-width-expand@m uk-flex uk-flex-middle"
                            uk-scrollspy="cls: slide-in-left; delay: 600" style="background-color: #070a12;">
                            <div class="uk-card-body">
-                              <h1 class="uk-text-color-lighter">Welcome to <br><span class="in-highlight">Kostbar
-                                    Trading</span></h1>
-                              <h4 class="uk-text-color-lighter">Your Trusted
+
+                              <h1 class="uk-text-color-lighter text-lead">Welcome to Kostbar
+                                 Trading</h1>
+                              <h4 class="uk-text-color-lighter text-lead">Your Trusted
                                  Partner in Precious Metals
                                  and Bullion Trading</h4>
-                              <p class="uk-text-color-lighter">Experience ethical, transparent, and secure investment
+                              <p class="uk-text-color-lighter uk-text-lead">Experience ethical, transparent, and secure
+                                 investment
                                  opportunities with a legacy of
                                  trust and excellence. At Kostbar, we invite you to join us in exploring the rewarding
                                  world of gold, silver, and jewellery trading, backed by our commitment to quality and
@@ -376,15 +376,18 @@
                <div class="uk-width-2-2@m" uk-scrollspy="cls: fade-in; delay: 300">
                   <div class="uk-grid uk-grid-small" data-uk-grid>
                      <div class="uk-width-expand">
-                        <h1 class="uk-margin-remove uk-text-color-lighter uk-text-center" style="color: #ffffff;">
-                           Gold Price <span class="in-highlight"> Live Quote</span>
+                        <h1 class="text-lead uk-margin-remove uk-text-color-lighter uk-text-center"
+                           style="color: #ffffff;">
+                           Gold Price Live Quote
                         </h1>
-                        <p class="uk-margin-medium-bottom uk-text-center" style="color: #ffffff;"><b>
-                              Stay updated with the latest live gold prices to make informed decisions for investment or
-                              purchase.
-                              Our real-time gold price tracker provides current rates for 24K, 22K, 18K, and 14K gold,
-                              helping you monitor market movements instantly.
-                           </b></p>
+                        <p class="uk-text-color-lighter uk-text-lead uk-text-center" style="color: #ffffff;"> Stay
+                           updated with the
+                           latest live gold prices to
+                           make informed decisions for investment or
+                           purchase.
+                           Our real-time gold price tracker provides current rates for 24K, 22K, 18K, and 14K gold,
+                           helping you monitor market movements instantly.</p>
+
                      </div>
                   </div>
                </div>
@@ -399,17 +402,18 @@
                   <div class="uk-grid-large uk-child-width-1-2@s uk-child-width-1-2@m uk-flex uk-flex-middle"
                      data-uk-grid>
                      <div uk-scrollspy="cls: slide-in-left; delay: 300">
-                        <h1 class="uk-text-color-lighter">What is
-                           <span class="in-highlight">Bullion?</span>
+                        <h1 class="uk-text-color-lighter text-lead">What is Bullion?
                         </h1>
-                        <p class="uk-margin-medium-bottom">
+                        <p class="uk-margin-medium-bottom uk-text-lead">
                            Bullion refers to gold, silver, or other precious metals in the form of bars, ingots, or
                            coins, valued by their weight and purity. At Kostbar, our bullion products meet the highest
                            global standards, making them a secure and rewarding investment option. Whether you're a
                            seasoned investor or new to the market, bullion offers a tangible asset to diversify your
                            portfolio and safeguard your wealth.
                         </p>
-                        <p>We specialize in physical bullion trading, ensuring accuracy in weight and purity, and
+                        <p class="uk-text-lead">We specialize in physical bullion trading, ensuring accuracy in weight
+                           and
+                           purity, and
                            providing our clients with confidence in every transaction.
                         </p>
                      </div>
@@ -427,33 +431,35 @@
             <div class="uk-grid">
                <div class="uk-width-2-2@m" uk-scrollspy="cls: fade-in; delay: 300">
                   <div class="uk-grid uk-grid-small" data-uk-grid>
-                     <div class="uk-width-expand">
-                        <h1 class="uk-text-color-lighter uk-text-center">About <span class="in-highlight">
-                              Kostbar</span></h1>
-                        <p class="uk-margin-medium-bottom uk-text-center"><b> At Kostbar, credibility, integrity, and
-                              trust are the pillars of our
-                              business. Established
-                              under
-                              Commercial License No. 5021690 by the Department of Ajman Free Zone, UAE,
-                              we are a leading
-                              name in
-                              the gold and precious metals trading industry.</b>
 
-                        </p>
+
+                     <div class="uk-width-expand">
+                        <h1 class="text-lead uk-margin-remove uk-text-color-lighter uk-text-center"
+                           style="color: #ffffff;">
+                           About
+                           Kostbar
+                        </h1>
+                        <p class="uk-text-color-lighter uk-text-lead uk-text-center" style="color: #ffffff;"> At
+                           Kostbar, credibility, integrity, and
+                           trust are the
+                           pillars of our business. Established under Commercial License No. 5021690 by the
+                           Department of Ajman Free Zone, UAE, we are a leading name in the gold and precious metals
+                           trading industry.</p>
+
                      </div>
                   </div>
                </div>
             </div>
          </div>
       </div>
-        <!-- Expertise Circle Section -->
-  <div class="center-section">
-    <div class="circle">
-      <span class="text">EXPERTISE OF</span>
-      <span class="number">05</span>
-      <span class="text">YEARS</span>
-    </div>
-  </div>
+      <!-- Expertise Circle Section -->
+      <div class="center-section">
+         <div class="circle">
+            <span class="text">EXPERTISE OF</span>
+            <span class="number">05</span>
+            <span class="text">YEARS</span>
+         </div>
+      </div>
       <!-- section content begin -->
       <!-- section content end -->
       <div class="uk-section uk-padding-remove-vertical  uk-margin-large-bottom ">
@@ -463,17 +469,19 @@
                   <div class="uk-card  uk-padding-large uk-box-shadow-small uk-border-rounded ">
                      <div class="uk-grid uk-flex-middle" data-uk-grid>
                         <div class="uk-width-1-1 uk-width-expand@m">
-                           <h3 class="uk-text-center" style="color: #ffffff;">Our Mission</h3>
-                           <p> At Kostbar, our mission is to provide unparalleled access to premium gold bullion, doré
+                           <h3 class="uk-text-center text-lead " style="color: #ffffff;">Our Mission</h3>
+                           <p class="uk-text-lead"> At Kostbar, our mission is to provide unparalleled access to
+                              premium
+                              gold bullion, doré
                               metals, and bullion trading services, delivering exceptional value and trust to our
                               clients. We are dedicated to empowering investors and collectors with high-quality,
                               responsibly sourced precious metals, ensuring transparency, security, and excellence in
                               every transaction.</p>
-
                         </div>
                         <div class="uk-width-1-1 uk-width-expand@m">
-                           <h3 class="uk-text-center" style="color: #ffffff;" >Our Vision</h3>
-                           <p>Our vision is to be the global benchmark in premium gold bullion and doré metals trading,
+                           <h3 class="uk-text-center text-lead uk-padding-small" style="color: #ffffff;">Our Vision</h3>
+                           <p class="uk-text-lead">Our vision is to be the global benchmark in premium gold bullion and
+                              doré metals trading,
                               recognized for integrity, innovation, and sustainability. We aim to shape a future where
                               precious metals are a cornerstone of wealth preservation and growth, fostering confidence
                               and prosperity through ethical sourcing, cutting-edge trading solutions, and a commitment
@@ -497,9 +505,11 @@
                   <img src="assets/img/in-wave-icon-10.svg" alt="wave-icon" width="96" height="96">
                </div>
                <div class="uk-width-3-5@m" uk-scrollspy="cls: slide-in-left; delay: 400">
-                  <h2 class="uk-margin-remove-bottom">Why Choose Kostbar</h2>
-                  <h6>With a decade of experience in the Middle East and India, Kostbar stands out for its:</h6>
-                  <p>Ethical Conduct: Upholding honesty and transparency in every transaction.
+                  <h2 class="uk-margin-remove-bottom text-lead">Why Choose Kostbar</h2>
+                  <h4 class="text-lead">With a decade of experience in the Middle East and India, Kostbar stands out
+                     for
+                     its:</h4>
+                  <p class="uk-text-lead">Ethical Conduct: Upholding honesty and transparency in every transaction.
                      Global Reach: Serving clients across the Middle East, South Asia, and Southeast Asia.
                      Innovation: Leveraging cutting-edge technology to enhance trading efficiency.
                      Diverse Portfolio: Expanding into commodities, wealth management, and mining
@@ -516,58 +526,63 @@
                <div class="uk-container uk-margin-small-bottom">
                   <div class="uk-grid">
                      <div class="uk-width-3-4@m" uk-scrollspy="cls: fade-in; delay: 400">
-                        <h1 class="uk-margin-remove-bottom uk-text-color-lighter">Why Customer <span
-                              class="in-highlight">Choose </span> Kostbar
+                        <h1 class="uk-margin-remove-bottom uk-text-color-lighter text-lead">Why CustomerChoose Kostbar
                         </h1>
                      </div>
                   </div>
-                  <div class="uk-grid-large uk-child-width-1-2@s uk-child-width-1-4@m uk-margin-large-top" data-uk-grid>
+                  <div class="uk-grid-large uk-child-width-1-2@s uk-child-width-1-4@m uk-margin-large-top "
+                     data-uk-grid>
                      <div uk-scrollspy="cls: scale-up; delay: 400">
                         <div class="in-wave-12-counter">
                            <h1 class="uk-heading-medium uk-margin-remove">
-                              <span class="count uk-text-color-lighter" data-counter-end="20">0</span>
+                              <span class="count uk-text-color-lighter  text-lead" data-counter-end="20">0</span>
                               <span class="in-wave-12-small">years</span>
                            </h1>
-                           <h4 class="uk-margin-top uk-margin-remove-bottom uk-text-color-lighter">Trusted Expertise
+                           <h4 class="uk-margin-top uk-margin-remove-bottom uk-text-color-lighter  text-lead">Trusted
+                              Expertise
                            </h4>
-                           <p class="uk-text-muted uk-margin-remove-top">Serving Since 2004</p>
+                           <p class="uk-text-muted uk-margin-remove-top  text-lead">Serving Since 2004</p>
                         </div>
                      </div>
                      <div uk-scrollspy="cls: scale-up; delay: 500">
                         <div class="in-wave-12-counter">
                            <h1 class="uk-heading-medium uk-margin-remove">
-                              <span class="count uk-text-color-lighter" data-counter-end="100">0</span>
+                              <span class="count uk-text-color-lighter  text-lead" data-counter-end="100">0</span>
                               <span class="in-wave-12-small">%</span>
                            </h1>
-                           <h4 class="uk-margin-top uk-margin-remove-bottom uk-text-color-lighter">Quality Assurance
+                           <h4 class="uk-margin-top uk-margin-remove-bottom uk-text-color-lighter  text-lead">Quality
+                              Assurance
                            </h4>
-                           <p class="uk-text-muted uk-margin-remove-top">Dubai & London Standards</p>
+                           <p class="uk-text-muted uk-margin-remove-top  text-lead">Dubai & London Standards</p>
                         </div>
                      </div>
                      <div uk-scrollspy="cls: scale-up; delay: 600">
                         <div class="in-wave-12-counter">
                            <h1 class="uk-heading-medium uk-margin-remove">
-                              <span class="count uk-text-color-lighter" data-counter-end="500">0</span>
+                              <span class="count uk-text-color-lighter  text-lead" data-counter-end="500">0</span>
                               <span class="in-wave-12-small">+</span>
                            </h1>
-                           <h4 class="uk-margin-top uk-margin-remove-bottom uk-text-color-lighter">Satisfied Clients
+                           <h4 class="uk-margin-top uk-margin-remove-bottom uk-text-color-lighter  text-lead">Satisfied
+                              Clients
                            </h4>
-                           <p class="uk-text-muted uk-margin-remove-top">Elite Investors & Retailers</p>
+                           <p class="uk-text-muted uk-margin-remove-top  text-lead">Elite Investors & Retailers</p>
                         </div>
                      </div>
                      <div uk-scrollspy="cls: scale-up; delay: 700">
                         <div class="in-wave-12-counter">
                            <h1 class="uk-heading-medium uk-margin-remove">
-                              <span class="count uk-text-color-lighter" data-counter-end="24">0</span>
+                              <span class="count uk-text-color-lighter  text-lead" data-counter-end="24">0</span>
                               <span class="in-wave-12-small">/7</span>
                            </h1>
-                           <h4 class="uk-margin-top uk-margin-remove-bottom uk-text-color-lighter">Customer Support</h4>
-                           <p class="uk-text-muted uk-margin-remove-top">Personalized Assistance</p>
+                           <h4 class="uk-margin-top uk-margin-remove-bottom uk-text-color-lighter  text-lead">Customer
+                              Support</h4>
+                           <p class="uk-text-muted uk-margin-remove-top text-lead">Personalized Assistance</p>
                         </div>
                      </div>
                   </div>
                   <div class="uk-text-center uk-margin-top">
-                     <p class="uk-text-muted">Licensed by Ajman Free Zone, UAE – Commercial License No. 5021690</p>
+                     <p class="uk-text-muted  text-lead">Licensed by Ajman Free Zone, UAE – Commercial License No.
+                        5021690</p>
                   </div>
                </div>
             </div>
@@ -579,8 +594,9 @@
                         <div class="uk-card uk-card-default uk-card-body uk-box-shadow-small uk-border-rounded">
                            <div class="uk-grid uk-flex-middle" data-uk-grid>
                               <div class="uk-width-1-1 uk-width-expand@m">
-                                 <h3>Discover Gold Investment – Contact Us Today!</h3>
-                                 <p class="uk-text-small uk-margin-small-top">Connect with Our Trusted Gold Experts to
+                                 <h3 class=" text-lead">Discover Gold Investment – Contact Us Today!</h3>
+                                 <p class="uk-text-small uk-margin-small-top text-lead">Connect with Our Trusted Gold
+                                    Experts to
                                     Start
                                     Your Journey!</p>
                               </div>
@@ -605,21 +621,24 @@
                            <div class="in-create-account uk-margin-medium-top">
                               <span class="uk-label in-label-small uk-text-uppercase uk-margin-small-bottom">Contact
                                  Us</span>
-                              <p class="uk-margin-remove-top uk-visible@m">Let’s build a long-term, trustworthy
+                              <p class="uk-margin-remove-top uk-visible@m text-lead">Let’s build a long-term,
+                                 trustworthy
                                  partnership.
                               </p>
                               <div class="uk-grid-small" data-uk-grid>
                                  <div class="uk-width-1-1@m uk-margin-medium-top u">
                                     <div class="uk-grid uk-grid-large" data-uk-grid>
                                        <div class="uk-width-1-3@m" uk-scrollspy="cls: slide-in-left; delay: 300">
-                                          <h4 class="uk-margin-remove-bottom uk-text-color-lighter">Visit our office
+                                          <h4 class="uk-margin-remove-bottom uk-text-color-lighter text-lead">Visit our
+                                             office
                                           </h4>
-                                          <p class="uk-margin-small-top">C1- 601, Executive Office, Ajman Free Zone,
+                                          <p class="uk-margin-small-top text-lead">C1- 601, Executive Office, Ajman Free
+                                             Zone,
                                              Ajman –
                                              PO Box
                                              No - 241677</p>
                                           <h4
-                                             class="uk-margin-medium-top uk-margin-remove-bottom uk-text-color-lighter">
+                                             class="uk-margin-medium-top uk-margin-remove-bottom uk-text-color-lighter text-lead">
                                              Message us
                                           </h4>
                                           <p class="uk-margin-small-top">
@@ -633,7 +652,7 @@
                                              </span>
                                              <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=kostbartrading@gmail.com"
                                                 target="_blank"
-                                                class="uk-link-text uk-button uk-button-text">kostbartrading@gmail.com</a>
+                                                class="uk-link-text uk-button uk-button-text text-lead">kostbartrading@gmail.com</a>
                                           </p>
                                           <p>
                                              <span class="uk-margin-small-right uk-icon" uk-icon="receiver">
@@ -644,7 +663,7 @@
                                                 </svg>
                                              </span>
                                              <a href="tel:+971588159515"
-                                                class="uk-link-text uk-button uk-button-text">+971 58
+                                                class="uk-link-text uk-button uk-button-text text-lead ">+971 58
                                                 815 9515</a>
                                           </p>
                                           <label for=""><span class="uk-margin-small-right uk-icon" uk-icon="world"><svg
@@ -657,7 +676,7 @@
                                                    </path>
                                                    <circle fill="none" stroke="#000" cx="10" cy="10.5" r="9"></circle>
                                                 </svg></span><a href="www.kostbartrading.com"
-                                                class="uk-link-text uk-button uk-button-text">www.kostbartrading.com</a></label>
+                                                class="uk-link-text uk-button uk-button-text text-lead">www.kostbartrading.com</a></label>
                                           <!-- social media begin -->
                                           <div class="uk-flex">
                                              <div style="margin-top: 3px;">
@@ -699,7 +718,7 @@
                                                    <textarea class="uk-textarea uk-border-rounded" id="message"
                                                       name="message" rows="6" placeholder="Message" required></textarea>
                                                 </div>
-                                                <div class="uk-width-1-1">
+                                                <div class="uk-width-1-1 text-lead">
                                                    <input type="submit" value="Send Message"
                                                       class="uk-button uk-button-primary uk-border-rounded uk-align-right">
                                                 </div>
@@ -726,7 +745,7 @@
       <!-- map end -->
    </main>
    <!-- footer begin -->
-      <footer>
+   <footer>
       <div class="uk-section uk-section-muted uk-padding-large uk-padding-remove-horizontal "
          style="background-color: #070a12;">
          <div class="uk-container">
@@ -736,29 +755,30 @@
                      <img class="uk-display-block" src="assets/img/logo/heaer-logo.png" alt="footer-logo" width="230"
                         height="23" data-uk-img="">
                   </div>
-                  <p class="uk-text-small uk-margin-small-top">Your Trusted Source for Gold & Jewelry</p>
-                  <p class="uk-margin-small-top">C1- 601, Executive Office,<br> Ajman Free Zone, <br>
+                  <p class="uk-text-small uk-margin-small-top text-lead">Your Trusted Source for Gold & Jewelry</p>
+                  <p class="uk-margin-small-top text-lead">C1- 601, Executive Office,<br> Ajman Free Zone, <br>
                      Ajman – PO Box No - 241677
                   </p>
                </div>
                <div class="uk-width-3-5@m">
                   <div class="uk-child-width-1-2@s uk-child-width-1-2@m" data-uk-grid="">
                      <div>
-                        <h4 class="uk-text-color-lighter ">Useful Links</h4>
+                        <h4 class="uk-text-color-lighter text-lead">Useful Links</h4>
                         <ul class="uk-list uk-link-text">
-                           <li><a href="index.html" class="uk-text-small uk-button uk-button-text">Home</a>
+                           <li><a href="index.html" class="uk-text-small uk-button uk-button-text text-lead">Home</a>
                            </li>
-                           <li><a href="about-us.html" class="uk-text-small uk-button uk-button-text">About
+                           <li><a href="about-us.html" class="uk-text-small uk-button uk-button-text text-lead">About
                                  US</a></li>
-                           <li><a href="our-services.html" class="uk-text-small uk-button uk-button-text">Our
+                           <li><a href="our-services.html" class="uk-text-small uk-button uk-button-text text-lead">Our
                                  Services</a></li>
-                           <li><a href="products.html" class="uk-text-small uk-button uk-button-text">Products
+                           <li><a href="products.html" class="uk-text-small uk-button uk-button-text text-lead">Products
                               </a>
                            </li>
-                           <li><a href="faqs.html" class="uk-text-small uk-button uk-button-text">FAQs
+                           <li><a href="faqs.html" class="uk-text-small uk-button uk-button-text text-lead">FAQs
                               </a>
                            </li>
-                           <li><a href="contact-us.html" class="uk-text-small uk-button uk-button-text">Contact
+                           <li><a href="contact-us.html"
+                                 class="uk-text-small uk-button uk-button-text text-lead">Contact
                                  Us</a>
                            </li>
                         </ul>
@@ -766,7 +786,7 @@
 
 
                      <div>
-                        <h4 class="uk-text-color-lighter">Contact</h4>
+                        <h4 class="uk-text-color-lighter text-lead">Contact</h4>
                         <ul class="uk-list uk-link-text">
                            <li>
                               <span class="uk-margin-small-right uk-icon" uk-icon="receiver">
@@ -776,7 +796,7 @@
                                     </path>
                                  </svg>
                               </span>
-                              <a href="tel:+971588159515" class="uk-text-small uk-button uk-button-text">+971
+                              <a href="tel:+971588159515" class="uk-text-small uk-button uk-button-text text-lead">+971
                                  58 815
                                  9515</a>
                            </li>
@@ -790,7 +810,7 @@
                                  </svg>
                               </span>
                               <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=kostbartrading@gmail.com"
-                                 target="_blank" class="uk-text-small  uk-button
+                                 target="_blank" class="uk-text-small  uk-button text-lead
                                     uk-button-text" target="_blank">kostbartrading@gmail.com</a>
                                          
                            </li>
@@ -798,10 +818,12 @@
                               <!-- social media begin -->
                               <div class="uk-flex social-media-list uk-margin-large-bottom">
                                  <div><a href="https://www.facebook.com/indonez"
-                                       class="color-facebook text-decoration-none"><i class="fab fa-facebook" style="color: #d6c5c5; text-decoration: none;"></i>
+                                       class="color-facebook text-decoration-none"><i class="fab fa-facebook"
+                                          style="color: #d6c5c5; text-decoration: none;"></i>
                                        Facebook</a></div>
                                  <div><a href="https://www.instagram.com/indonez_ig"
-                                       class="color-instagram text-decoration-none"><i class="fab fa-instagram" style="color: #d6c5c5; text-decoration: none;"></i>
+                                       class="color-instagram text-decoration-none"><i class="fab fa-instagram"
+                                          style="color: #d6c5c5; text-decoration: none;"></i>
                                        Instagram</a></div>
 
                               </div>
@@ -811,14 +833,15 @@
                      </div>
                   </div>
                </div>
-               
+
             </div>
          </div>
       </div>
       <div class=" uk-padding-remove-vertical">
          <div class="uk-grid uk-flex uk-flex-center uk-padding-small">
             <div class="uk-width-auto uk-text-center">
-               <span class="uk-text-small uk-button">© 2025 <a href="https://keryar.com/" target="_blank">KERYAR.</a>
+               <span class="uk-text-small uk-button text-lead">© 2025 <a href="https://keryar.com/"
+                     target="_blank">KERYAR.</a>
                   All rights reserved.</span>
             </div>
          </div>
