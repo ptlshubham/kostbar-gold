@@ -17,7 +17,7 @@
          background-position: center;
          background-repeat: no-repeat;
          background-attachment: fixed;
-         background-image: url('../img/bg/lien.jpeg');
+         background-image: url('../img/bg/nuggets.webp');
          opacity: 0.8;
       }
 
@@ -44,7 +44,7 @@
          background-position: center;
          background-repeat: no-repeat;
          background-attachment: fixed;
-         background-image: url('../img/bg/about.webp');
+         background-image: url('../img/bg/nuggets.webp');
         }
          .About::before {
          content: "";
