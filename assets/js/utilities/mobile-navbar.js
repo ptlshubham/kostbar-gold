@@ -1,4 +1,4 @@
-/* mobile-navbar.js | https://www.indonez.com | Indonez | MIT License */
+/* mobile-navbar.js | https://www..com |  | MIT License */
 class MobileNavbar {
     constructor(settings) {
         this.addonButtons = settings.addonButtons
@@ -11,7 +11,7 @@ class MobileNavbar {
         this.optionalNav = document.querySelector('.in-optional-nav')
     }
 
-    init() {        
+    init() {
         if (this.navbar !== false) {
             this.createMobileNav(this.cloneNavbar, this.cloneNavbarChild)
             this.createMobileBtn(this.cloneNavbar, this.navbar)
@@ -71,7 +71,7 @@ class MobileNavbar {
         </div>`
 
         // Clean previous mobile button if exist and insert after that 
-        if(navbar.closest('.uk-navbar-left').nextElementSibling.querySelector('.in-mobile-nav')) {
+        if (navbar.closest('.uk-navbar-left').nextElementSibling.querySelector('.in-mobile-nav')) {
             navbar.closest('.uk-navbar-left').nextElementSibling.lastElementChild.remove()
         }
         navbar.closest('.uk-navbar-left').nextElementSibling.appendChild(mobileBtn).appendChild(modalFull);
@@ -80,7 +80,7 @@ class MobileNavbar {
     createAddonBtn(btnUrl, btnName, btnIcon) {
         const navbar = this.optionalNav;
         let signinBtn = '';
-        if (this.addonButtons && navbar !== null && navbar.children.length > 0) {            
+        if (this.addonButtons && navbar !== null && navbar.children.length > 0) {
             this.buttons.forEach(function (e) {
                 signinBtn += `<a href="${btnUrl(e, navbar)}" class="uk-button uk-button-${e.type} uk-border-rounded uk-align-center" style="margin-bottom : -12px">${btnName(e, navbar)}${btnIcon(e)}</a>`;
             })

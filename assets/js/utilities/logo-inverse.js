@@ -1,7 +1,7 @@
-/* logo-inverse.js | https://www.indonez.com | Indonez | MIT License */
+/* logo-inverse.js | https://www..com |  | MIT License */
 class LogoInverse {
     constructor() {
-        this.element = document.querySelector('[data-logo-inverse]') !== null ?document.querySelector('[data-logo-inverse]') : false
+        this.element = document.querySelector('[data-logo-inverse]') !== null ? document.querySelector('[data-logo-inverse]') : false
     }
 
     init() {
@@ -24,11 +24,11 @@ class LogoInverse {
 
         attrValue.forEach(attr => {
             const sanitize = attr.replace(/(;)/g, '')
-            Object.assign(dataAttr, {[sanitize.match(/(.*):/)[1].replace(/[-_\s.]+(.)?/g, (_, c) => c ? c.toUpperCase() : '')]: sanitize.match(/: (.*)/)[1]})
+            Object.assign(dataAttr, { [sanitize.match(/(.*):/)[1].replace(/[-_\s.]+(.)?/g, (_, c) => c ? c.toUpperCase() : '')]: sanitize.match(/: (.*)/)[1] })
         })
 
         if (!dataAttr.hasOwnProperty('stickyOnly')) {
-            Object.assign(dataAttr, {stickyOnly: 'false'})
+            Object.assign(dataAttr, { stickyOnly: 'false' })
         }
 
         return dataAttr
@@ -43,7 +43,7 @@ class LogoInverse {
                 document.querySelector('[data-logo-inverse] img').setAttribute('src', originalLogo)
             }
         })
-        observer.observe(document.querySelector('header'), {childList: true, subtree: true})
+        observer.observe(document.querySelector('header'), { childList: true, subtree: true })
     }
 }
 

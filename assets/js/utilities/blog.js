@@ -1,29 +1,29 @@
-/* blog.js | https://www.indonez.com | Indonez | MIT License */
+/* blog.js | https://www..com |  | MIT License */
 class Blog {
     constructor() {
         this.articleWrap = document.querySelectorAll('article')
         this.tagWrap = document.querySelector('.widget-tag')
         this.categoryWrap = document.querySelector('.widget-categories')
         this.latestWrap = document.querySelector('.widget-latest')
-        this.urlParams = window.location.href.split( '/' )
+        this.urlParams = window.location.href.split('/')
         this.currentPage = this.urlParams.pop()
         this.sanitizePath = this.sanitizePage(this.currentPage)
     }
 
     init() {
-        if(document.querySelector('[data-title="blog"]') || document.querySelector('[data-title="blog-find"]')) {
+        if (document.querySelector('[data-title="blog"]') || document.querySelector('[data-title="blog-find"]')) {
             this.getData()
-            .then(responses => {
-                return Promise.all(responses.map(response => response.json()))
-            })
-            .then(data => {                
-                this.createCategoryWidget(data)
-                this.createLatestWidget(data)
-                this.createTagWidget(data)
-                this.createFindPage(data)
-                this.createPagination(data)
-                this.searchForm(data)
-            })
+                .then(responses => {
+                    return Promise.all(responses.map(response => response.json()))
+                })
+                .then(data => {
+                    this.createCategoryWidget(data)
+                    this.createLatestWidget(data)
+                    this.createTagWidget(data)
+                    this.createFindPage(data)
+                    this.createPagination(data)
+                    this.searchForm(data)
+                })
 
             this.contentTruncate()
             this.trimLatestWidget()
@@ -61,10 +61,10 @@ class Blog {
     }
 
     createCategoryWidget(data) {
-        if(document.querySelector('.widget-categories') !== null) {
+        if (document.querySelector('.widget-categories') !== null) {
             data[1].sort((a, b) => {
-                if(a.category < b.category) return -1
-                if(a.category > b.category) return 1
+                if (a.category < b.category) return -1
+                if (a.category > b.category) return 1
                 return 0
             })
             const categoryFilter = data[1].filter(item => item.category !== 'Uncategorized')
@@ -75,7 +75,7 @@ class Blog {
     }
 
     createLatestWidget(data) {
-        if(document.querySelector('.widget-latest') !== null) {
+        if (document.querySelector('.widget-latest') !== null) {
             data[0].latestPost.forEach(each => {
                 this.latestWrap.innerHTML += `
                 <li>
@@ -88,11 +88,11 @@ class Blog {
     }
 
     createTagWidget(data) {
-        if(document.querySelector('.widget-tag') !== null) {
+        if (document.querySelector('.widget-tag') !== null) {
             data[0].tagLists.sort()
             const tagFilter = data[0].tagLists.filter(item => item !== 'untagged')
             tagFilter.forEach(eachTag => {
-                if(eachTag.length !== 0) {
+                if (eachTag.length !== 0) {
                     this.tagWrap.innerHTML += `<a href="${this.sanitizePath}-find.html?tag=${eachTag}"><span class="uk-label uk-border-pill">#${eachTag}</span></a>`
                 } else {
                     this.tagWrap.innerHTML = '<p class="uk-text-small uk-text-muted uk-margin-remove-bottom">No tags available yet</p>'
@@ -102,7 +102,7 @@ class Blog {
     }
 
     createPagination(data) {
-        if(document.querySelector('[data-title="blog"]')) {
+        if (document.querySelector('[data-title="blog"]')) {
             const element = document.querySelector('.uk-pagination')
             const totalPages = data[0].totalPages
             const page = !this.currentPage.includes(`${this.sanitizePath}-page`) ? 1 : parseInt(this.currentPage.split('.')[0].split('-').pop())
@@ -113,20 +113,20 @@ class Blog {
             let afterPage = page + 1
 
             // hide pagination when only one page
-            if(totalPages === 1) {
+            if (totalPages === 1) {
                 element.remove()
             }
 
             // show the next button if the page value is greater than 1
-            if(page > 3) { 
+            if (page > 3) {
                 liTag += `<li class="page-item"><a class="page-link" href="${data[0].asBlog}" aria-label="previous"><span aria-hidden="true">&laquo;</span></a></li>`
             }
 
-            if(page == 1) {
+            if (page == 1) {
                 afterPage = afterPage + 2
-            } else if(page == 2) {
+            } else if (page == 2) {
                 afterPage = afterPage + 1
-            } else if(page !== totalPages && page < totalPages && page !== 1) {
+            } else if (page !== totalPages && page < totalPages && page !== 1) {
                 beforePage = beforePage - 1
             } else if (page == totalPages) {
                 beforePage = beforePage - 2
@@ -134,26 +134,26 @@ class Blog {
 
             for (let plength = beforePage; plength <= afterPage; plength++) {
                 // if plength is greater than totalPage length then continue
-                if (plength > totalPages) { 
+                if (plength > totalPages) {
                     continue
                 }
 
                 // if plength is 0 than add +1 in plength value
-                if (plength == 0) { 
+                if (plength == 0) {
                     plength = plength + 1
                 }
 
                 // if page is equal to plength than assign active string in the active variable
-                if(page == plength){ 
+                if (page == plength) {
                     active = 'class="uk-active"'
-                }else{ // else leave empty to the active variable
+                } else { // else leave empty to the active variable
                     active = ''
                 }
                 liTag += `<li ${active}><a href="${plength == 1 ? data[0].asBlog : `${this.sanitizePath}-page-${plength}.html`}">${plength}</a></li>`
             }
 
             // show the next button if the page value is less than totalPage(20)
-            if (page < totalPages - 1) { 
+            if (page < totalPages - 1) {
                 liTag += `<li><a href="${this.sanitizePath}-page-${totalPages}.html" aria-label="next"><span aria-hidden="true">&raquo;</span></a></li>`
             }
             // add li tag inside ul tag
@@ -162,32 +162,32 @@ class Blog {
     }
 
     createFindPage(data) {
-        if(document.querySelector('[data-title="blog-find"]')) {
+        if (document.querySelector('[data-title="blog-find"]')) {
             const params = new URLSearchParams(window.location.search)
             const textEl = document.querySelector('.blog-find-text')
             const headingEl = document.querySelector('.blog-find-heading')
 
-            if(params.has('category')) {
+            if (params.has('category')) {
                 const categoryName = this.capitalizeText(params.get('category'))
                 textEl.textContent = 'Post with category :'
                 headingEl.innerHTML = `<i class="fas fa-folder-open fa-xs uk-margin-small-right"></i>${categoryName}`
 
                 // write posts category into the dom
                 data[1].filter(post => {
-                    if(post.category.toLowerCase() === categoryName.toLowerCase()) {
+                    if (post.category.toLowerCase() === categoryName.toLowerCase()) {
                         const postWrap = document.querySelector('.blog-find')
                         const selectedPost = post.posts
                         setTimeout(() => {
                             selectedPost.forEach((each) => {
                                 const articleDiv = document.createElement('div')
-                                    articleDiv.innerHTML = this.postFormat(each)
-                                    postWrap.appendChild(articleDiv)
+                                articleDiv.innerHTML = this.postFormat(each)
+                                postWrap.appendChild(articleDiv)
                             }, 0);
                         })
                     }
                 })
             }
-            if(params.has('tag')) {
+            if (params.has('tag')) {
                 const tagName = params.get('tag')
 
                 textEl.textContent = 'Post with tag :'
@@ -195,7 +195,7 @@ class Blog {
 
                 // write posts tag into the dom
                 data[2].filter(post => {
-                    if(post.tag.toLowerCase() === tagName.toLowerCase()) {
+                    if (post.tag.toLowerCase() === tagName.toLowerCase()) {
                         const postWrap = document.querySelector('.blog-find')
                         const selectedPost = post.posts
 
@@ -211,7 +211,7 @@ class Blog {
     }
 
     searchForm(data) {
-        if(document.forms['blog-search'] !== undefined) {
+        if (document.forms['blog-search'] !== undefined) {
             const inputSearch = document.forms['blog-search']
 
             const category = data[1].map(item => {
@@ -241,7 +241,7 @@ class Blog {
         const postWrap = document.querySelector('.blog-find')
         const notFoundArr = []
 
-        if(document.querySelector('[data-title="blog-find"]') && params.has('result')) {
+        if (document.querySelector('[data-title="blog-find"]') && params.has('result')) {
             data.forEach(post => {
                 const title = post.title.toLowerCase()
                 const body = post.content.toLowerCase()
@@ -252,14 +252,14 @@ class Blog {
                 notFoundArr.push(title.indexOf(params.get('result')))
                 notFoundArr.push(body.indexOf(params.get('result')))
 
-                if(title.indexOf(params.get('result')) > -1 || body.indexOf(params.get('result')) > -1) {
+                if (title.indexOf(params.get('result')) > -1 || body.indexOf(params.get('result')) > -1) {
                     const articleDiv = document.createElement('div')
                     articleDiv.innerHTML = this.postFormat(post)
                     postWrap.appendChild(articleDiv)
                 }
             })
 
-            if(this.checkDiff(notFoundArr) !== true) {
+            if (this.checkDiff(notFoundArr) !== true) {
                 const notFoundDiv = document.createElement('div')
                 notFoundDiv.innerHTML = `<article class="uk-card uk-card-default uk-border-rounded">
     <div class="uk-card-body uk-text-center">
@@ -269,10 +269,10 @@ class Blog {
 </article>`
                 postWrap.appendChild(notFoundDiv)
             }
-        } 
+        }
     }
 
-    postFormat({link, title, content, author, date, category}) {
+    postFormat({ link, title, content, author, date, category }) {
         return `<article class="uk-card uk-card-default uk-border-rounded">
     <div class="uk-card-body">
         <h3>
@@ -312,7 +312,7 @@ class Blog {
     }
 
     trimLatestWidget() {
-        if(document.querySelector('.widget-latest') !== null) {
+        if (document.querySelector('.widget-latest') !== null) {
             const latestWrap = document.querySelector('.widget-latest')
             const titleList = latestWrap.querySelectorAll('a')
             titleList.forEach(title => title.textContent = this.trimLongTitle(title.textContent, 55))
@@ -330,14 +330,14 @@ class Blog {
 
     trimLongTitle(string, number) {
         let cut = string.indexOf(' ', number)
-        if(cut == -1) return string
+        if (cut == -1) return string
         return string.substring(0, cut) + ' ...'
     }
 
     removeUntagged() {
-        if(document.querySelector('.article-tags') !== null) {
+        if (document.querySelector('.article-tags') !== null) {
             const tagWrap = document.querySelector('.article-tags')
-            if(tagWrap.querySelector('a').textContent == 'untagged') tagWrap.remove()
+            if (tagWrap.querySelector('a').textContent == 'untagged') tagWrap.remove()
         }
     }
 }

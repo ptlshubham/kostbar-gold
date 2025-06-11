@@ -1,4 +1,4 @@
-/* page-loader.js | https://www.indonez.com | Indonez | MIT License */
+/* page-loader.js | https://www..com |  | MIT License */
 class PageLoader {
     constructor() {
         this.class = 'loaded'
@@ -6,7 +6,7 @@ class PageLoader {
     }
 
     init() {
-        if(document.querySelector(this.wrapper) !== null) {
+        if (document.querySelector(this.wrapper) !== null) {
             window.addEventListener('load', () => document.querySelector('body').classList.add(this.class))
         }
     }

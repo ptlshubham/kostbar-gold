@@ -5,9 +5,9 @@
     <!-- meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Premium HTML5 Template by Indonez">
-    <meta name="keywords" content="blockit, uikit3, indonez, handlebars, scss, javascript">
-    <meta name="author" content="Indonez">
+    <meta name="description" content="Premium HTML5 Template by ">
+    <meta name="keywords" content="blockit, uikit3, , handlebars, scss, javascript">
+    <meta name="author" content="">
     <meta name="theme-color" content="#FCB42D">
     <link rel="preload" href="assets/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
@@ -42,7 +42,6 @@
 </head>
 
 <body>
-    <canvas id="line-network-background"></canvas>
 
     <!-- page loader begin -->
     <div class="page-loader">
@@ -79,14 +78,14 @@
                                 <!-- social media begin -->
                                 <div class="uk-flex social-media-list uk-flex-right@m uk-flex-middle@m">
                                     <div style="padding: 5px;">
-                                        <a href="https://www.facebook.com/indonez"
+                                        <a href="https://www.facebook.com/"
                                             style="color: #ffffff; text-decoration: none; font-size: 20px;">
                                             <i class="fab fa-facebook"></i>
                                         </a>
                                     </div>
 
                                     <div style="padding: 5px;">
-                                        <a href="https://www.instagram.com/indonez_ig"
+                                        <a href="https://www.instagram.com/"
                                             style="color: #ffffff; text-decoration: none; font-size: 20px;">
                                             <i class="fab fa-instagram"></i>
                                         </a>
@@ -400,12 +399,12 @@
                                     <li class="uk-margin-top">
                                         <!-- social media begin -->
                                         <div class="uk-flex social-media-list uk-margin-large-bottom">
-                                            <div><a href="https://www.facebook.com/indonez"
+                                            <div><a href="https://www.facebook.com/"
                                                     class="color-facebook text-decoration-none"><i
                                                         class="fab fa-facebook"
                                                         style="color: #d6c5c5; text-decoration: none;"></i>
                                                     Facebook</a></div>
-                                            <div><a href="https://www.instagram.com/indonez_ig"
+                                            <div><a href="https://www.instagram.com/"
                                                     class="color-instagram text-decoration-none"><i
                                                         class="fab fa-instagram"
                                                         style="color: #d6c5c5; text-decoration: none;"></i>
@@ -441,92 +440,7 @@
     <!-- javascript -->
     <script src="assets/js/utilities.min.js"></script>
     <script src="assets/js/config-theme.js"></script>
-    <script>
-        const canvas = document.getElementById('line-network-background');
-        const ctx = canvas.getContext('2d');
 
-        // Set canvas size
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        // Resize canvas on window resize
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
-
-        // Node class for line network
-        class Node {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.vx = (Math.random() - 0.5) * 0.5;
-                this.vy = (Math.random() - 0.5) * 0.5;
-                this.glow = Math.random() * 0.5 + 0.5;
-            }
-
-            update() {
-                this.x += this.vx;
-                this.y += this.vy;
-
-                // Bounce off edges
-                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-
-                // Pulse glow effect
-                this.glow += (Math.random() - 0.5) * 0.05;
-                if (this.glow < 0.5) this.glow = 0.5;
-                if (this.glow > 1) this.glow = 1;
-            }
-        }
-
-        // Create nodes
-        const nodes = [];
-        for (let i = 0; i < 30; i++) {
-            nodes.push(new Node());
-        }
-
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            // Draw lines between nodes
-            for (let i = 0; i < nodes.length; i++) {
-                for (let j = i + 1; j < nodes.length; j++) {
-                    const dx = nodes[i].x - nodes[j].x;
-                    const dy = nodes[i].y - nodes[j].y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-
-                    if (distance < 150) {
-                        ctx.beginPath();
-                        ctx.strokeStyle = `rgba(252, 180, 45, ${1 - distance / 150})`;
-                        ctx.lineWidth = 1;
-                        ctx.moveTo(nodes[i].x, nodes[i].y);
-                        ctx.lineTo(nodes[j].x, nodes[j].y);
-                        ctx.stroke();
-                    }
-                }
-            }
-
-            // Draw nodes
-            nodes.forEach(node => {
-                node.update();
-                ctx.beginPath();
-                ctx.arc(node.x, node.y, 2, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(252, 180, 45, ${node.glow})`;
-                ctx.fill();
-
-                // Add glow effect
-                ctx.beginPath();
-                ctx.arc(node.x, node.y, 5, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(252, 180, 45, ${node.glow * 0.3})`;
-                ctx.fill();
-            });
-
-            requestAnimationFrame(animate);
-        }
-
-        animate();
-    </script>
 </body>
 
 </html>

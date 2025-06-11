@@ -5,9 +5,9 @@
    <!-- meta tags -->
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta name="description" content="Premium HTML5 Template by Indonez">
-   <meta name="keywords" content="blockit, uikit3, indonez, handlebars, scss, javascript">
-   <meta name="author" content="Indonez">
+   <meta name="description" content="Premium HTML5 Template by ">
+   <meta name="keywords" content="blockit, uikit3, , handlebars, scss, javascript">
+   <meta name="author" content="">
    <meta name="theme-color" content="#FCB42D">
    <link rel="preload" href="assets/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
    <link rel="preload" href="assets/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
@@ -42,7 +42,6 @@
 </head>
 
 <body>
-   <canvas id="line-network-background"></canvas>
 
    <!-- page loader begin -->
    <div class="page-loader">
@@ -52,8 +51,7 @@
    </div>
    <!-- page loader end -->
    <header>
-      <div class="uk-section uk-padding-remove-vertical  uk-background-cover uk-background-top-center"
-         style="background-image: url(assets/img/in-wave-background-1.png);">
+      <div class="uk-section uk-padding-remove-vertical  uk-background-cover uk-background-top-center">
          <nav class="uk-navbar-container uk-navbar-transparent "
             data-uk-sticky="show-on-up: true; top: 80; animation: uk-animation-fade">
             <div class="uk-container " data-uk-navbar>
@@ -80,14 +78,14 @@
                         <!-- social media begin -->
                         <div class="uk-flex social-media-list uk-flex-right@m uk-flex-middle@m">
                            <div style="padding: 5px;">
-                              <a href="https://www.facebook.com/indonez"
+                              <a href="https://www.facebook.com/"
                                  style="color: #ffffff; text-decoration: none; font-size: 20px;">
                                  <i class="fab fa-facebook"></i>
                               </a>
                            </div>
 
                            <div style="padding: 5px;">
-                              <a href="https://www.instagram.com/indonez_ig"
+                              <a href="https://www.instagram.com/"
                                  style="color: #ffffff; text-decoration: none; font-size: 20px;">
                                  <i class="fab fa-instagram"></i>
                               </a>
@@ -184,14 +182,14 @@
                                     <!-- social media begin -->
                                     <div class="uk-flex">
                                        <div style="margin-top: 3px;">
-                                          <a href="https://www.facebook.com/indonez"
+                                          <a href="https://www.facebook.com/"
                                              style="color: #ffffff; text-decoration: none; font-size: 20px;">
                                              <i class="fab fa-facebook"></i>
                                           </a>
                                        </div>
 
                                        <div style="margin-top: 3px; padding-left: 10px;">
-                                          <a href="https://www.instagram.com/indonez_ig"
+                                          <a href="https://www.instagram.com/"
                                              style="color: #ffffff; text-decoration: none; font-size: 20px;">
                                              <i class="fab fa-instagram"></i>
                                           </a>
@@ -293,13 +291,13 @@
 
          </div>
          <!-- section content end -->
-
+         <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28831.35319288955!2d55.438333315776056!3d25.407516823951678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5784a7c97153%3A0x2f7b6f7ff376bcb3!2sAjman%20Free%20Zone!5e0!3m2!1sen!2sin!4v1748326988266!5m2!1sen!2sin"
+            width="100%" height="450px" style="border:1px" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
 
          <!-- map -->
-         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d903.4177855200795!2d55.148442472213745!3d25.079133000000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6d9c0ba2b39b%3A0xa5672a0762681447!2s1%20lake%20towers%20Jumeirah%20Lakes%20towers!5e0!3m2!1sen!2sin!4v1746092778789!5m2!1sen!2sin"
-            style="border:1px; width: 100%; height: 450px;" allowfullscreen="" loading="lazy">
-         </iframe>
+
          <!-- map end -->
    </main>
    <!-- footer begin -->
@@ -375,11 +373,10 @@
                            <li class="uk-margin-top">
                               <!-- social media begin -->
                               <div class="uk-flex social-media-list uk-margin-large-bottom">
-                                 <div><a href="https://www.facebook.com/indonez"
-                                       class="color-facebook text-decoration-none"><i class="fab fa-facebook"
-                                          style="color: #d6c5c5; text-decoration: none;"></i>
+                                 <div><a href="https://www.facebook.com/" class="color-facebook text-decoration-none"><i
+                                          class="fab fa-facebook" style="color: #d6c5c5; text-decoration: none;"></i>
                                        Facebook</a></div>
-                                 <div><a href="https://www.instagram.com/indonez_ig"
+                                 <div><a href="https://www.instagram.com/"
                                        class="color-instagram text-decoration-none"><i class="fab fa-instagram"
                                           style="color: #d6c5c5; text-decoration: none;"></i>
                                        Instagram</a></div>
@@ -414,92 +411,7 @@
    <!-- javascript -->
    <script src="assets/js/utilities.min.js"></script>
    <script src="assets/js/config-theme.js"></script>
-   <script>
-      const canvas = document.getElementById('line-network-background');
-      const ctx = canvas.getContext('2d');
 
-      // Set canvas size
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-
-      // Resize canvas on window resize
-      window.addEventListener('resize', () => {
-         canvas.width = window.innerWidth;
-         canvas.height = window.innerHeight;
-      });
-
-      // Node class for line network
-      class Node {
-         constructor() {
-            this.x = Math.random() * canvas.width;
-            this.y = Math.random() * canvas.height;
-            this.vx = (Math.random() - 0.5) * 0.5;
-            this.vy = (Math.random() - 0.5) * 0.5;
-            this.glow = Math.random() * 0.5 + 0.5;
-         }
-
-         update() {
-            this.x += this.vx;
-            this.y += this.vy;
-
-            // Bounce off edges
-            if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-            if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-
-            // Pulse glow effect
-            this.glow += (Math.random() - 0.5) * 0.05;
-            if (this.glow < 0.5) this.glow = 0.5;
-            if (this.glow > 1) this.glow = 1;
-         }
-      }
-
-      // Create nodes
-      const nodes = [];
-      for (let i = 0; i < 30; i++) {
-         nodes.push(new Node());
-      }
-
-      function animate() {
-         ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-         // Draw lines between nodes
-         for (let i = 0; i < nodes.length; i++) {
-            for (let j = i + 1; j < nodes.length; j++) {
-               const dx = nodes[i].x - nodes[j].x;
-               const dy = nodes[i].y - nodes[j].y;
-               const distance = Math.sqrt(dx * dx + dy * dy);
-
-               if (distance < 150) {
-                  ctx.beginPath();
-                  ctx.strokeStyle = `rgba(252, 180, 45, ${1 - distance / 150})`;
-                  ctx.lineWidth = 1;
-                  ctx.moveTo(nodes[i].x, nodes[i].y);
-                  ctx.lineTo(nodes[j].x, nodes[j].y);
-                  ctx.stroke();
-               }
-            }
-         }
-
-         // Draw nodes
-         nodes.forEach(node => {
-            node.update();
-            ctx.beginPath();
-            ctx.arc(node.x, node.y, 2, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(252, 180, 45, ${node.glow})`;
-            ctx.fill();
-
-            // Add glow effect
-            ctx.beginPath();
-            ctx.arc(node.x, node.y, 5, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(252, 180, 45, ${node.glow * 0.3})`;
-            ctx.fill();
-         });
-
-         requestAnimationFrame(animate);
-      }
-
-      animate();
-   </script>
 </body>
 
 </html>

@@ -1,11 +1,11 @@
-/* to-top.js | https://www.indonez.com | Indonez | MIT License */
+/* to-top.js | https://www..com |  | MIT License */
 class ToTop {
     constructor() {
         this.elementName = 'to-top'
     }
 
     init() {
-        if(document.querySelector(`.${this.elementName}`) !== null) {
+        if (document.querySelector(`.${this.elementName}`) !== null) {
             const inTotop = document.querySelector(`.${this.elementName}`)
             window.addEventListener('scroll', function () {
                 setTimeout(function () {

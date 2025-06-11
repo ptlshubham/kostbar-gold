@@ -11,11 +11,11 @@ require 'php-mailer/src/Exception.php';
 $mail = new PHPMailer(true);
 
 try {
-    // SMTP settings for Vijjubhai0707@gmail.com
+    // SMTP settings for hetpatel598@gmail.com
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'Vijjubhai0707@gmail.com'; // Gmail used to send email
+    $mail->Username = 'hetpatel598@gmail.com'; // Gmail used to send email
     $mail->Password = 'edus aqwa smjs otio'; // Replace with your Gmail App Password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->Port = 465;
@@ -31,10 +31,10 @@ try {
     }
 
     // Send email
-    $mail->setFrom('Vijjubhai0707@gmail.com', 'Saphalya Corporation');
+    $mail->setFrom('hetpatel598@gmail.com', 'Saphalya Corporation');
     $mail->addAddress($email, $name);
-    $mail->addReplyTo('Vijjubhai0707@gmail.com', 'Saphalya Corporation');
-    $mail->addAddress('Vijjubhai0707@gmail.com'); // also send to yourself
+    $mail->addReplyTo('hetpatel598@gmail.com', 'Saphalya Corporation');
+    $mail->addAddress('hetpatel598@gmail.com'); // also send to yourself
 
     $mail->isHTML(true);
     $mail->Subject = 'Thank You for Contacting Saphalya Corporation';
