@@ -44,8 +44,7 @@
          background-position: center;
          background-repeat: no-repeat;
          background-attachment: fixed;
-         background-image: url('../img/bg/about.jpg');
-         opacity: 0.8;
+         background-image: url('../img/bg/about.webp');
         }
          .About::before {
          content: "";
