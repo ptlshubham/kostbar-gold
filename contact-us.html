@@ -25,7 +25,7 @@
    <!-- stylesheet -->
    <link rel="stylesheet" href="assets/css/style.css">
    <!-- uikit -->
-   <script src="assets/js/vendors/uikit.min.js"></script>
+   <script loading="lazy" src="assets/js/vendors/uikit.min.js"></script>
    <!-- favicon -->
    <link rel="shortcut icon" href="assets/img/logo/favicon.ico" type="image/x-icon">
    <!-- touch icon -->
@@ -60,7 +60,7 @@
             <div class="uk-container " data-uk-navbar>
                <div class="uk-navbar-left uk-width-expand uk-flex uk-flex-between ">
                   <a class="uk-navbar-item uk-logo" href="index.html">
-                     <img src="assets/img/logo/heaer-logo.png" alt="logo" width="230" height="23">
+                     <img loading="lazy" src="assets/img/logo/heaer-logo.png" alt="logo" width="230" height="23">
                   </a>
                   <ul class="uk-navbar-nav uk-visible@m">
                      <li><a href="index.html">Home</a>
@@ -203,7 +203,7 @@
                                  <div class="uk-width-2-3@m">
                                     <div class="uk-margin-medium-left in-margin-remove-left@s">
                                        <form id="contact-form" class="uk-form uk-grid-small" data-uk-grid
-                                          action="php/php/contact-form.php" method="POST">
+                                          action="php/contact-form.php" method="POST">
                                           <div class="uk-width-1-2@s uk-inline">
                                              <span class="uk-form-icon fas fa-user fa-sm"></span>
                                              <input class="uk-input uk-border-rounded" id="name" name="name" type="text"
@@ -228,6 +228,8 @@
                                                 class="uk-button uk-button-primary uk-border-rounded uk-align-right">
 
                                           </div>
+                                          <div class="g-recaptcha" data-sitekey="your-site-key"></div>
+                                          <script src="https://www.google.com/recaptcha/api.js" async defer></script>
                                        </form>
 
 
@@ -281,7 +283,7 @@
                                     </div>
                                  </div>
                                  <div class="uk-width-1-3@m">
-                                    <img src="assets/img/Precious-metals-Insight/Support.png" alt="">
+                                    <img loading="lazy" src="assets/img/Precious-metals-Insight/Support.png" alt="">
                                  </div>
                               </div>
                            </div>
@@ -294,7 +296,7 @@
 
          </div>
          <!-- section content end -->
-         <iframe
+         <iframe loading="lazy"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28831.35319288955!2d55.438333315776056!3d25.407516823951678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5784a7c97153%3A0x2f7b6f7ff376bcb3!2sAjman%20Free%20Zone!5e0!3m2!1sen!2sin!4v1748326988266!5m2!1sen!2sin"
             width="100%" height="450px" style="border:1px" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -311,8 +313,8 @@
             <div class="uk-grid-medium" data-uk-grid="">
                <div class="uk-width-expand@m">
                   <div class="footer-logo">
-                     <img class="uk-display-block" src="assets/img/logo/heaer-logo.png" alt="footer-logo" width="230"
-                        height="23" data-uk-img="">
+                     <img class="uk-display-block" loading="lazy" src="assets/img/logo/heaer-logo.png" alt="footer-logo"
+                        width="230" height="23" data-uk-img="">
                   </div>
                   <p class="uk-text-small uk-margin-small-top text-lead">Your Trusted Source for Gold & Jewelry</p>
                   <p class="uk-margin-small-top text-lead">C1- 601, Executive Office,<br> Ajman Free Zone, <br>
@@ -412,8 +414,31 @@
    </a>
    <!-- to top end -->
    <!-- javascript -->
-   <script src="assets/js/utilities.min.js"></script>
-   <script src="assets/js/config-theme.js"></script>
+   <script loading="lazy" src="assets/js/utilities.min.js"></script>
+   <script loading="lazy" src="assets/js/config-theme.js"></script>
+   <script>
+      document.getElementById("contact-form").addEventListener("submit", function (e) {
+         e.preventDefault();
+         const form = e.target;
+         const formData = new FormData(form);
+
+         fetch(form.action, {
+            method: "POST",
+            body: formData
+         })
+            .then(response => response.json())
+            .then(data => {
+               alert(data.message);
+               if (data.success) {
+                  form.reset();
+               }
+            })
+            .catch(error => {
+               alert("There was an error submitting the form.");
+               console.error("Error:", error);
+            });
+      });
+   </script>
 
 </body>
 
