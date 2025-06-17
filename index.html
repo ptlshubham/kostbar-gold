@@ -808,7 +808,7 @@
                                        <div class="uk-width-2-3@m" uk-scrollspy="cls: slide-in-right; delay: 400">
                                           <div class="uk-margin-medium-left in-margin-remove-left@s">
                                              <form id="contact-form" class="uk-form uk-grid-small" data-uk-grid
-                                                action="php/php/contact-form.php" method="POST">
+                                                action="php/contact-form.php" method="POST">
                                                 <div class="uk-width-1-2@s uk-inline">
                                                    <span class="uk-form-icon fas fa-user fa-sm"></span>
                                                    <input class="uk-input uk-border-rounded" id="name" name="name"
@@ -819,19 +819,24 @@
                                                    <input class="uk-input uk-border-rounded" id="email" name="email"
                                                       type="email" placeholder="Email address" required>
                                                 </div>
-                                                <div class="uk-width-1-1 uk-inline">
-                                                   <span class="uk-form-icon fas fa-pen fa-sm"></span>
-                                                   <input class="uk-input uk-border-rounded" id="subject" name="subject"
-                                                      type="text" placeholder="Subject" required>
+                                                <div class="uk-width-1@s uk-inline">
+                                                   <span class="uk-form-icon fas fa-envelope fa-sm"></span>
+                                                   <input class="uk-input uk-border-rounded" id="contact" name="contact"
+                                                      type="contact" placeholder="Contact Number" required>
                                                 </div>
                                                 <div class="uk-width-1-1">
                                                    <textarea class="uk-textarea uk-border-rounded" id="message"
                                                       name="message" rows="6" placeholder="Message" required></textarea>
                                                 </div>
-                                                <div class="uk-width-1-1 text-lead">
+                                                <div class="g-recaptcha"
+                                                   data-sitekey="6LdLeWMrAAAAALyZPbr_WCWXZp_3-1oKD36QI6aJ"></div>
+                                                <div class="uk-width-1-1">
                                                    <input type="submit" value="Send Message"
                                                       class="uk-button uk-button-primary uk-border-rounded uk-align-right">
+
                                                 </div>
+                                                <script src="https://www.google.com/recaptcha/api.js" async
+                                                   defer></script>
                                              </form>
                                           </div>
                                        </div>
@@ -966,6 +971,27 @@
    <script loading="lazy" src="assets/js/utilities.min.js"></script>
    <script loading="lazy" src="assets/js/config-theme.js"></script>
    <!-- Dynamic line network background script -->
+   <script>
+      document.getElementById("contact-form").addEventListener("submit", function (e) {
+         e.preventDefault();
+         const form = e.target;
+         const formData = new FormData(form);
+
+         fetch(form.action, {
+            method: "POST",
+            body: formData
+         })
+            .then(response => response.json())
+            .then(data => {
+               if (data.success) {
+                  window.location.href = "https://dev.kostbartrading.com/"; // ✅ Redirect here
+               }
+            })
+            .catch(error => {
+               console.error("Submission failed:", error);
+            });
+      });
+   </script>
 
 </body>
 

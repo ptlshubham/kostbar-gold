@@ -57,9 +57,9 @@ try {
     }
 
     // Recipients
-    $mail->setFrom('het@keryar.com', 'Saphalya Corporation');
+    $mail->setFrom('het@keryar.com', 'Kostbar Trading');
     $mail->addAddress($contact_email, $form_name);
-    $mail->addReplyTo('het@keryar.com', 'Saphalya Corporation');
+    $mail->addReplyTo('het@keryar.com', 'Kostbar Trading');
     $mail->addAddress('het@keryar.com');
 
     // $servername = "localhost"; // Change if needed
@@ -89,11 +89,11 @@ if (!mysqli_stmt_execute($stmt)) {
 
     // Email content
     $mail->isHTML(true);
-    $mail->Subject = 'Thank You for Contacting Saphalya Corporation';
+    $mail->Subject = 'Thank You for Contacting Kostbar Trading';
     $mail_body = '<html>
     <body style="font-family: Open Sans, Helvetica, Arial, sans-serif; background-color: #F2F2F2;">
         <div style="max-width: 600px; margin: 0 auto; padding: 20px; background: #FFFFFF; border-radius: 10px;">
-            <img src="https://saphalyacorp.com/img/demos/industry-factory/logo-light.png" alt="Saphalya Corporation" style="max-width: 100%;">
+            <img src="https://saphalyacorp.com/img/demos/industry-factory/logo-light.png" alt="Kostbar Trading" style="max-width: 100%;">
             <h2 style="color: #4F4F4F;">Thank You for Reaching Out!</h2>
             <p style="color: #4F4F4F;">Dear ' . htmlspecialchars($form_name) . ',</p>
             <p style="color: #4F4F4F;">We’ve received your message and will get back to you soon.</p>
@@ -102,10 +102,10 @@ if (!mysqli_stmt_execute($stmt)) {
                 <li><strong>Email:</strong> ' . htmlspecialchars($contact_email) . '</li>
                 <li><strong>Message:</strong> ' . htmlspecialchars($contact_message) . '</li>
             </ul>
-            <p style="color: #4F4F4F;">Best regards,<br>Saphalya Corporation Team</p>
+            <p style="color: #4F4F4F;">Best regards,<br>Kostbar Trading Team</p>
         </div>
         <div style="text-align: center; font-size: 12px; color: #4F4F4F; padding: 10px;">
-            © 2024 Saphalya Corporation. All rights reserved.
+            © 2024 Kostbar Trading. All rights reserved.
         </div>
     </body>
     </html>';
