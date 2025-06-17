@@ -20,7 +20,7 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.hostinger.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'het@saphalyacorp.com';
+    $mail->Username   = 'het@keryar.com';
     $mail->Password   = 'Het@2210';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->Port       = 465;
@@ -29,6 +29,8 @@ try {
     $form_name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
     $contact_email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $contact_message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
+    $contact_contact = filter_var($_POST['contact'], FILTER_SANITIZE_STRING);
+
 
     // Validate inputs
     if (!filter_var($contact_email, FILTER_VALIDATE_EMAIL)) {
@@ -46,7 +48,7 @@ try {
     }
 
     // reCAPTCHA validation
-    $recaptcha_secret = '6Lc_TwcrAAAAABv8wEjOqNUSUzNW3NVup9zPMHyK'; // Your secret key
+    $recaptcha_secret = '6LdLeWMrAAAAAKVP4U_-WNVWRpnfXP0DlCQT6hZm'; // Your secret key
     $recaptcha_response = $_POST['g-recaptcha-response'];
     $verify = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$recaptcha_secret}&response={$recaptcha_response}");
     $recaptcha = json_decode($verify);
@@ -55,31 +57,33 @@ try {
     }
 
     // Recipients
-    $mail->setFrom('het@saphalyacorp.com', 'Saphalya Corporation');
+    $mail->setFrom('het@keryar.com', 'Saphalya Corporation');
     $mail->addAddress($contact_email, $form_name);
-    $mail->addReplyTo('het@saphalyacorp.com', 'Saphalya Corporation');
-    $mail->addAddress('het@saphalyacorp.com');
-$servername = "localhost"; // Change if needed
-$username = "root"; // Change if needed
-$password = ""; // Change if needed
-$database = "kostbar"; // Change to your database name
+    $mail->addReplyTo('het@keryar.com', 'Saphalya Corporation');
+    $mail->addAddress('het@keryar.com');
+
+    // $servername = "localhost"; // Change if needed
+    // $username = "root"; // Change if needed
+    // $password = ""; // Change if needed
+    // $database = "kostbar"; // Change to your database name
+   
     // Database
-    // $servername = "127.0.0.1:3306";
-    // $username = "u768511311_saphalya_corp";
-    // $password = "Saphlya@2210";
-    // $database = "u768511311_saphalya";
+    $servername = "127.0.0.1:3306";
+    $username = "u768511311_kostbar";
+    $password = "Kostbar@2210";
+    $database = "u768511311_kostbar";
 
     $conn = mysqli_connect($servername, $username, $password, $database);
     if (!$conn) {
         throw new Exception("Database connection failed: " . mysqli_connect_error());
     }
+$sql = "INSERT INTO `contact` (`name`, `email`,`contact`, `message`) VALUES (?, ?, ?, ?)";
+$stmt = mysqli_prepare($conn, $sql);
+mysqli_stmt_bind_param($stmt, "ssss", $form_name, $contact_email, $contact_contact, $contact_message);
+if (!mysqli_stmt_execute($stmt)) {
+    throw new Exception("Database error: " . mysqli_stmt_error($stmt));
+}
 
-    $sql = "INSERT INTO `contact` (`name`, `email`, `message`) VALUES (?, ?, ?)";
-    $stmt = mysqli_prepare($conn, $sql);
-    mysqli_stmt_bind_param($stmt, "sss", $form_name, $contact_email, $contact_message);
-    if (!mysqli_stmt_execute($stmt)) {
-        throw new Exception("Database error: " . mysqli_error($conn));
-    }
     mysqli_stmt_close($stmt);
     mysqli_close($conn);
 

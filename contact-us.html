@@ -214,22 +214,25 @@
                                              <input class="uk-input uk-border-rounded" id="email" name="email"
                                                 type="email" placeholder="Email address" required>
                                           </div>
-                                          <div class="uk-width-1-1 uk-inline">
-                                             <span class="uk-form-icon fas fa-pen fa-sm"></span>
-                                             <input class="uk-input uk-border-rounded" id="subject" name="subject"
-                                                type="text" placeholder="Subject" required>
+                                          <div class="uk-width-1@s uk-inline">
+                                             <span class="uk-form-icon fas fa-envelope fa-sm"></span>
+                                             <input class="uk-input uk-border-rounded" id="contact" name="contact"
+                                                type="contact" placeholder="Contact Number" required>
                                           </div>
                                           <div class="uk-width-1-1">
                                              <textarea class="uk-textarea uk-border-rounded" id="message" name="message"
                                                 rows="6" placeholder="Message" required></textarea>
                                           </div>
+                                          <div class="g-recaptcha"
+                                             data-sitekey="6LdLeWMrAAAAALyZPbr_WCWXZp_3-1oKD36QI6aJ"></div>
                                           <div class="uk-width-1-1">
                                              <input type="submit" value="Send Message"
                                                 class="uk-button uk-button-primary uk-border-rounded uk-align-right">
 
                                           </div>
-                                          <div class="g-recaptcha" data-sitekey="your-site-key"></div>
+
                                           <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
                                        </form>
 
 
@@ -428,17 +431,18 @@
          })
             .then(response => response.json())
             .then(data => {
-               alert(data.message);
                if (data.success) {
-                  form.reset();
+                  window.location.href = "https://dev.kostbartrading.com/"; // ✅ Redirect here
                }
             })
             .catch(error => {
-               alert("There was an error submitting the form.");
-               console.error("Error:", error);
+               console.error("Submission failed:", error);
             });
       });
    </script>
+
+
+
 
 </body>
 
